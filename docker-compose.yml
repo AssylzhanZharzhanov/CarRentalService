@@ -2,13 +2,40 @@ version: '3.4'
 
 services:
 
-    nginx:
+    portainer:
+        container_name: portrainer
+        image: portainer/portainer
+        command: -H unix:///var/run/docker.sock
+        restart: always
+        ports:
+            - 9000:9000
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - portainer_data:/data
 
-    server:
+    nginx:
+        container_name: nginx
+        build:
+            context: ./
+            dockerfile: ./nginx/Dockerfile
+        ports: 
+            - 80:80
+            - 443:443
 
     mongo:
-        
-
-    
+        container_name: mongo
+        image: mongo
+        restart: always
+        ports:
+            - 27017:27017
+        environment: 
+            MONGO_INITDB_ROOT_USERNAME: mongo
+            MONGO_INITDB_ROOT_PASSWORD: mongo
+            MONGO_DATA_DIR: database
+        volumes:
+            - database:/data/db
 
 volumes:
+    database:
+        external: true
+    portainer_data:
