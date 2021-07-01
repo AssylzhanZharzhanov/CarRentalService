@@ -2,6 +2,14 @@ version: '3.4'
 
 services:
 
+    server:
+        container_name: server
+        build: ./
+        ports: 
+            - 8000:8000
+        depends_on: 
+            - mongo
+
     portainer:
         container_name: portrainer
         image: portainer/portainer

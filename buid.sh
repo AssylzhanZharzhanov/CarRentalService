@@ -1,1 +1,0 @@
-docker-compose -f docker-compose.yml --env-file ./.end.dev up -d --remove-orphans
