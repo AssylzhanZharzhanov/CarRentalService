@@ -1,39 +1,37 @@
-tages:
-  - deploy
-  - dev
+image: alpine
 
-before_script:
-  - echo before script is run 
-  
+stages:
+  - test
+  - deploy 
+
 test:
   stage: test
   tags:
     - dev
   script:
-    - echo run test on dev-meetup
+    - echo testing
+    - go test -v ./...
 
-dev:
-  stage: deploy
+deploy-to-dev:
+  stage: deploy  
+  script:
+    - echo deploy on dev server
+    - make down
+    - make run
+  only:
+    - developer
   tags:
     - dev
-  script:
-    - echo start deploy on dev server
-    - git pull origin test
-    - docker-compose up
-  only:
-    - dev
 
-deploy:
+deploy-to-prod:
   stage: deploy
   tags: 
     - meetup-prod
-  script:
-    - docker-compose -f docker-compose.yml stop server
-    - git pull 
-    - docker-compose -f docker-compose.yml down
-    - docker-compose -f docker-compose.yml build server
-    - docker-compose -f docker-compose.yml up -d 
-    - docker-compose -f docker-compose.yml restart nginx
   only:
     - master
+  script:
+    - echo deploy on prod server
+    - make down
+    - make run
 
+# push -> test -> build image docker -> push to dockerhub -> download and launch image

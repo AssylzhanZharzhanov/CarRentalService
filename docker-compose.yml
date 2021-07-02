@@ -5,6 +5,7 @@ services:
     server:
         container_name: server
         build: ./
+        command: ./app
         ports: 
             - 8000:8000
         depends_on: 
