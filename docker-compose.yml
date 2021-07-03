@@ -13,23 +13,23 @@ services:
         depends_on: 
             - mongo
 
-    portainer:
-        container_name: portrainer
-        image: portainer/portainer
-        command: -H unix:///var/run/docker.sock
-        restart: always
-        ports:
-            - 9000:9000
-        volumes:
-            - /var/run/docker.sock:/var/run/docker.sock
-            - portainer_data:/data
+#    portainer:
+#        container_name: portrainer
+#        image: portainer/portainer
+#        command: -H unix:///var/run/docker.sock
+#        restart: always
+#        ports:
+#            - 9000:9000
+#        volumes:
+#            - /var/run/docker.sock:/var/run/docker.sock
+#            - portainer_data:/data
 
     nginx:
         container_name: nginx
         build:
             context: ./
             dockerfile: ./nginx/Dockerfile
-        ports: 
+        ports:
             - 80:80
             - 443:443
 
