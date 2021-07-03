@@ -4,6 +4,9 @@ stages:
   - test
   - deploy 
 
+before_script:
+  - go -version
+
 test:
   stage: test
   tags:
