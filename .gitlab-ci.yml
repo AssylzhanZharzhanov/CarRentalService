@@ -5,7 +5,7 @@ stages:
   - deploy 
 
 before_script:
-  - go -version
+  - go version
 
 test:
   stage: test
