@@ -4,14 +4,13 @@ stages:
 
 before_script:
   - go version
-  - echo $PATH
 
 test:
   stage: test
   tags:
     - dev
   script:
-    - echo testing
+    - echo test is started
     - go test -v ./...
 
 deploy-to-dev:
