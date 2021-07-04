@@ -3,6 +3,7 @@ stages:
   - deploy 
 
 before_script:
+  - echo deploy
   - go version
 
 test:
