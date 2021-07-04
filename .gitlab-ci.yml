@@ -4,6 +4,7 @@ stages:
 
 before_script:
   - go version
+  - echo $PATH
 
 test:
   stage: test
