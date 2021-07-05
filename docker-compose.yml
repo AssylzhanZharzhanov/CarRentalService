@@ -6,8 +6,6 @@ services:
         container_name: server
         build: ./
         command: ./app
-        env_file:
-            - .env.dev
         ports: 
             - 8000:8000
         depends_on: 
@@ -43,10 +41,10 @@ services:
             MONGO_INITDB_ROOT_USERNAME: mongo
             MONGO_INITDB_ROOT_PASSWORD: mongo
             MONGO_DATA_DIR: database
-        volumes:
-            - database:/data/db
+#        volumes:
+#            - database:/data/db
 
-volumes:
-    database:
-        external: true
-    portainer_data:
+#volumes:
+#    database:
+#        external: true
+#    portainer_data:
