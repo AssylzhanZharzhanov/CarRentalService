@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/spf13/viper"
 	"gitlab.com/zharzhanov/region"
 	"gitlab.com/zharzhanov/region/pkg/handler"
 	"gitlab.com/zharzhanov/region/pkg/repository"
@@ -11,11 +10,14 @@ import (
 
 func main() {
 
-	//if err := initConfig(); err != nil {
-	//	log.Fatalf("Error initializing server configs: %s", err.Error())
-	//}
+	db := repository.NewMongoDB(repository.Config{
+		MongoUser: "mongo",
+		MongoPassword: "mongo",
+		MongoPort: "27017",
+		MongoHost: "mongo",
+	})
 
-	repos := repository.NewRepository()
+	repos := repository.NewRepository(db)
 	services := service.NewService(repos)
 	handler := handler.NewHandler(services)
 
@@ -23,10 +25,4 @@ func main() {
 	if err := srv.Run("8000", handler.InitRoutes()); err != nil {
 		log.Fatalf("error occured during starting web service: %s", err.Error())
 	}
-}
-
-func initConfig () error {
-	viper.SetConfigFile("config.yml")
-	viper.AddConfigPath("/configs")
-	return viper.ReadInConfig()
 }

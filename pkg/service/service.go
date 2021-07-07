@@ -1,13 +1,19 @@
 package service
 
-import "gitlab.com/zharzhanov/region/pkg/repository"
+import (
+	"context"
+	"gitlab.com/zharzhanov/region/models"
+	"gitlab.com/zharzhanov/region/pkg/repository"
+)
 
 type Authentication interface {
-
+	SignUp(ctx context.Context, user models.User) (string, error)
+	SignIn(ctx context.Context, user models.User) (string, error)
 }
 
 type Adverts interface {
-
+	CreateAdvert(ctx context.Context, advert models.Advert) (string, error)
+	GetAllAdverts(ctx context.Context) error
 }
 
 type Users interface {
@@ -21,5 +27,8 @@ type Service struct {
 }
 
 func NewService(repos *repository.Repository) *Service {
-	return &Service{}
+	return &Service{
+		Authentication: NewAuthService(repos),
+		Adverts: NewAdvertService(repos),
+	}
 }
