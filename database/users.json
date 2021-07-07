@@ -4,4 +4,6 @@
   "secondName": "Brandon",
   "email": "alice.brandon@gmail.com",
   "phone": "77478736911",
+  "bookmarks": [1,2,3],
+  "rating": 3
 }

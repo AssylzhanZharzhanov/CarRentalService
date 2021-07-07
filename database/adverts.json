@@ -28,7 +28,8 @@
       "inspiration_date": "",
       "expiration_date": ""
     },
-    "createdAt": ""
+    "createdAt": "",
+    "share_url": ""
   },
   {
     "id": "2",
@@ -54,6 +55,7 @@
       "inspiration_date": "",
       "expiration_date": ""
     },
-    "createdAt": ""
+    "createdAt": "",
+    "share_url": ""
   }
 ]
