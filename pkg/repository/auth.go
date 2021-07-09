@@ -16,11 +16,11 @@ func NewAuthMongo(db *mongo.Database) *AuthMongo {
 	}
 }
 
-func (r *AuthMongo) SignUp(ctx context.Context, user models.User) (string, error) {
+func (r *AuthMongo) CreateUser(ctx context.Context, user models.User) (string, error) {
 	return "", nil
 }
 
-func (r *AuthMongo) SignIn(ctx context.Context, user models.User) (string, error) {
+func (r *AuthMongo) GetUser(ctx context.Context, user models.User) (string, error) {
 	return "", nil
 }
 

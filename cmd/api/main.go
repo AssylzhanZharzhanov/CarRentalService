@@ -15,6 +15,7 @@ func main() {
 		MongoPassword: "mongo",
 		MongoPort: "27017",
 		MongoHost: "mongo",
+		DbName: "region",
 	})
 
 	repos := repository.NewRepository(db)

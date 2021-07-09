@@ -7,13 +7,16 @@ import (
 )
 
 type Authentication interface {
-	SignUp(ctx context.Context, user models.User) (string, error)
-	SignIn(ctx context.Context, user models.User) (string, error)
+	CreateUser(ctx context.Context, user models.User) (string, error)
+	GetUser(ctx context.Context, user models.User) (string, error)
 }
 
 type Adverts interface {
 	CreateAdvert(ctx context.Context, advert models.Advert) (string, error)
-	GetAllAdverts(ctx context.Context) error
+	GetAllAdverts(ctx context.Context) ([]models.Advert, error)
+	GetAdvertById(ctx context.Context, id string) (*models.Advert, error)
+	UpdateAdvert(ctx context.Context, id string,  advert models.UpdateAdvertInput) error
+	DeleteAdvert(ctx context.Context, id string) error
 }
 
 type Users interface {
@@ -29,5 +32,6 @@ type Repository struct {
 func NewRepository(db *mongo.Database) *Repository {
 	return &Repository{
 		Authentication: NewAuthMongo(db),
+		Adverts : NewAdvertMongo(db, "adverts"),
 	}
 }

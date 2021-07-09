@@ -18,14 +18,18 @@ type Config struct {
 	DbName string
 }
 
-func NewMongoDB(cfg Config) *mongo.Database {
+const (
+	usersCollection = "users"
+	advertsCollection = "adverts"
+	paymentsCollection = "payments"
+)
 
-	MongoURI :=  fmt.Sprintf("mongodb://%s:%s@%s:%s/%s",
+func NewMongoDB(cfg Config) *mongo.Database {
+	MongoURI :=  fmt.Sprintf("mongodb://%s:%s@%s:%s/",
 		cfg.MongoUser,
 		cfg.MongoPassword,
 		cfg.MongoHost,
 		cfg.MongoPort,
-		cfg.DbName,
 	)
 
 	clientOptions := options.Client().ApplyURI(MongoURI)

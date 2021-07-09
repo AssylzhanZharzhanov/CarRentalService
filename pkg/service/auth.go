@@ -17,11 +17,11 @@ func NewAuthService(repository *repository.Repository) *AuthService {
 }
 
 func (s *AuthService) SignIn(ctx context.Context, user models.User) (string, error) {
-	return s.repo.SignIn(ctx, user)
+	return s.repo.CreateUser(ctx, user)
 }
 
 func (s *AuthService) SignUp(ctx context.Context, user models.User) (string, error) {
-	return s.repo.SignUp(ctx, user)
+	return s.repo.GetUser(ctx, user)
 }
 
 func generatePassword(password string)  string {
