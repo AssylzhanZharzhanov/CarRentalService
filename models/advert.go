@@ -8,12 +8,12 @@ import (
 
 type Advert struct {
 	ID                primitive.ObjectID `json:"_id" bson:"_id,omitempty"`
-	Category          string             `json:"category" bson:"category"`
-	Title             string             `json:"title" bson:"title"`
-	Description       string             `json:"description" bson:"description"`
-	RentType          string             `json:"rent_type" bson:"rent_type"`
-	Price             int32              `json:"price" bson:"price"`
-	Images            []string           `json:"images" bson:"images"`
+	Category          string             `json:"category" bson:"category" form:"category"`
+	Title             string             `json:"title" bson:"title" form:"title"`
+	Description       string             `json:"description" bson:"description" form:"description"`
+	RentType          string             `json:"rent_type" bson:"rent_type" form:"rent_type"`
+	Price             int32              `json:"price" bson:"price" form:"price"`
+	Images            []string           `json:"images" bson:"images" form:"images"`
 	HasAdvertisement  bool               `json:"has_advertisement" bson:"has_advertisement,omitempty"`
 	Advertisement 	  Advertisement 	 `json:"advertisement" bson:"advertisement,omitempty"`
 	Feedbacks         []Feedback         `json:"feedbacks,omitempty" bson:"feedbacks,omitempty"`

@@ -13,7 +13,10 @@ type AdvertMongo struct {
 }
 
 func NewAdvertMongo(db *mongo.Database, collection string) *AdvertMongo {
-	return &AdvertMongo{db:db.Collection(collection)}
+	return &AdvertMongo{
+		db:db.Collection(collection),
+
+	}
 }
 
 func (r *AdvertMongo) CreateAdvert(ctx context.Context, advert models.Advert) (string, error) {
@@ -71,6 +74,11 @@ func (r *AdvertMongo) DeleteAdvert(ctx context.Context, id string) error {
 	if err != nil {
 		return err
 	}
+
+	return nil
+}
+
+func storeImages() error {
 
 	return nil
 }

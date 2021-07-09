@@ -18,6 +18,7 @@ func NewAdvertService(repo *repository.Repository) *AdvertService {
 func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.Advert) (string, error) {
 	advert.CreatedAt = time.Now()
 	advert.HasAdvertisement = false
+
 	return s.repo.CreateAdvert(ctx, advert)
 }
 

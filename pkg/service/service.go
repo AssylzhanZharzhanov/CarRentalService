@@ -6,6 +6,10 @@ import (
 	"gitlab.com/zharzhanov/region/pkg/repository"
 )
 
+type Users interface {
+
+}
+
 type Authentication interface {
 	SignUp(ctx context.Context, user models.User) (string, error)
 	SignIn(ctx context.Context, user models.User) (string, error)
@@ -19,19 +23,22 @@ type Adverts interface {
 	DeleteAdvert(ctx context.Context, id string) error
 }
 
-type Users interface {
-
+type Images interface {
+	UploadImage(urls []string) error
+	GetImageById(ctx context.Context, id string) error
 }
 
 type Service struct {
 	Authentication
 	Adverts
 	Users
+	Images
 }
 
 func NewService(repos *repository.Repository) *Service {
 	return &Service{
 		Authentication: NewAuthService(repos),
 		Adverts: NewAdvertService(repos),
+		Images: NewImageService(repos),
 	}
 }

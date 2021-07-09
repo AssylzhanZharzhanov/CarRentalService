@@ -15,7 +15,6 @@ func (h *Handler) createAdvert(c *gin.Context) {
 	}
 
 	id, err := h.service.CreateAdvert(c.Request.Context(), advert)
-
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 		return

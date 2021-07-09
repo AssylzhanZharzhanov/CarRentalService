@@ -41,6 +41,12 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			adverts.PUT("/:id", h.updateAdvert)
 			adverts.DELETE("/:id", h.deleteAdvert)
 		}
+
+		images := api.Group("/images")
+		{
+			images.POST("/", h.UploadImages)
+			images.GET("/", h.getImageById)
+		}
 	}
 
 	return router

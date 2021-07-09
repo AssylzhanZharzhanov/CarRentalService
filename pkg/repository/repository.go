@@ -23,15 +23,23 @@ type Users interface {
 
 }
 
+type Images interface {
+	UploadImage(urls []string) error
+	GetImageById(ctx context.Context, id string) error
+}
+
 type Repository struct {
 	Authentication
 	Adverts
 	Users
+	Images
 }
+
 
 func NewRepository(db *mongo.Database) *Repository {
 	return &Repository{
 		Authentication: NewAuthMongo(db),
 		Adverts : NewAdvertMongo(db, "adverts"),
+		Images: NewImageMongo(db, "adverts"),
 	}
 }
