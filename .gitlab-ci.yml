@@ -1,22 +1,25 @@
-image: alpine
-
 stages:
   - test
   - deploy 
+
+before_script:
+  - echo deploy
+  - go version
 
 test:
   stage: test
   tags:
     - dev
   script:
-    - echo testing
+    - echo test is started
     - go test -v ./...
 
 deploy-to-dev:
   stage: deploy  
   script:
     - echo deploy on dev server
-    - make down
+    - docker stop server
+    - docker rm server
     - make run
   only:
     - developer
@@ -31,7 +34,8 @@ deploy-to-prod:
     - master
   script:
     - echo deploy on prod server
-    - make down
+    - docker stop server
+    - docker rm server
     - make run
 
 # push -> test -> build image docker -> push to dockerhub -> download and launch image
