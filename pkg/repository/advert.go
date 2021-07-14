@@ -13,10 +13,7 @@ type AdvertMongo struct {
 }
 
 func NewAdvertMongo(db *mongo.Database, collection string) *AdvertMongo {
-	return &AdvertMongo{
-		db:db.Collection(collection),
-
-	}
+	return &AdvertMongo{db:db.Collection(collection)}
 }
 
 func (r *AdvertMongo) CreateAdvert(ctx context.Context, advert models.Advert) (string, error) {
@@ -29,10 +26,10 @@ func (r *AdvertMongo) CreateAdvert(ctx context.Context, advert models.Advert) (s
 	return res.InsertedID.(primitive.ObjectID).Hex(), nil
 }
 
-func (r *AdvertMongo) GetAllAdverts(ctx context.Context) ([]models.Advert, error) {
+func (r *AdvertMongo) GetAllAdverts(ctx context.Context, filter bson.M) ([]models.Advert, error) {
 	var adverts []models.Advert
 
-	cur, err := r.db.Find(ctx,bson.M{})
+	cur, err := r.db.Find(ctx, filter)
 	if err != nil {
 		return nil, err
 	}
@@ -74,11 +71,6 @@ func (r *AdvertMongo) DeleteAdvert(ctx context.Context, id string) error {
 	if err != nil {
 		return err
 	}
-
-	return nil
-}
-
-func storeImages() error {
 
 	return nil
 }

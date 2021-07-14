@@ -2,6 +2,7 @@ package main
 
 import (
 	"gitlab.com/zharzhanov/region"
+	"gitlab.com/zharzhanov/region/database/mongo"
 	"gitlab.com/zharzhanov/region/pkg/handler"
 	"gitlab.com/zharzhanov/region/pkg/repository"
 	"gitlab.com/zharzhanov/region/pkg/service"
@@ -10,7 +11,7 @@ import (
 
 func main() {
 
-	db := repository.NewMongoDB(repository.Config{
+	db := mongo.NewMongoDB(mongo.Config{
 		MongoUser: "mongo",
 		MongoPassword: "mongo",
 		MongoPort: "27017",

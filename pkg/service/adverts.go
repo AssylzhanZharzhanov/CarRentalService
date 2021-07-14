@@ -4,6 +4,7 @@ import (
 	"context"
 	"gitlab.com/zharzhanov/region/models"
 	"gitlab.com/zharzhanov/region/pkg/repository"
+	"go.mongodb.org/mongo-driver/bson"
 	"time"
 )
 
@@ -22,8 +23,8 @@ func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.Advert) 
 	return s.repo.CreateAdvert(ctx, advert)
 }
 
-func (s *AdvertService) GetAllAdverts(ctx context.Context) ([]models.Advert, error) {
-	return s.repo.GetAllAdverts(ctx)
+func (s *AdvertService) GetAllAdverts(ctx context.Context, filter bson.M) ([]models.Advert, error) {
+	return s.repo.GetAllAdverts(ctx, filter)
 }
 
 func (s *AdvertService) GetAdvertById(ctx context.Context, id string)  (*models.Advert, error) {

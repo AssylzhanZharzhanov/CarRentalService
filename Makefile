@@ -27,3 +27,4 @@ migrateup:
 migratedown:
 	 migrate -path ./schema -database "postgres://postgres:qwerty@localhost:5432/postgres?sslmode=disable" down
 
+.DEFAULT_GOAL := run

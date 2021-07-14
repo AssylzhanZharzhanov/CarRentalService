@@ -32,7 +32,7 @@ services:
             MONGO_INITDB_ROOT_PASSWORD: mongo
             MONGO_DATA_DIR: json
 #        volumes:
-#            - database:/data/db
+#            - db:/data/db
 
     mongo-express:
         image: mongo-express

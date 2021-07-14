@@ -4,6 +4,7 @@ import (
 	"context"
 	"gitlab.com/zharzhanov/region/models"
 	"gitlab.com/zharzhanov/region/pkg/repository"
+	"go.mongodb.org/mongo-driver/bson"
 )
 
 type Users interface {
@@ -17,7 +18,7 @@ type Authentication interface {
 
 type Adverts interface {
 	CreateAdvert(ctx context.Context, advert models.Advert) (string, error)
-	GetAllAdverts(ctx context.Context) ([]models.Advert, error)
+	GetAllAdverts(ctx context.Context, filter bson.M) ([]models.Advert, error)
 	GetAdvertById(ctx context.Context, id string) (*models.Advert, error)
 	UpdateAdvert(ctx context.Context, id string , advert models.UpdateAdvertInput) error
 	DeleteAdvert(ctx context.Context, id string) error
