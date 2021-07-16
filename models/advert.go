@@ -10,7 +10,9 @@ type Advert struct {
 	ID               primitive.ObjectID `json:"_id" bson:"_id,omitempty"`
 	City             string             `json:"city" bson:"city"`
 	Category         string             `json:"category" bson:"category" form:"category"`
+	Phone            string             `json:"phone" bson:"phone"`
 	Title            string             `json:"title" bson:"title" form:"title"`
+	TitleSearch      []string           `json:"title_search" bson:"title_search"`
 	Description      string             `json:"description" bson:"description" form:"description"`
 	RentType         string             `json:"rent_type" bson:"rent_type" form:"rent_type"`
 	Price            int                `json:"price" bson:"price" form:"price"`

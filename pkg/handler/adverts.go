@@ -1,11 +1,13 @@
 package handler
 
 import (
+	"net/http"
+	"strconv"
+	"strings"
+
 	"github.com/gin-gonic/gin"
 	"gitlab.com/zharzhanov/region/models"
 	"go.mongodb.org/mongo-driver/bson"
-	"net/http"
-	"strconv"
 )
 
 func (h *Handler) createAdvert(c *gin.Context) {
@@ -26,10 +28,10 @@ func (h *Handler) createAdvert(c *gin.Context) {
 }
 
 type Filter struct {
-	City string `json:"city" bson:"city,omitempty"`
+	City     string `json:"city" bson:"city,omitempty"`
 	Category string `json:"category" bson:"category,omitempty"`
 	RentType string `json:"rent_type" bson:"rent_type,omitempty"`
-	Price int `json:"price" bson:"price,omitempty"`
+	Price    int    `json:"price" bson:"price,omitempty"`
 }
 
 func (h *Handler) getAllAdverts(c *gin.Context) {
@@ -49,12 +51,10 @@ func (h *Handler) getAllAdverts(c *gin.Context) {
 	}
 
 	if title := c.Query("title"); title != "" {
-		query["title"] = bson.M{
-
-		}
+		query["title_search"] = bson.M{"$regex": "^" + strings.ToLower(title)}
 	}
 
-	if c.Query("minPrice") != "" && c.Query("maxPrice") != ""  {
+	if c.Query("minPrice") != "" && c.Query("maxPrice") != "" {
 
 		minPrice, _ := strconv.Atoi(c.Query("minPrice"))
 		maxPrice, _ := strconv.Atoi(c.Query("maxPrice"))

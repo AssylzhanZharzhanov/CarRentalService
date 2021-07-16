@@ -1,9 +1,9 @@
 package models
 
 type User struct {
-	id int32 `json:"id" bson:"id"`
-	FirstName string `json:"firstName" bson:"first_name"`
+	Id         int32  `json:"id" bson:"id"`
+	FirstName  string `json:"firstName" bson:"first_name"`
 	SecondName string `json:"secondName" bson:"second_name"`
-	Username string `json:"username"bson:"username"`
-	Password string `json:"password" bson:"password"`
+	Username   string `json:"username" bson:"username"`
+	Password   string `json:"password" bson:"password"`
 }

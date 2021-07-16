@@ -1,23 +1,25 @@
 package main
 
 import (
+	"log"
+
 	"gitlab.com/zharzhanov/region"
 	"gitlab.com/zharzhanov/region/database/mongo"
 	"gitlab.com/zharzhanov/region/pkg/handler"
 	"gitlab.com/zharzhanov/region/pkg/repository"
 	"gitlab.com/zharzhanov/region/pkg/service"
-	"log"
 )
 
 func main() {
 
 	db := mongo.NewMongoDB(mongo.Config{
-		MongoUser: "mongo",
+		MongoUser:     "mongo",
 		MongoPassword: "mongo",
-		MongoPort: "27017",
-		MongoHost: "mongo",
-		DbName: "region",
+		MongoPort:     "27017",
+		MongoHost:     "mongo",
+		DbName:        "region",
 	})
+	mongo.CreateIndexes(db)
 
 	repos := repository.NewRepository(db)
 	services := service.NewService(repos)
