@@ -12,16 +12,16 @@ before_script:
   - echo deploy
   - go version
 
-test:
-  stage: test
-  tags:
-    - dev-server
-    - prod-server
-  variables:
-    GIT_CLEAN_FLAGS: -x -f -e data/**
-  script:
-    - echo test is started
-    - go test -v ./...
+#test:
+#  stage: test
+#  tags:
+#    - dev-server
+#    - prod-server
+#  variables:
+#    GIT_CLEAN_FLAGS: -x -f -e data/**
+#  script:
+#    - echo test is started
+#    - go test -v ./...
 
 build:
   stage: build
