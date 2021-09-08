@@ -1,6 +1,12 @@
+image: docker
+
+services:
+  - docker:dind
+
 stages:
   - test
-  - deploy 
+  - build
+  - deploy
 
 before_script:
   - echo deploy
@@ -9,33 +15,39 @@ before_script:
 test:
   stage: test
   tags:
-    - dev
+    - dev-server
+    - prod-server
+  variables:
+    GIT_CLEAN_FLAGS: -x -f -e data/**
   script:
     - echo test is started
     - go test -v ./...
 
-deploy-to-dev:
-  stage: deploy  
+build:
+  stage: build
+  tags:
+    - dev-server
+  variables:
+    GIT_CLEAN_FLAGS: -x -f -e data/**
   script:
-    - echo deploy on dev server
-    - docker stop server
-    - docker rm server
-    - make run
+    - docker image prune -f
+    - docker-compose build
+
+dev_server:
+  stage: deploy
+  script:
+    - docker-compose up -d
+    - docker-compose restart mongo && docker-compose restart server
   only:
     - developer
   tags:
-    - dev
+    - dev-server
 
 deploy-to-prod:
   stage: deploy
-  tags: 
-    - meetup-prod
+  tags:
+    - prod-server
   only:
     - master
   script:
     - echo deploy on prod server
-    - docker stop server
-    - docker rm server
-    - make run
-
-# push -> test -> build image docker -> push to dockerhub -> download and launch image

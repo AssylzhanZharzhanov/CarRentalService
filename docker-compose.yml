@@ -1,6 +1,18 @@
 version: '3.4'
 
 services:
+    nginx:
+        container_name: nginx
+        build:
+            context: ./
+            dockerfile: ./nginx/Dockerfile
+        ports:
+            - 80:80
+            - 443:443
+        restart: always
+        depends_on:
+            - server
+        command: "nginx -g 'daemon off;'"
 
     server:
         container_name: server
@@ -11,15 +23,6 @@ services:
         depends_on: 
             - mongo
             - mongo-express
-
-    nginx:
-        container_name: nginx
-        build:
-            context: ./
-            dockerfile: ./nginx/Dockerfile
-        ports:
-            - 80:80
-            - 443:443
 
     mongo:
         container_name: mongo

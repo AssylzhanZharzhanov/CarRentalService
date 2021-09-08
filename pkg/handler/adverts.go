@@ -51,7 +51,7 @@ func (h *Handler) getAllAdverts(c *gin.Context) {
 	}
 
 	if title := c.Query("title"); title != "" {
-		query["title_search"] = bson.M{"$regex": "^" + strings.ToLower(title)}
+		query["title_search"] = bson.M{"$regex": "[" + strings.ToLower(title) + "]"}
 	}
 
 	if c.Query("minPrice") != "" && c.Query("maxPrice") != "" {

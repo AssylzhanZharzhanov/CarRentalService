@@ -48,7 +48,7 @@ func (r *AdvertMongo) GetAdvertById(ctx context.Context, id string) (*models.Adv
 	err := r.db.FindOne(ctx,bson.M{"_id": objId}).Decode(&advert)
 
 	if err != nil {
-		return nil, nil
+		return nil, err
 	}
 
 	return models.ToAdvert(advert), nil
@@ -61,7 +61,7 @@ func (r *AdvertMongo) UpdateAdvert(ctx context.Context, id string, advert models
 		return err
 	}
 
-	return  nil
+	return nil
 }
 
 func (r *AdvertMongo) DeleteAdvert(ctx context.Context, id string) error {
