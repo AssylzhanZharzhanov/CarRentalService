@@ -8,10 +8,6 @@ stages:
   - build
   - deploy
 
-before_script:
-  - echo deploy
-  - go version
-
 #test:
 #  stage: test
 #  tags:
