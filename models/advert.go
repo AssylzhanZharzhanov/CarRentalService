@@ -8,6 +8,7 @@ import (
 
 type Advert struct {
 	ID               primitive.ObjectID `json:"_id" bson:"_id,omitempty"`
+	Status           string             `json:"status" bson:"status"`
 	City             string             `json:"city" bson:"city"`
 	Category         string             `json:"category" bson:"category" form:"category"`
 	Phone            string             `json:"phone" bson:"phone"`
@@ -19,7 +20,8 @@ type Advert struct {
 	Images           []string           `json:"images" bson:"images" form:"images"`
 	HasAdvertisement bool               `json:"has_advertisement" bson:"has_advertisement,omitempty"`
 	Advertisement    Advertisement      `json:"advertisement" bson:"advertisement,omitempty"`
-	Feedbacks        []Feedback         `json:"feedbacks,omitempty" bson:"feedbacks,omitempty"`
+	Feedbacks        []Feedback         `json:"feedbacks" bson:"feedbacks,omitempty"`
+	TotalRating      float64            `json:"total_rating" bson:"total_rating"`
 	CreatedAt        time.Time          `json:"createdAt" bson:"createdAt,omitempty"`
 }
 
@@ -33,6 +35,8 @@ func ToAdvert(advert *Advert) *Advert {
 		Price:            advert.Price,
 		Images:           advert.Images,
 		HasAdvertisement: advert.HasAdvertisement,
+		Feedbacks: 		  advert.Feedbacks,
+		TotalRating:      advert.TotalRating,
 		CreatedAt:        advert.CreatedAt,
 	}
 }

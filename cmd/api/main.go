@@ -10,6 +10,13 @@ import (
 	"gitlab.com/zharzhanov/region/pkg/service"
 )
 
+// @title Swagger Region.app Объявления API
+// @version 1.0
+// @description REST API for Region.app Объявления.
+// @termsOfService http://swagger.io/terms/
+
+// @host localhost
+// @BasePath /
 func main() {
 
 	db := mongo.NewMongoDB(mongo.Config{

@@ -1,0 +1,10 @@
+basePath: /
+host: localhost
+info:
+  contact: {}
+  description: REST API for Region.app Объявления.
+  termsOfService: http://swagger.io/terms/
+  title: Swagger Region.app Объявления API
+  version: "1.0"
+paths: {}
+swagger: "2.0"

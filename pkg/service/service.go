@@ -34,7 +34,7 @@ type Images interface {
 }
 
 type Feedback interface {
-	AddFeedback(ctx context.Context, feedback models.Feedback) error
+	AddFeedback(ctx context.Context, feedback models.Feedback, advertId string) error
 }
 
 type Category interface {
@@ -49,6 +49,7 @@ type Service struct {
 	Users
 	Images
 	Search
+	Feedback
 }
 
 func NewService(repos *repository.Repository) *Service {
@@ -57,5 +58,6 @@ func NewService(repos *repository.Repository) *Service {
 		Adverts:        NewAdvertService(repos),
 		Images:         NewImageService(repos),
 		Search:         NewSearchService(repos),
+		Feedback: 		NewFeedbackService(repos),
 	}
 }

@@ -2,6 +2,9 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/swaggo/gin-swagger"
+	"github.com/swaggo/gin-swagger/swaggerFiles"
+	_ "gitlab.com/zharzhanov/region/docs"
 	"gitlab.com/zharzhanov/region/pkg/service"
 )
 
@@ -15,6 +18,8 @@ func NewHandler(service *service.Service) *Handler {
 
 func (h *Handler) InitRoutes() *gin.Engine {
 	router := gin.New()
+
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	auth := router.Group("/auth")
 	{
@@ -41,6 +46,23 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			adverts.PUT("/:id", h.updateAdvert)
 			adverts.DELETE("/:id", h.deleteAdvert)
 		}
+
+		feedback := api.Group("/feedback")
+		{
+			feedback.POST("/", h.addFeedback)
+			//feedback.GET("/:id",h.)
+		}
+
+		//bookmark := api.Group("/bookmark")
+		//{
+		//	bookmark.POST("/")
+		//	bookmark.GET("/")
+		//}
+		//
+		//filters := api.Group("/")
+		//{
+		//	filters.GET("/")
+		//}
 
 		images := api.Group("/images")
 		{

@@ -8,9 +8,18 @@ import (
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
+const (
+	advertsCollection = "adverts"
+)
+
 type Authentication interface {
 	CreateUser(ctx context.Context, user models.User) (string, error)
 	GetUser(ctx context.Context, user models.User) (string, error)
+}
+
+type Feedback interface {
+	AddFeedback(ctx context.Context, feedback models.Feedback, advertId string) error
+	UpdateRating(ctx context.Context, advertId string) error
 }
 
 type Adverts interface {
@@ -40,13 +49,15 @@ type Repository struct {
 	Users
 	Images
 	Search
+	Feedback
 }
 
 func NewRepository(db *mongo.Database) *Repository {
 	return &Repository{
 		Authentication: NewAuthMongo(db),
-		Adverts:        NewAdvertMongo(db, "adverts"),
-		Images:         NewImageMongo(db, "adverts"),
-		Search:         NewSearchMongo(db, "adverts"),
+		Adverts:        NewAdvertMongo(db, advertsCollection),
+		Images:         NewImageMongo(db, advertsCollection),
+		Search:         NewSearchMongo(db, advertsCollection),
+		Feedback:       NewFeedbackMongo(db, advertsCollection),
 	}
 }

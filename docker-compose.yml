@@ -6,23 +6,24 @@ services:
         build:
             context: ./
             dockerfile: ./nginx/Dockerfile
+        restart: always
         ports:
             - 80:80
-            - 443:443
-        restart: always
         depends_on:
             - server
+            - mongo-express
         command: "nginx -g 'daemon off;'"
 
     server:
         container_name: server
         build: ./
-        command: ./app
-        ports: 
-            - 8000:8000
-        depends_on: 
+        volumes:
+            - ./:/app:z
+        depends_on:
             - mongo
             - mongo-express
+        ports:
+            - 8000:8000
 
     mongo:
         container_name: mongo

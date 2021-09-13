@@ -2,7 +2,7 @@ FROM golang:alpine
 
 RUN apk --no-cache add ca-certificates
 
-WORKDIR /root/
+WORKDIR /app/
 
 COPY . .
 
