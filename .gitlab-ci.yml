@@ -28,7 +28,7 @@ build:
   script:
     - docker image prune -f
     - docker-compose stop server && docker-compose rm -f server
-    - docker-compose build server
+    - sudo docker-compose build server
 
 dev_server:
   stage: deploy
