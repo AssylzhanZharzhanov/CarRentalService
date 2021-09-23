@@ -2,6 +2,7 @@ package service
 
 import (
 	"context"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"strings"
 	"time"
 
@@ -20,6 +21,7 @@ func NewAdvertService(repo *repository.Repository) *AdvertService {
 
 func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.Advert) (string, error) {
 	advert.CreatedAt = time.Now()
+	advert.Images = []primitive.ObjectID{}
 	advert.HasAdvertisement = false
 	advert.TitleSearch = strings.Fields(strings.ToLower(advert.Title))
 	return s.repo.CreateAdvert(ctx, advert)

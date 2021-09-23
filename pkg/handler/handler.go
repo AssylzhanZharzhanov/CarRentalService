@@ -50,7 +50,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 		feedback := api.Group("/feedback")
 		{
 			feedback.POST("/", h.addFeedback)
-			//feedback.GET("/:id",h.)
+			feedback.GET("/:id",h.getFeedback)
 		}
 
 		//bookmark := api.Group("/bookmark")
@@ -58,7 +58,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 		//	bookmark.POST("/")
 		//	bookmark.GET("/")
 		//}
-		//
+
 		//filters := api.Group("/")
 		//{
 		//	filters.GET("/")
@@ -66,8 +66,9 @@ func (h *Handler) InitRoutes() *gin.Engine {
 
 		images := api.Group("/images")
 		{
-			images.POST("/", h.UploadImages)
-			images.GET("/", h.getImageById)
+			images.POST("/", h.uploadImage)
+			images.GET("/:id", h.getImageById)
+			images.DELETE("/", h.deleteImage)
 		}
 	}
 

@@ -11,6 +11,10 @@ import (
 type Users interface {
 }
 
+type Bookmarks interface {
+	GetBookmarkAdverts(userId string) (models.Advert, error)
+}
+
 type Authentication interface {
 	SignUp(ctx context.Context, user models.User) (string, error)
 	SignIn(ctx context.Context, user models.User) (string, error)
@@ -29,17 +33,20 @@ type Search interface {
 }
 
 type Images interface {
-	UploadImage(urls []string) error
-	GetImageById(ctx context.Context, id string) error
+	UploadImage(ctx context.Context, advertId string, url string) error
+	UploadMultipleImages(ctx context.Context, urls []string) error
+	GetImageById(ctx context.Context, id string) (models.Image, error)
+	DeleteImage(ctx context.Context, imageId string, advertId string) error
 }
 
 type Feedback interface {
 	AddFeedback(ctx context.Context, feedback models.Feedback, advertId string) error
+	GetFeedbackByUserId(ctx context.Context, feedbackId string) (*models.Feedback, error)
 }
 
 type Category interface {
 	AddCategory(ctx context.Context, category models.Category) error
-	GetCategories(ctx context.Context) error
+	GetCategories(ctx context.Context) (models.Category, error)
 	DeleteCategory(ctx context.Context, id string) error
 }
 
@@ -50,6 +57,7 @@ type Service struct {
 	Images
 	Search
 	Feedback
+	Category
 }
 
 func NewService(repos *repository.Repository) *Service {
@@ -59,5 +67,6 @@ func NewService(repos *repository.Repository) *Service {
 		Images:         NewImageService(repos),
 		Search:         NewSearchService(repos),
 		Feedback: 		NewFeedbackService(repos),
+		Category:       NewCategoryService(repos),
 	}
 }

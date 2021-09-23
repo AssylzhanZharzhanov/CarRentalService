@@ -2,11 +2,13 @@ version: '3.4'
 
 services:
     nginx:
-        container_name: nginx
+        container_name: region_nginx
         build:
             context: ./
             dockerfile: ./nginx/Dockerfile
         restart: always
+        volumes:
+            - ./static:/var/www/html/static
         ports:
             - 80:80
         depends_on:
@@ -15,7 +17,7 @@ services:
         command: "nginx -g 'daemon off;'"
 
     server:
-        container_name: server
+        container_name: region_server
         build: ./
         volumes:
             - ./:/app:z
@@ -26,7 +28,7 @@ services:
             - 8000:8000
 
     mongo:
-        container_name: mongo
+        container_name: region_mongo
         image: mongo
         restart: always
         ports:

@@ -63,11 +63,11 @@ func (h *Handler) getAllAdverts(c *gin.Context) {
 	}
 
 	adverts, err := h.service.GetAllAdverts(c.Request.Context(), query)
-
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 		return
 	}
+
 
 	c.JSON(http.StatusOK, adverts)
 }
@@ -76,7 +76,6 @@ func (h *Handler) getAdvertById(c *gin.Context) {
 	id := c.Param("id")
 
 	advert, err := h.service.GetAdvertById(c.Request.Context(), id)
-
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 		return

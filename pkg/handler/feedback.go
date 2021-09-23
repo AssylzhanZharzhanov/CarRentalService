@@ -18,9 +18,23 @@ func (h *Handler) addFeedback(c *gin.Context) {
 
 	err := h.service.AddFeedback(c.Request.Context(), feedback, advertId)
 	if err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, err.Error())
+		newErrorResponse(c, http.StatusNotFound, err.Error())
 		return
 	}
 
 	c.JSON(http.StatusOK, "ok")
+}
+
+
+func (h *Handler) getFeedback( c *gin.Context) {
+	feedbackId := c.Query("feedbackId")
+
+	feedback, err := h.service.GetFeedbackByUserId(c.Request.Context(), feedbackId)
+
+	if err != nil {
+		newErrorResponse(c, http.StatusNotFound, err.Error())
+		return
+	}
+
+	c.JSON(http.StatusOK, feedback)
 }

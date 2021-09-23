@@ -10,6 +10,7 @@ import (
 
 const (
 	advertsCollection = "adverts"
+	imageCollection = "images"
 )
 
 type Authentication interface {
@@ -39,8 +40,15 @@ type Users interface {
 }
 
 type Images interface {
-	UploadImage(urls []string) error
-	GetImageById(ctx context.Context, id string) error
+	UploadImage(ctx context.Context, advertId string, url string) error
+	DeleteImage(ctx context.Context, imageId string, advertId string) error
+	GetImageById(ctx context.Context, id string) (models.Image, error)
+}
+
+type Category interface {
+	AddCategory(ctx context.Context, category models.Category) error
+	GetCategories(ctx context.Context) (models.Category, error)
+	DeleteCategory(ctx context.Context, id string) error
 }
 
 type Repository struct {
@@ -50,14 +58,16 @@ type Repository struct {
 	Images
 	Search
 	Feedback
+	Category
 }
 
 func NewRepository(db *mongo.Database) *Repository {
 	return &Repository{
 		Authentication: NewAuthMongo(db),
 		Adverts:        NewAdvertMongo(db, advertsCollection),
-		Images:         NewImageMongo(db, advertsCollection),
+		Images:         NewImageMongo(db),
 		Search:         NewSearchMongo(db, advertsCollection),
 		Feedback:       NewFeedbackMongo(db, advertsCollection),
+		Category:       NewCategoryRepository(db),
 	}
 }

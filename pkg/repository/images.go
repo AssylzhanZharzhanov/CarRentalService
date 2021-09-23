@@ -2,21 +2,59 @@ package repository
 
 import (
 	"context"
+	"gitlab.com/zharzhanov/region/models"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
 type ImageMongo struct {
-	db *mongo.Collection
+	db *mongo.Database
 }
 
-func (i *ImageMongo) UploadImage(urls []string) error {
-	panic("implement me")
+func (r *ImageMongo) DeleteImage(ctx context.Context, imageId string, advertId string) error {
+	advertObjId, _ := primitive.ObjectIDFromHex(advertId)
+	imageObjId, _ := primitive.ObjectIDFromHex(imageId)
+
+	_, err := r.db.Collection(advertsCollection).UpdateOne(ctx, bson.M{"_id": advertObjId}, bson.M{"$pull": bson.M{"images": imageObjId}})
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
-func (i *ImageMongo) GetImageById(ctx context.Context, id string) error {
-	panic("implement me")
+func (r *ImageMongo) UploadImage(ctx context.Context, advertId string, url string) error {
+	objId, _ := primitive.ObjectIDFromHex(advertId)
+
+	obj := bson.M{"url": url}
+	res, err := r.db.Collection(imageCollection).InsertOne(ctx, obj)
+	if err != nil {
+		return err
+	}
+
+	_, err = r.db.Collection(advertsCollection).UpdateOne(ctx, bson.M{"_id": objId},  bson.M{"$push": bson.M{"images": res.InsertedID}})
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
 
-func NewImageMongo(db *mongo.Database, collection string) *ImageMongo {
-	return &ImageMongo{db: db.Collection(collection)}
+func (r *ImageMongo) GetImageById(ctx context.Context, id string) (models.Image, error) {
+	objId, _ := primitive.ObjectIDFromHex(id)
+
+	var image models.Image
+
+	err := r.db.Collection(imageCollection).FindOne(ctx, bson.M{"_id":objId }).Decode(&image)
+
+	if err != nil {
+		return image, err
+	}
+
+	return image, nil
+}
+
+func NewImageMongo(db *mongo.Database) *ImageMongo {
+	return &ImageMongo{db: db}
 }

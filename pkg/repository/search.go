@@ -15,11 +15,9 @@ func NewSearchMongo(db *mongo.Database, collection string) *SearchMongo {
 }
 
 func (r *SearchMongo) GetCarModels(ctx context.Context) error {
-
 	return nil
 }
 
 func (r *SearchMongo) SpellChecker() error {
-
 	return nil
 }

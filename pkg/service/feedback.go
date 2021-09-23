@@ -4,13 +4,19 @@ import (
 	"context"
 	"gitlab.com/zharzhanov/region/models"
 	"gitlab.com/zharzhanov/region/pkg/repository"
+	"time"
 )
 
 type FeedbackService struct {
 	repo repository.Feedback
 }
 
+func (s *FeedbackService) GetFeedbackByUserId(ctx context.Context, feedbackId string) (*models.Feedback, error) {
+	panic("implement me")
+}
+
 func (s *FeedbackService) AddFeedback(ctx context.Context, feedback models.Feedback, advertId string) error {
+	feedback.CreatedAt = time.Now()
 	err := s.repo.AddFeedback(ctx, feedback, advertId)
 
 	if err != nil {

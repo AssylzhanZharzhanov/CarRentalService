@@ -7,7 +7,7 @@ import (
 )
 
 type Advert struct {
-	ID               primitive.ObjectID `json:"_id" bson:"_id,omitempty"`
+	ID               primitive.ObjectID `json:"id" bson:"_id,omitempty"`
 	Status           string             `json:"status" bson:"status"`
 	City             string             `json:"city" bson:"city"`
 	Category         string             `json:"category" bson:"category" form:"category"`
@@ -17,7 +17,7 @@ type Advert struct {
 	Description      string             `json:"description" bson:"description" form:"description"`
 	RentType         string             `json:"rent_type" bson:"rent_type" form:"rent_type"`
 	Price            int                `json:"price" bson:"price" form:"price"`
-	Images           []string           `json:"images" bson:"images" form:"images"`
+	Images           []primitive.ObjectID `json:"images" bson:"images" form:"images"`
 	HasAdvertisement bool               `json:"has_advertisement" bson:"has_advertisement,omitempty"`
 	Advertisement    Advertisement      `json:"advertisement" bson:"advertisement,omitempty"`
 	Feedbacks        []Feedback         `json:"feedbacks" bson:"feedbacks,omitempty"`
@@ -47,7 +47,6 @@ type UpdateAdvertInput struct {
 	Description      string        `json:"description" bson:"description"`
 	RentType         string        `json:"rent_type" bson:"rent_type"`
 	Price            int32         `json:"price" bson:"price"`
-	Images           []string      `json:"images" bson:"images"`
 	HasAdvertisement bool          `json:"has_advertisement" bson:"has_advertisement,omitempty"`
 	Advertisement    Advertisement `json:"advertisement" bson:"advertisement,omitempty"`
 	Feedbacks        []Feedback    `json:"feedbacks,omitempty" bson:"feedbacks,omitempty"`
