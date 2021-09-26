@@ -18,7 +18,11 @@ services:
 
     server:
         container_name: region_server
-        build: ./
+        env_file:
+            -   ./configs/config.yml
+        build:
+            context: ./
+            dockerfile: ./Dockerfile
         volumes:
             - ./:/app:z
         depends_on:

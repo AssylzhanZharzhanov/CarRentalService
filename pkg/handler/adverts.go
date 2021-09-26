@@ -10,10 +10,21 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 )
 
+//@Summary Create Advert
+// @Tags digest
+// @Description create advert
+// @ID create-advert
+// @Accept json
+// @Produce json
+// @Param input body models.Advert true "digest body"
+// @Success 200 {integer} integer
+// @Failure 400,404 {object} errorResponse
+// @Failure 500 {object} errorResponse
+// @Failure default {object} errorResponse
+// @Router /api/digest [post]
 func (h *Handler) createAdvert(c *gin.Context) {
 	var advert models.Advert
-
-	if err := c.BindJSON(&advert); err != nil {
+	if err := c.Bind(&advert); err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 		return
 	}

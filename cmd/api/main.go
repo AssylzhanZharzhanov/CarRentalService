@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"gitlab.com/zharzhanov/region"
 	"gitlab.com/zharzhanov/region/database/mongo"
@@ -20,11 +21,11 @@ import (
 func main() {
 
 	db := mongo.NewMongoDB(mongo.Config{
-		MongoUser:     "mongo",
-		MongoPassword: "mongo",
-		MongoPort:     "27017",
-		MongoHost:     "mongo",
-		DbName:        "region",
+		MongoUser:     os.Getenv("mongo_user"),
+		MongoPassword: os.Getenv("mongo_password"),
+		MongoPort:     os.Getenv("mongo_port"),
+		MongoHost:     os.Getenv("mongo_host"),
+		DbName:        os.Getenv("mongo_db"),
 	})
 	mongo.CreateIndexes(db)
 

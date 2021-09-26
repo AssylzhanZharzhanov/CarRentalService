@@ -25,6 +25,16 @@ type Advert struct {
 	CreatedAt        time.Time          `json:"createdAt" bson:"createdAt,omitempty"`
 }
 
+type AdvertInput struct {
+	Title            string             `json:"title" bson:"title" form:"title"`
+	City             string             `json:"city" bson:"city" form:"city"`
+	Category         string             `json:"category" bson:"category" form:"category"`
+	Phone            string             `json:"phone" bson:"phone" form:"phone"`
+	Description      string             `json:"description" bson:"description" form:"description"`
+	RentType         string             `json:"rent_type" bson:"rent_type" form:"rent_type"`
+	Price            int                `json:"price" bson:"price" form:"price"`
+}
+
 func ToAdvert(advert *Advert) *Advert {
 	return &Advert{
 		ID:               advert.ID,

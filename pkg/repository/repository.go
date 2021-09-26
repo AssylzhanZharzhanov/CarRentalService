@@ -68,6 +68,6 @@ func NewRepository(db *mongo.Database) *Repository {
 		Images:         NewImageMongo(db),
 		Search:         NewSearchMongo(db, advertsCollection),
 		Feedback:       NewFeedbackMongo(db, advertsCollection),
-		Category:       NewCategoryRepository(db),
+		Category:       NewFilterRepository(db),
 	}
 }

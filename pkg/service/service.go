@@ -67,6 +67,6 @@ func NewService(repos *repository.Repository) *Service {
 		Images:         NewImageService(repos),
 		Search:         NewSearchService(repos),
 		Feedback: 		NewFeedbackService(repos),
-		Category:       NewCategoryService(repos),
+		Category:       NewFilterService(repos),
 	}
 }

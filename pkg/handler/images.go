@@ -10,21 +10,19 @@ import (
 	"path/filepath"
 )
 
-//const staticFileHost = "http://161.35.196.24/image/"
-const staticFileHost = "http://localhost/image"
+const staticFileHost = "http://161.35.196.24/static/"
+//const staticFileHost = "http://localhost/static"
 
 func (h *Handler) uploadImage(c *gin.Context) {
 	advertId := c.Query("advertId")
 
 	file, err := c.FormFile("image")
-
 	if err != nil {
 		newErrorResponse(c, http.StatusNotFound, err.Error())
 		return
 	}
 
 	fileName := filepath.Base(file.Filename)
-
 	newFileName := uuid.New().String() + fileName
 	dst := path.Join("./static", newFileName)
 	if err := c.SaveUploadedFile(file, dst); err != nil {
