@@ -15,6 +15,5 @@ func NewSearchService(repository *repository.Repository) *SearchService {
 }
 
 func (s *SearchService) GetCarModels(ctx context.Context) error {
-
 	return s.repo.GetCarModels(ctx)
 }

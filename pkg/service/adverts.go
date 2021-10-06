@@ -2,13 +2,11 @@ package service
 
 import (
 	"context"
-	"go.mongodb.org/mongo-driver/bson/primitive"
-	"strings"
-	"time"
-
 	"gitlab.com/zharzhanov/region/models"
 	"gitlab.com/zharzhanov/region/pkg/repository"
 	"go.mongodb.org/mongo-driver/bson"
+	"strings"
+	"time"
 )
 
 type AdvertService struct {
@@ -19,14 +17,20 @@ func NewAdvertService(repo *repository.Repository) *AdvertService {
 	return &AdvertService{repo: repo.Adverts}
 }
 
-func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.Advert) (string, error) {
-	advert.Images = []primitive.ObjectID{}
+func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.AdvertInput, imageUrl string) (string, error) {
 
 	advert.CreatedAt = time.Now()
 	advert.HasAdvertisement = false
 	advert.TitleSearch = strings.Fields(strings.ToLower(advert.Title))
 
-	return s.repo.CreateAdvert(ctx, advert)
+	advertId, err := s.repo.CreateAdvert(ctx, advert)
+	if err != nil {
+		return "", err
+	}
+
+	_ = s.repo.UploadImage(ctx, advertId, imageUrl)
+
+	return advertId, nil
 }
 
 func (s *AdvertService) GetAllAdverts(ctx context.Context, filter bson.M) ([]models.Advert, error) {

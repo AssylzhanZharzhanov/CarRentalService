@@ -18,14 +18,17 @@ func NewHandler(service *service.Service) *Handler {
 
 func (h *Handler) InitRoutes() *gin.Engine {
 	router := gin.New()
-	//router.Use(cors.Default())
+
 	router.Use(CORSMiddleware())
+
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	auth := router.Group("/auth")
 	{
 		auth.POST("/sign-up", h.signUp)
 		auth.POST("/sign-in", h.signIn)
+		auth.POST("/code", h.generateCode)
+		auth.POST("/code/verify", h.verifyCode)
 	}
 
 	api := router.Group("/api")

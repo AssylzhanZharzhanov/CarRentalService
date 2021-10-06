@@ -2,36 +2,55 @@ package handler
 
 import (
 	"net/http"
+	"path"
+	"path/filepath"
 	"strconv"
 	"strings"
 
 	"github.com/gin-gonic/gin"
+	"github.com/google/uuid"
 	"gitlab.com/zharzhanov/region/models"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
-//@Summary Create Advert
-// @Tags digest
+// @Summary Create Advert
+// @Tags adverts
 // @Description create advert
 // @ID create-advert
-// @Accept json
+// @Accept mpfd
 // @Produce json
-// @Param input body models.Advert true "digest body"
+// @Param input body models.AdvertInput true "advert body"
 // @Success 200 {integer} integer
 // @Failure 400,404 {object} errorResponse
 // @Failure 500 {object} errorResponse
 // @Failure default {object} errorResponse
-// @Router /api/digest [post]
+// @Router /api/adverts [post]
 func (h *Handler) createAdvert(c *gin.Context) {
-	var advert models.Advert
-	if err := c.Bind(&advert); err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, err.Error())
+	advert := models.AdvertInput{}
+	if err := c.ShouldBind(&advert); err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, inputError)
 		return
 	}
 
-	id, err := h.service.CreateAdvert(c.Request.Context(), advert)
+	file, err := c.FormFile("images")
 	if err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, err.Error())
+		newErrorResponse(c, http.StatusNotFound, inputError)
+		return
+	}
+
+	fileName := filepath.Base(file.Filename)
+	newFileName := uuid.New().String() + fileName
+	dst := path.Join("./static", newFileName)
+	if err := c.SaveUploadedFile(file, dst); err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, saveFileError)
+		return
+	}
+
+	imageUrl := staticFileHost + newFileName
+
+	id, err := h.service.CreateAdvert(c.Request.Context(), advert, imageUrl)
+	if err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, createObjectError)
 		return
 	}
 
@@ -45,6 +64,23 @@ type Filter struct {
 	Price    int    `json:"price" bson:"price,omitempty"`
 }
 
+// @Summary Get all adverts
+// @Tags adverts
+// @Description get all adverts
+// @ID get-all-adverts
+// @Accept json
+// @Produce json
+// @Param city path string true "City"
+// @Param category path string true "Category"
+// @Param rent_type path string true "Rent type"
+// @Param minPrice path string true "Minimum price"
+// @Param maxPrice path string true "Maximum price"
+// @Param title path string true "Title"
+// @Success 200 {array} models.Advert
+// @Failure 400,404 {object} errorResponse
+// @Failure 500 {object} errorResponse
+// @Failure default {object} errorResponse
+// @Router /api/adverts [get]
 func (h *Handler) getAllAdverts(c *gin.Context) {
 
 	query := bson.M{}
@@ -75,10 +111,9 @@ func (h *Handler) getAllAdverts(c *gin.Context) {
 
 	adverts, err := h.service.GetAllAdverts(c.Request.Context(), query)
 	if err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, err.Error())
+		newErrorResponse(c, http.StatusInternalServerError, notFoundError)
 		return
 	}
-
 
 	c.JSON(http.StatusOK, adverts)
 }
@@ -88,7 +123,7 @@ func (h *Handler) getAdvertById(c *gin.Context) {
 
 	advert, err := h.service.GetAdvertById(c.Request.Context(), id)
 	if err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, err.Error())
+		newErrorResponse(c, http.StatusNotFound, notFoundError)
 		return
 	}
 
@@ -100,7 +135,7 @@ func (h *Handler) updateAdvert(c *gin.Context) {
 
 	var newAdvert models.UpdateAdvertInput
 	if err := c.BindJSON(&newAdvert); err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, err.Error())
+		newErrorResponse(c, http.StatusInternalServerError, inputError)
 		return
 	}
 

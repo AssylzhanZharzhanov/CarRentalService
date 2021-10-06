@@ -9,15 +9,17 @@ import (
 )
 
 type AdvertMongo struct {
-	db *mongo.Collection
+	db *mongo.Database
 }
 
-func NewAdvertMongo(db *mongo.Database, collection string) *AdvertMongo {
-	return &AdvertMongo{db:db.Collection(collection)}
+func NewAdvertMongo(db *mongo.Database, advertCollection string) *AdvertMongo {
+	return &AdvertMongo{
+		db:db,
+	}
 }
 
-func (r *AdvertMongo) CreateAdvert(ctx context.Context, advert models.Advert) (string, error) {
-	res, err := r.db.InsertOne(ctx, advert)
+func (r *AdvertMongo) CreateAdvert(ctx context.Context, advert models.AdvertInput) (string, error) {
+	res, err := r.db.Collection(advertsCollection).InsertOne(ctx, advert)
 
 	if err != nil {
 		return "", err
@@ -26,10 +28,27 @@ func (r *AdvertMongo) CreateAdvert(ctx context.Context, advert models.Advert) (s
 	return res.InsertedID.(primitive.ObjectID).Hex(), nil
 }
 
-func (r *AdvertMongo) GetAllAdverts(ctx context.Context, filter bson.M) ([]models.Advert, error) {
-	var adverts []models.Advert
+func (r *AdvertMongo) UploadImage(ctx context.Context, advertId string, url string) error {
+	objId, _ := primitive.ObjectIDFromHex(advertId)
 
-	cur, err := r.db.Find(ctx, filter)
+	obj := bson.M{"url": url}
+	res, err := r.db.Collection(imageCollection).InsertOne(ctx, obj)
+	if err != nil {
+		return err
+	}
+
+	_, err = r.db.Collection(advertsCollection).UpdateOne(ctx, bson.M{"_id": objId},  bson.M{"$push": bson.M{"images": res.InsertedID}})
+	if err != nil {
+		return err
+	}
+
+	return err
+}
+
+func (r *AdvertMongo) GetAllAdverts(ctx context.Context, filter bson.M) ([]models.Advert, error) {
+	adverts := make([]models.Advert, 0)
+
+	cur, err := r.db.Collection(advertsCollection).Find(ctx, filter)
 	if err != nil {
 		return nil, err
 	}
@@ -45,7 +64,7 @@ func (r *AdvertMongo) GetAdvertById(ctx context.Context, id string) (*models.Adv
 	objId, _ := primitive.ObjectIDFromHex(id)
 
 	var advert *models.Advert
-	err := r.db.FindOne(ctx,bson.M{"_id": objId}).Decode(&advert)
+	err := r.db.Collection(advertsCollection).FindOne(ctx,bson.M{"_id": objId}).Decode(&advert)
 
 	if err != nil {
 		return nil, err
@@ -56,7 +75,7 @@ func (r *AdvertMongo) GetAdvertById(ctx context.Context, id string) (*models.Adv
 func (r *AdvertMongo) UpdateAdvert(ctx context.Context, id string, advert models.UpdateAdvertInput) error {
 	objId, _ := primitive.ObjectIDFromHex(id)
 
-	_, err := r.db.UpdateOne(ctx, bson.D{{"_id", objId}},  bson.M{ "$set": advert})
+	_, err := r.db.Collection(advertsCollection).UpdateOne(ctx, bson.D{{"_id", objId}},  bson.M{ "$set": advert})
 	if err != nil {
 		return err
 	}
@@ -67,7 +86,7 @@ func (r *AdvertMongo) UpdateAdvert(ctx context.Context, id string, advert models
 func (r *AdvertMongo) DeleteAdvert(ctx context.Context, id string) error {
 	objId, _ := primitive.ObjectIDFromHex(id)
 
-	_, err := r.db.DeleteOne(ctx, bson.D{{"_id", objId}})
+	_, err := r.db.Collection(advertsCollection).DeleteOne(ctx, bson.D{{"_id", objId}})
 	if err != nil {
 		return err
 	}

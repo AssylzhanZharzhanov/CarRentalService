@@ -26,13 +26,17 @@ type Advert struct {
 }
 
 type AdvertInput struct {
-	Title            string             `json:"title" bson:"title" form:"title"`
-	City             string             `json:"city" bson:"city" form:"city"`
-	Category         string             `json:"category" bson:"category" form:"category"`
-	Phone            string             `json:"phone" bson:"phone" form:"phone"`
-	Description      string             `json:"description" bson:"description" form:"description"`
-	RentType         string             `json:"rent_type" bson:"rent_type" form:"rent_type"`
-	Price            int                `json:"price" bson:"price" form:"price"`
+	Title            string             ` bson:"title" form:"title" binding:"required"`
+	City             string             ` bson:"city" form:"city" binding:"required"`
+	Category         string             ` bson:"category" form:"category" binding:"required"`
+	Phone            string             ` bson:"phone" form:"phone" binding:"required"`
+	Description      string             ` bson:"description" form:"description" binding:"required"`
+	RentType         string             ` bson:"rent_type" form:"rent_type" binding:"required"`
+	Price            int                ` bson:"price" form:"price" binding:"required"`
+	Image            primitive.ObjectID ` bson:"image" form:"image"`
+	HasAdvertisement bool               `json:"has_advertisement" bson:"has_advertisement,omitempty"`
+	TitleSearch      []string           `json:"title_search" bson:"title_search"`
+	CreatedAt        time.Time          `json:"createdAt" bson:"createdAt,omitempty"`
 }
 
 func ToAdvert(advert *Advert) *Advert {

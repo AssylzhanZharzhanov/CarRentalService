@@ -18,6 +18,7 @@ require (
 	github.com/swaggo/gin-swagger v1.3.1 // indirect
 	github.com/swaggo/swag v1.7.1 // indirect
 	github.com/urfave/cli v1.20.0 // indirect
+	github.com/vonage/vonage-go-sdk v0.13.1 // indirect
 	go.mongodb.org/mongo-driver v1.7.2
 	golang.org/x/net v0.0.0-20210907225631-ff17edfbf26d // indirect
 	golang.org/x/sys v0.0.0-20210906170528-6f6e22806c34 // indirect

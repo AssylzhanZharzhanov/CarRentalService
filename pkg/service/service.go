@@ -16,12 +16,14 @@ type Bookmarks interface {
 }
 
 type Authentication interface {
+	VerifyCode(ctx context.Context, code string) error
+	SendSMS(ctx context.Context, phone string) (string, error)
 	SignUp(ctx context.Context, user models.User) (string, error)
 	SignIn(ctx context.Context, user models.User) (string, error)
 }
 
 type Adverts interface {
-	CreateAdvert(ctx context.Context, advert models.Advert) (string, error)
+	CreateAdvert(ctx context.Context, advert models.AdvertInput, imageUrl string) (string, error)
 	GetAllAdverts(ctx context.Context, filter bson.M) ([]models.Advert, error)
 	GetAdvertById(ctx context.Context, id string) (*models.Advert, error)
 	UpdateAdvert(ctx context.Context, id string, advert models.UpdateAdvertInput) error
