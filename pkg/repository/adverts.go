@@ -28,16 +28,20 @@ func (r *AdvertMongo) CreateAdvert(ctx context.Context, advert models.AdvertInpu
 	return res.InsertedID.(primitive.ObjectID).Hex(), nil
 }
 
-func (r *AdvertMongo) UploadImage(ctx context.Context, advertId string, url string) error {
+func (r *AdvertMongo) UploadImage(ctx context.Context, advertId string, urls []string) error {
 	objId, _ := primitive.ObjectIDFromHex(advertId)
 
-	obj := bson.M{"url": url}
-	res, err := r.db.Collection(imageCollection).InsertOne(ctx, obj)
+	objList := []interface{}{}
+	for url := range urls {
+		objList = append(objList, bson.M{"url": url})
+	}
+
+	res, err := r.db.Collection(imageCollection).InsertMany(ctx, objList)
 	if err != nil {
 		return err
 	}
 
-	_, err = r.db.Collection(advertsCollection).UpdateOne(ctx, bson.M{"_id": objId},  bson.M{"$push": bson.M{"images": res.InsertedID}})
+	_, err = r.db.Collection(advertsCollection).UpdateOne(ctx, bson.M{"_id": objId},  bson.M{"$push": bson.M{"images": bson.M{"$each": res.InsertedIDs}}})
 	if err != nil {
 		return err
 	}

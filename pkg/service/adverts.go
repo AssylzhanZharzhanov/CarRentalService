@@ -17,7 +17,7 @@ func NewAdvertService(repo *repository.Repository) *AdvertService {
 	return &AdvertService{repo: repo.Adverts}
 }
 
-func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.AdvertInput, imageUrl string) (string, error) {
+func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.AdvertInput, imageUrl []string) (string, error) {
 
 	advert.CreatedAt = time.Now()
 	advert.HasAdvertisement = false

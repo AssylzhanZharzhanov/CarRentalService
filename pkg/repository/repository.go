@@ -17,7 +17,7 @@ type Authentication interface {
 	CreateUser(ctx context.Context, user models.User) (string, error)
 	GetUser(ctx context.Context, user models.User) (string, error)
 	CreateCode(ctx context.Context, code models.Code)  error
-	VerifyCode(ctx context.Context, code string) error
+	VerifyCode(ctx context.Context, code string) (models.Code, error)
 }
 
 type Feedback interface {
@@ -31,7 +31,7 @@ type Adverts interface {
 	GetAdvertById(ctx context.Context, id string) (*models.Advert, error)
 	UpdateAdvert(ctx context.Context, id string, advert models.UpdateAdvertInput) error
 	DeleteAdvert(ctx context.Context, id string) error
-	UploadImage(ctx context.Context, advertId string, url string) error
+	UploadImage(ctx context.Context, advertId string, url []string) error
 }
 
 type Search interface {

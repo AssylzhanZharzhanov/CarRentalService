@@ -4,11 +4,12 @@ import (
 	"context"
 	"gitlab.com/zharzhanov/region/models"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
-	"log"
 )
 
 const (
+	usersCollection = "users"
 	codeCollection = "codes"
 )
 
@@ -22,18 +23,22 @@ func NewAuthMongo(db *mongo.Database) *AuthMongo {
 	}
 }
 
-func (r *AuthMongo) VerifyCode(ctx context.Context, code string) error {
-	//var code models.Code
-	err := r.db.Collection(codeCollection).FindOne(ctx, bson.M{"code": code})
-	log.Println(err)
+func (r *AuthMongo) VerifyCode(ctx context.Context, code string) (models.Code, error) {
+	var output models.Code
+	err := r.db.Collection(codeCollection).FindOne(ctx, bson.M{"code": code}).Decode(&output)
 	if err != nil {
-		return err.Err()
+		return output, err
 	}
-	return nil
+	return output, err
 }
 
 func (r *AuthMongo) CreateUser(ctx context.Context, user models.User) (string, error) {
-	return "", nil
+	//	Временно
+	res, err := r.db.Collection(usersCollection).InsertOne(ctx, user)
+	if err != nil {
+		return "", err
+	}
+	return res.InsertedID.(primitive.ObjectID).Hex(), nil
 }
 
 func (r *AuthMongo) GetUser(ctx context.Context, user models.User) (string, error) {

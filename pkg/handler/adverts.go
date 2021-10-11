@@ -1,14 +1,14 @@
 package handler
 
 import (
+	"fmt"
+	"log"
 	"net/http"
-	"path"
 	"path/filepath"
 	"strconv"
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/google/uuid"
 	"gitlab.com/zharzhanov/region/models"
 	"go.mongodb.org/mongo-driver/bson"
 )
@@ -32,23 +32,28 @@ func (h *Handler) createAdvert(c *gin.Context) {
 		return
 	}
 
-	file, err := c.FormFile("images")
+	form, err := c.MultipartForm()
 	if err != nil {
-		newErrorResponse(c, http.StatusNotFound, inputError)
+		c.String(http.StatusBadRequest, fmt.Sprintf("get form err: %s", err.Error()))
 		return
 	}
 
-	fileName := filepath.Base(file.Filename)
-	newFileName := uuid.New().String() + fileName
-	dst := path.Join("./static", newFileName)
-	if err := c.SaveUploadedFile(file, dst); err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, saveFileError)
-		return
+	files := form.File["images[]"]
+
+	var fileNames []string
+	var imageUrls []string
+	for _, file := range files {
+		filename := filepath.Base(file.Filename)
+		log.Println(filename)
+		fileNames = append(fileNames, filename)
+		imageUrls = append(imageUrls, staticFileHost + filename)
+		if err := c.SaveUploadedFile(file, filename); err != nil {
+			c.String(http.StatusBadRequest, fmt.Sprintf("upload file err: %s", err.Error()))
+			return
+		}
 	}
 
-	imageUrl := staticFileHost + newFileName
-
-	id, err := h.service.CreateAdvert(c.Request.Context(), advert, imageUrl)
+	id, err := h.service.CreateAdvert(c.Request.Context(), advert, imageUrls)
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, createObjectError)
 		return

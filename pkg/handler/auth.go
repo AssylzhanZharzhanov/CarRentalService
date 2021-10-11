@@ -14,14 +14,14 @@ func (h *Handler) verifyCode (c *gin.Context) {
 		return
 	}
 
-	err := h.service.VerifyCode(c.Request.Context(), code.Code)
+	token, err := h.service.VerifyCode(c.Request.Context(), code.Code)
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, notFoundError)
 		return
 	}
 
 	c.JSON(http.StatusOK, map[string]interface{}{
-		"status": "verified",
+		"token": token,
 	})
 }
 
@@ -76,3 +76,4 @@ func (h *Handler) signIn(c *gin.Context) {
 
 	c.JSON(http.StatusOK, token)
 }
+

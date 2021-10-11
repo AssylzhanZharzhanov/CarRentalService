@@ -14,7 +14,7 @@ type FeedbackMongo struct {
 
 func (r *FeedbackMongo) AddFeedback(ctx context.Context, feedback models.Feedback, advertId string) error {
 	objId, _ := primitive.ObjectIDFromHex(advertId)
-
+	feedback.Id = primitive.NewObjectID()
 	_, err := r.db.UpdateByID(ctx, objId, bson.D{{"$push", bson.D{{"feedbacks", feedback}}}})
 
 	if err != nil {
