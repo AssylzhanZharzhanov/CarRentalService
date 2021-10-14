@@ -37,6 +37,7 @@ type Adverts interface {
 	UpdateAdvert(ctx context.Context, id string, advert models.UpdateAdvertInput) error
 	DeleteAdvert(ctx context.Context, id string) error
 	UploadImage(ctx context.Context, advertId string, url []string) error
+	GetMyAdverts(ctx context.Context, userId string) ([]models.AdvertOutput, error)
 }
 
 type Search interface {

@@ -5,6 +5,7 @@ import (
 	"gitlab.com/zharzhanov/region/models"
 	"gitlab.com/zharzhanov/region/pkg/repository"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"strings"
 	"time"
 )
@@ -13,12 +14,19 @@ type AdvertService struct {
 	repo repository.Adverts
 }
 
+func (s *AdvertService) GetMyAdverts(ctx context.Context, userId string) ([]models.AdvertOutput, error) {
+	return s.repo.GetMyAdverts(ctx, userId)
+}
+
 func NewAdvertService(repo *repository.Repository) *AdvertService {
 	return &AdvertService{repo: repo.Adverts}
 }
 
 func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.AdvertInput, imageUrl []string, userId string) (string, error) {
 
+	userObjId, _ := primitive.ObjectIDFromHex(userId)
+
+	advert.UserID = userObjId
 	advert.CreatedAt = time.Now()
 	advert.HasAdvertisement = false
 	advert.TitleSearch = strings.Fields(strings.ToLower(advert.Title))

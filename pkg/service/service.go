@@ -17,6 +17,7 @@ type Adverts interface {
 	GetAdvertById(ctx context.Context, id string) (models.AdvertOutput, error)
 	UpdateAdvert(ctx context.Context, id string, advert models.UpdateAdvertInput) error
 	DeleteAdvert(ctx context.Context, id string) error
+	GetMyAdverts(ctx context.Context, userId string) ([]models.AdvertOutput, error)
 }
 
 type Bookmarks interface {

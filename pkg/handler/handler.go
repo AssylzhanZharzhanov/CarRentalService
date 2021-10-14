@@ -49,6 +49,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			adverts.GET("/:id", h.getAdvertById)
 			adverts.PUT("/:id", h.updateAdvert)
 			adverts.DELETE("/:id", h.deleteAdvert)
+			adverts.GET("/my", h.getUserAdverts)
 		}
 
 		feedback := api.Group("/feedback", h.GetUserIdentity)

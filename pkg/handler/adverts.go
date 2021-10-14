@@ -174,14 +174,18 @@ func (h *Handler) deleteAdvert(c *gin.Context) {
 	})
 }
 
-//func (h *Handler) getUserAdverts(c *gin.Context) {
-//	userId, err := getUserId(c)
-//	if err != nil {
-//		newErrorResponse(c, http.StatusInternalServerError, "user not found")
-//		return
-//	}
-//
-//	adverts, err := h.service.Adverts.
-//
-//
-//}
+func (h *Handler) getUserAdverts(c *gin.Context) {
+	userId, err := getUserId(c)
+	if err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, "user not found")
+		return
+	}
+
+	adverts, err := h.service.Adverts.GetMyAdverts(c.Request.Context(), userId)
+	if err != nil {
+		newErrorResponse(c, http.StatusNotFound, "user not found")
+		return
+	}
+
+	c.JSON(http.StatusOK, adverts)
+}

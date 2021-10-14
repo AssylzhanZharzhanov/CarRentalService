@@ -13,6 +13,25 @@ type AdvertMongo struct {
 	db *mongo.Database
 }
 
+func (r *AdvertMongo) GetMyAdverts(ctx context.Context, userId string) ([]models.AdvertOutput, error) {
+
+	userObjId, _ := primitive.ObjectIDFromHex(userId)
+	filter := bson.M{"user_id": userObjId}
+
+	adverts := make([]models.AdvertOutput, 0)
+
+	cur, err := r.db.Collection(advertsCollection).Find(ctx, filter)
+	if err != nil {
+		return adverts, err
+	}
+
+	if err = cur.All(ctx, &adverts); err != nil {
+		return adverts, err
+	}
+
+	return adverts, nil
+}
+
 func NewAdvertMongo(db *mongo.Database, advertCollection string) *AdvertMongo {
 	return &AdvertMongo{
 		db:db,
