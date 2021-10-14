@@ -36,7 +36,7 @@ type AdvertOutput struct {
 	Description      string             `json:"description" bson:"description" form:"description"`
 	RentType         string             `json:"rent_type" bson:"rent_type" form:"rent_type"`
 	Price            int                `json:"price" bson:"price" form:"price"`
-	Images           []primitive.ObjdectID `json:"images" bson:"images" form:"images"`
+	Images           []primitive.ObjectID `json:"images" bson:"images" form:"images"`
 	HasAdvertisement bool               `json:"has_advertisement" bson:"has_advertisement,omitempty"`
 	Advertisement    Advertisement      `json:"advertisement" bson:"advertisement,omitempty"`
 	Feedbacks        []Feedback         `json:"feedbacks" bson:"feedbacks,omitempty"`
