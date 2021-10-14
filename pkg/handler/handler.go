@@ -64,13 +64,36 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			bookmark.GET("/", h.getBookmarks)
 		}
 
-		//filters := api.Group("/filters")
-		//{
-		//	categories := filters.Group("/categories")
-		//	{
-		//		categories.GET("/")
-		//	}
-		//}
+		filters := api.Group("/filters")
+		{
+			categories := filters.Group("/categories")
+			{
+				categories.GET("/", h.getCategories)
+				categories.POST("/", h.addCategory)
+				categories.DELETE("/", h.deleteCategory)
+			}
+
+			cities := filters.Group("/cities")
+			{
+				cities.GET("/", h.getCities)
+				cities.POST("/", h.addCity)
+				cities.DELETE("/", h.deleteCity)
+			}
+
+			rentTypes := filters.Group("/rent_types")
+			{
+				rentTypes.GET("/", h.getRentTypes)
+				rentTypes.POST("/", h.addRentType)
+				rentTypes.DELETE("/", h.deleteRentType)
+			}
+
+			prices := filters.Group("/prices")
+			{
+				prices.GET("/", h.getPrice)
+				prices.POST("/", h.addPrice)
+				prices.DELETE("/", h.deletePrice)
+			}
+		}
 
 		images := api.Group("/images", h.GetUserIdentity)
 		{

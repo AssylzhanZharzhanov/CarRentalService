@@ -58,7 +58,19 @@ type Images interface {
 type Filters interface {
 	AddCategory(ctx context.Context, category models.Category) error
 	GetCategories(ctx context.Context) ([]models.Category, error)
-	DeleteCategory(ctx context.Context, id string) error
+	DeleteCategory(ctx context.Context, name string) error
+
+	AddCity(ctx context.Context, city models.City) error
+	GetCities(ctx context.Context) ([]models.City, error)
+	DeleteCity(ctx context.Context, name string) error
+
+	AddRentType(ctx context.Context, rentType models.RentTypes) error
+	GetRentTypes(ctx context.Context) ([]models.RentTypes, error)
+	DeleteRentType(ctx context.Context, name string) error
+
+	AddPrice(ctx context.Context, price models.Price) error
+	GetPrices(ctx context.Context) ([]models.Price, error)
+	DeletePrices(ctx context.Context, name string) error
 }
 
 type Repository struct {

@@ -1,14 +1,19 @@
 package models
 
 type Category struct {
-	//ID   primitive.ObjectID `json:"_id" bson:"_id,omitempty"`
 	Name string             `json:"name" bson:"name"`
 }
 
 type City struct {
-
+	Name string             `json:"name" bson:"name"`
 }
 
-type Filters struct {
+type RentTypes struct {
+	Name string             `json:"name" bson:"name"`
+}
 
+type Price struct {
+	Name string				`json:"name" bson:"name"`
+	Min  int  				`json:"min,omitempty" bson:"min"`
+	Max  int 				`json:"max,omitempty" bson:"max"`
 }

@@ -111,11 +111,6 @@ func (r *AdvertMongo) UploadImage(ctx context.Context, advertId string, urls []s
 		})
 	}
 
-	//res, err := r.db.Collection(imageCollection).InsertMany(ctx, objList)
-	//if err != nil {
-	//	return err
-	//}
-
 	res, err := r.db.Collection(advertsCollection).UpdateOne(ctx, filter, bson.M{"$push": bson.M{"images": bson.M{"$each": imageList}}})
 	if err != nil {
 		log.Println(err.Error())
