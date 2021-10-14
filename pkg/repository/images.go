@@ -16,7 +16,7 @@ func (r *ImageMongo) DeleteImage(ctx context.Context, imageId string, advertId s
 	advertObjId, _ := primitive.ObjectIDFromHex(advertId)
 	imageObjId, _ := primitive.ObjectIDFromHex(imageId)
 
-	_, err := r.db.Collection(advertsCollection).UpdateOne(ctx, bson.M{"_id": advertObjId}, bson.M{"$pull": bson.M{"images": imageObjId}})
+	_, err := r.db.Collection(advertsCollection).UpdateOne(ctx, bson.M{"_id": advertObjId}, bson.M{"$pull": bson.M{"images": bson.M{"_id": imageObjId}}})
 	if err != nil {
 		return err
 	}
@@ -27,13 +27,17 @@ func (r *ImageMongo) DeleteImage(ctx context.Context, imageId string, advertId s
 func (r *ImageMongo) UploadImage(ctx context.Context, advertId string, url string) error {
 	objId, _ := primitive.ObjectIDFromHex(advertId)
 
-	obj := bson.M{"url": url}
-	res, err := r.db.Collection(imageCollection).InsertOne(ctx, obj)
-	if err != nil {
-		return err
+	image := models.Image{
+		ID: primitive.NewObjectID(),
+		Url: url,
 	}
 
-	_, err = r.db.Collection(advertsCollection).UpdateOne(ctx, bson.M{"_id": objId},  bson.M{"$push": bson.M{"images": res.InsertedID}})
+	//res, err := r.db.Collection(imageCollection).InsertOne(ctx, image)
+	//if err != nil {
+	//	return err
+	//}
+
+	_, err := r.db.Collection(advertsCollection).UpdateOne(ctx, bson.M{"_id": objId},  bson.M{"$push": bson.M{"images": image}})
 	if err != nil {
 		return err
 	}
