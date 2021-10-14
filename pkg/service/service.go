@@ -12,7 +12,8 @@ type Users interface {
 }
 
 type Bookmarks interface {
-	GetBookmarkAdverts(userId string) (models.Advert, error)
+	AddUserBookmark(ctx context.Context, userId string, advertId string) error
+	GetUserBookmarks(ctx context.Context, userId string) ([]models.Advert, error)
 }
 
 type Authentication interface {
@@ -20,10 +21,11 @@ type Authentication interface {
 	SendSMS(ctx context.Context, phone string) (string, error)
 	SignUp(ctx context.Context, user models.User) (string, error)
 	SignIn(ctx context.Context, user models.User) (string, error)
+	ParseToken(accessToken string) (string, error)
 }
 
 type Adverts interface {
-	CreateAdvert(ctx context.Context, advert models.AdvertInput, imageUrl []string) (string, error)
+	CreateAdvert(ctx context.Context, advert models.AdvertInput, imageUrl []string, userId string) (string, error)
 	GetAllAdverts(ctx context.Context, filter bson.M) ([]models.Advert, error)
 	GetAdvertById(ctx context.Context, id string) (*models.Advert, error)
 	UpdateAdvert(ctx context.Context, id string, advert models.UpdateAdvertInput) error
@@ -46,20 +48,20 @@ type Feedback interface {
 	GetFeedbackByUserId(ctx context.Context, feedbackId string) (*models.Feedback, error)
 }
 
-type Category interface {
+type Filters interface {
 	AddCategory(ctx context.Context, category models.Category) error
-	GetCategories(ctx context.Context) (models.Category, error)
+	GetCategories(ctx context.Context) ([]models.Category, error)
 	DeleteCategory(ctx context.Context, id string) error
 }
 
 type Service struct {
 	Authentication
 	Adverts
-	Users
 	Images
 	Search
 	Feedback
-	Category
+	Filters
+	Bookmarks
 }
 
 func NewService(repos *repository.Repository) *Service {
@@ -69,6 +71,7 @@ func NewService(repos *repository.Repository) *Service {
 		Images:         NewImageService(repos),
 		Search:         NewSearchService(repos),
 		Feedback: 		NewFeedbackService(repos),
-		Category:       NewFilterService(repos),
+		Filters:        NewFilterService(repos),
+		Bookmarks:      NewBookmarkService(repos),
 	}
 }

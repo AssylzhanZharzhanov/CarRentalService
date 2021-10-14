@@ -2,7 +2,6 @@ package handler
 
 import (
 	"fmt"
-	"log"
 	"net/http"
 	"path/filepath"
 	"strconv"
@@ -44,7 +43,6 @@ func (h *Handler) createAdvert(c *gin.Context) {
 	var imageUrls []string
 	for _, file := range files {
 		filename := filepath.Base(file.Filename)
-		log.Println(filename)
 		fileNames = append(fileNames, filename)
 		imageUrls = append(imageUrls, staticFileHost + filename)
 		if err := c.SaveUploadedFile(file, filename); err != nil {
@@ -53,7 +51,13 @@ func (h *Handler) createAdvert(c *gin.Context) {
 		}
 	}
 
-	id, err := h.service.CreateAdvert(c.Request.Context(), advert, imageUrls)
+	userId, err := getUserId(c)
+	if err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, "user not found")
+		return
+	}
+
+	id, err := h.service.CreateAdvert(c.Request.Context(), advert, imageUrls, userId)
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, createObjectError)
 		return

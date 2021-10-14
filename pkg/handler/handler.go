@@ -33,7 +33,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 
 	api := router.Group("/api")
 	{
-		users := api.Group("/users")
+		users := api.Group("/users", h.GetUserIdentity)
 		{
 			users.POST("/", h.createUser)
 			users.GET("/", h.getAllUsers)
@@ -42,7 +42,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			users.DELETE("/:id", h.deleteUser)
 		}
 
-		adverts := api.Group("/adverts")
+		adverts := api.Group("/adverts", h.GetUserIdentity)
 		{
 			adverts.POST("/", h.createAdvert)
 			adverts.GET("/", h.getAllAdverts)
@@ -51,24 +51,24 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			adverts.DELETE("/:id", h.deleteAdvert)
 		}
 
-		feedback := api.Group("/feedback")
+		feedback := api.Group("/feedback", h.GetUserIdentity)
 		{
 			feedback.POST("/", h.addFeedback)
 			feedback.GET("/:id",h.getFeedback)
 		}
 
-		//bookmark := api.Group("/bookmark")
-		//{
-		//	bookmark.POST("/")
-		//	bookmark.GET("/")
-		//}
+		bookmark := api.Group("/bookmark", h.GetUserIdentity)
+		{
+			bookmark.POST("/", h.addBookmark)
+			bookmark.GET("/", h.getBookmarks)
+		}
 
 		//filters := api.Group("/")
 		//{
 		//	filters.GET("/")
 		//}
 
-		images := api.Group("/images")
+		images := api.Group("/images", h.GetUserIdentity)
 		{
 			images.POST("/", h.uploadImage)
 			images.GET("/:id", h.getImageById)

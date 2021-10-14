@@ -20,6 +20,11 @@ type Authentication interface {
 	VerifyCode(ctx context.Context, code string) (models.Code, error)
 }
 
+type Bookmarks interface {
+	AddUserBookmark(ctx context.Context, userId string, advertId string) error
+	GetUserBookmarks(ctx context.Context, userId string) ([]models.Advert, error)
+}
+
 type Feedback interface {
 	AddFeedback(ctx context.Context, feedback models.Feedback, advertId string) error
 	UpdateRating(ctx context.Context, advertId string) error
@@ -40,6 +45,7 @@ type Search interface {
 }
 
 type Users interface {
+
 }
 
 type Images interface {
@@ -48,9 +54,9 @@ type Images interface {
 	GetImageById(ctx context.Context, id string) (models.Image, error)
 }
 
-type Category interface {
+type Filters interface {
 	AddCategory(ctx context.Context, category models.Category) error
-	GetCategories(ctx context.Context) (models.Category, error)
+	GetCategories(ctx context.Context) ([]models.Category, error)
 	DeleteCategory(ctx context.Context, id string) error
 }
 
@@ -61,7 +67,8 @@ type Repository struct {
 	Images
 	Search
 	Feedback
-	Category
+	Filters
+	Bookmarks
 }
 
 func NewRepository(db *mongo.Database) *Repository {
@@ -71,6 +78,7 @@ func NewRepository(db *mongo.Database) *Repository {
 		Images:         NewImageMongo(db),
 		Search:         NewSearchMongo(db, advertsCollection),
 		Feedback:       NewFeedbackMongo(db, advertsCollection),
-		Category:       NewFilterRepository(db),
+		Filters:        NewFilterRepository(db),
+		Bookmarks:      NewBookmarkMongo(db),
 	}
 }

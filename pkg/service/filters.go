@@ -7,23 +7,25 @@ import (
 )
 
 type FilterService struct {
-
+	repo repository.Filters
 }
 
-func (c *FilterService) AddCategory(ctx context.Context, category models.Category) error {
-	panic("implement me")
+func (s *FilterService) AddCategory(ctx context.Context, category models.Category) error {
+	return s.repo.AddCategory(ctx, category)
 }
 
-func (c *FilterService) GetCategories(ctx context.Context) (models.Category, error) {
-	panic("implement me")
+func (s *FilterService) GetCategories(ctx context.Context) ([]models.Category, error) {
+	return s.repo.GetCategories(ctx)
 }
 
-func (c *FilterService) DeleteCategory(ctx context.Context, id string) error {
-	panic("implement me")
+func (s *FilterService) DeleteCategory(ctx context.Context, id string) error {
+	return s.repo.DeleteCategory(ctx, id)
 }
 
 func NewFilterService(repository *repository.Repository) *FilterService {
-	return &FilterService{}
+	return &FilterService{
+		repo: repository.Filters,
+	}
 }
 
 

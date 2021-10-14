@@ -8,6 +8,7 @@ import (
 
 type Advert struct {
 	ID               primitive.ObjectID `json:"id" bson:"_id,omitempty"`
+	UserID           primitive.ObjectID `json:"user_id" bson:"user_id"`
 	Status           string             `json:"status" bson:"status"`
 	City             string             `json:"city" bson:"city"`
 	Category         string             `json:"category" bson:"category" form:"category"`
@@ -25,8 +26,27 @@ type Advert struct {
 	CreatedAt        time.Time          `json:"createdAt" bson:"createdAt,omitempty"`
 }
 
+type AdvertOutput struct {
+	ID               primitive.ObjectID `json:"id" bson:"_id,omitempty"`
+	Status           string             `json:"status" bson:"status"`
+	City             string             `json:"city" bson:"city"`
+	Category         string             `json:"category" bson:"category" form:"category"`
+	Phone            string             `json:"phone" bson:"phone"`
+	Title            string             `json:"title" bson:"title" form:"title"`
+	Description      string             `json:"description" bson:"description" form:"description"`
+	RentType         string             `json:"rent_type" bson:"rent_type" form:"rent_type"`
+	Price            int                `json:"price" bson:"price" form:"price"`
+	Images           []primitive.ObjdectID `json:"images" bson:"images" form:"images"`
+	HasAdvertisement bool               `json:"has_advertisement" bson:"has_advertisement,omitempty"`
+	Advertisement    Advertisement      `json:"advertisement" bson:"advertisement,omitempty"`
+	Feedbacks        []Feedback         `json:"feedbacks" bson:"feedbacks,omitempty"`
+	TotalRating      float64            `json:"total_rating" bson:"total_rating"`
+	CreatedAt        time.Time          `json:"createdAt" bson:"createdAt,omitempty"`
+}
+
 type AdvertInput struct {
 	Title            string             ` bson:"title" form:"title" binding:"required"`
+	UserID           primitive.ObjectID `json:"user_id" bson:"user_id"`
 	City             string             ` bson:"city" form:"city" binding:"required"`
 	Category         string             ` bson:"category" form:"category" binding:"required"`
 	Phone            string             ` bson:"phone" form:"phone" binding:"required"`

@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"errors"
 	"github.com/gin-gonic/gin"
 	"net/http"
 	"strings"
@@ -8,6 +9,7 @@ import (
 
 const (
 	authorizationHeader = "Authorization"
+	userCtx             = "userId"
 )
 
 func CORSMiddleware() gin.HandlerFunc {
@@ -45,4 +47,26 @@ func (h *Handler) GetUserIdentity(c *gin.Context) {
 		return
 	}
 
+	userID, err := h.service.ParseToken(headerParts[1])
+
+	if err != nil {
+		newErrorResponse(c, http.StatusUnauthorized, err.Error())
+		return
+	}
+
+	c.Set("userId", userID)
+}
+
+func getUserId(c *gin.Context) (string, error) {
+	id, ok := c.Get(userCtx)
+	if !ok {
+		return "", errors.New("user not found")
+	}
+
+	userId, ok := id.(string)
+	if !ok {
+		return userId, errors.New("user id is of invalid type")
+	}
+
+	return userId, nil
 }
