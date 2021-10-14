@@ -3,11 +3,17 @@ package handler
 import (
 	"github.com/gin-gonic/gin"
 	"gitlab.com/zharzhanov/region/models"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"net/http"
 )
 
 func (h *Handler) addFeedback(c *gin.Context) {
-	// get user id from middleware
+	userId, err := getUserId(c)
+	if err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, "user not found")
+		return
+	}
+
 	advertId := c.Query("advertId")
 
 	var feedback models.Feedback
@@ -15,8 +21,10 @@ func (h *Handler) addFeedback(c *gin.Context) {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 		return
 	}
+	userObjId, _ := primitive.ObjectIDFromHex(userId)
+	feedback.UserId = userObjId
 
-	err := h.service.AddFeedback(c.Request.Context(), feedback, advertId)
+	err = h.service.AddFeedback(c.Request.Context(), feedback, advertId)
 	if err != nil {
 		newErrorResponse(c, http.StatusNotFound, err.Error())
 		return
