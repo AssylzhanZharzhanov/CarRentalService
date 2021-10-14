@@ -30,18 +30,18 @@ type AdvertOutput struct {
 	ID               primitive.ObjectID `json:"id" bson:"_id,omitempty"`
 	Status           string             `json:"status" bson:"status"`
 	City             string             `json:"city" bson:"city"`
-	Category         string             `json:"category" bson:"category" form:"category"`
+	Category         string             `json:"category" bson:"category"`
 	Phone            string             `json:"phone" bson:"phone"`
 	Title            string             `json:"title" bson:"title" form:"title"`
-	Description      string             `json:"description" bson:"description" form:"description"`
-	RentType         string             `json:"rent_type" bson:"rent_type" form:"rent_type"`
-	Price            int                `json:"price" bson:"price" form:"price"`
-	Images           []primitive.ObjectID `json:"images" bson:"images" form:"images"`
-	HasAdvertisement bool               `json:"has_advertisement" bson:"has_advertisement,omitempty"`
-	Advertisement    Advertisement      `json:"advertisement" bson:"advertisement,omitempty"`
-	Feedbacks        []Feedback         `json:"feedbacks" bson:"feedbacks,omitempty"`
+	Description      string             `json:"description" bson:"description"`
+	RentType         string             `json:"rent_type" bson:"rent_type"`
+	Price            int                `json:"price" bson:"price"`
+	Images           []Image 			`json:"images" bson:"images"`
+	//HasAdvertisement bool               `json:"has_advertisement" bson:"has_advertisement"`
+	//Advertisement    Advertisement      `json:"advertisement" bson:"advertisement,omitempty"`
+	Feedbacks        []Feedback         `json:"feedbacks" bson:"feedbacks"`
 	TotalRating      float64            `json:"total_rating" bson:"total_rating"`
-	CreatedAt        time.Time          `json:"createdAt" bson:"createdAt,omitempty"`
+	CreatedAt        time.Time          `json:"createdAt" bson:"createdAt"`
 }
 
 type AdvertInput struct {
@@ -53,7 +53,8 @@ type AdvertInput struct {
 	Description      string             ` bson:"description" form:"description" binding:"required"`
 	RentType         string             ` bson:"rent_type" form:"rent_type" binding:"required"`
 	Price            int                ` bson:"price" form:"price" binding:"required"`
-	Image            primitive.ObjectID ` bson:"image" form:"image"`
+	Images            []Image 			` bson:"images" form:"images"`
+	Feedbacks        []Feedback         `json:"feedbacks" bson:"feedbacks,omitempty"`
 	HasAdvertisement bool               `json:"has_advertisement" bson:"has_advertisement,omitempty"`
 	TitleSearch      []string           `json:"title_search" bson:"title_search"`
 	CreatedAt        time.Time          `json:"createdAt" bson:"createdAt,omitempty"`

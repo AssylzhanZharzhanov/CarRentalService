@@ -57,15 +57,18 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			feedback.GET("/:id",h.getFeedback)
 		}
 
-		bookmark := api.Group("/bookmark", h.GetUserIdentity)
+		bookmark := api.Group("/bookmarks", h.GetUserIdentity)
 		{
 			bookmark.POST("/", h.addBookmark)
 			bookmark.GET("/", h.getBookmarks)
 		}
 
-		//filters := api.Group("/")
+		//filters := api.Group("/filters")
 		//{
-		//	filters.GET("/")
+		//	categories := filters.Group("/categories")
+		//	{
+		//		categories.GET("/")
+		//	}
 		//}
 
 		images := api.Group("/images", h.GetUserIdentity)

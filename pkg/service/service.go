@@ -11,6 +11,14 @@ import (
 type Users interface {
 }
 
+type Adverts interface {
+	CreateAdvert(ctx context.Context, advert models.AdvertInput, imageUrl []string, userId string) (string, error)
+	GetAllAdverts(ctx context.Context, filter bson.M) ([]models.AdvertOutput, error)
+	GetAdvertById(ctx context.Context, id string) (models.AdvertOutput, error)
+	UpdateAdvert(ctx context.Context, id string, advert models.UpdateAdvertInput) error
+	DeleteAdvert(ctx context.Context, id string) error
+}
+
 type Bookmarks interface {
 	AddUserBookmark(ctx context.Context, userId string, advertId string) error
 	GetUserBookmarks(ctx context.Context, userId string) ([]models.Advert, error)
@@ -24,13 +32,6 @@ type Authentication interface {
 	ParseToken(accessToken string) (string, error)
 }
 
-type Adverts interface {
-	CreateAdvert(ctx context.Context, advert models.AdvertInput, imageUrl []string, userId string) (string, error)
-	GetAllAdverts(ctx context.Context, filter bson.M) ([]models.Advert, error)
-	GetAdvertById(ctx context.Context, id string) (*models.Advert, error)
-	UpdateAdvert(ctx context.Context, id string, advert models.UpdateAdvertInput) error
-	DeleteAdvert(ctx context.Context, id string) error
-}
 
 type Search interface {
 	GetCarModels(ctx context.Context) error

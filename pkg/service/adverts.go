@@ -22,6 +22,8 @@ func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.AdvertIn
 	advert.CreatedAt = time.Now()
 	advert.HasAdvertisement = false
 	advert.TitleSearch = strings.Fields(strings.ToLower(advert.Title))
+	advert.Feedbacks = make([]models.Feedback, 0)
+	advert.Images = make([]models.Image, 0)
 
 	advertId, err := s.repo.CreateAdvert(ctx, advert)
 	if err != nil {
@@ -33,11 +35,11 @@ func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.AdvertIn
 	return advertId, nil
 }
 
-func (s *AdvertService) GetAllAdverts(ctx context.Context, filter bson.M) ([]models.Advert, error) {
+func (s *AdvertService) GetAllAdverts(ctx context.Context, filter bson.M) ([]models.AdvertOutput, error) {
 	return s.repo.GetAllAdverts(ctx, filter)
 }
 
-func (s *AdvertService) GetAdvertById(ctx context.Context, id string) (*models.Advert, error) {
+func (s *AdvertService) GetAdvertById(ctx context.Context, id string) (models.AdvertOutput, error) {
 	return s.repo.GetAdvertById(ctx, id)
 }
 

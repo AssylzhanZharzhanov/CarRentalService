@@ -32,8 +32,8 @@ type Feedback interface {
 
 type Adverts interface {
 	CreateAdvert(ctx context.Context, advert models.AdvertInput) (string, error)
-	GetAllAdverts(ctx context.Context, filter bson.M) ([]models.Advert, error)
-	GetAdvertById(ctx context.Context, id string) (*models.Advert, error)
+	GetAllAdverts(ctx context.Context, filter bson.M) ([]models.AdvertOutput, error)
+	GetAdvertById(ctx context.Context, id string) (models.AdvertOutput, error)
 	UpdateAdvert(ctx context.Context, id string, advert models.UpdateAdvertInput) error
 	DeleteAdvert(ctx context.Context, id string) error
 	UploadImage(ctx context.Context, advertId string, url []string) error
