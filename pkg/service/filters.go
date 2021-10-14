@@ -10,6 +10,18 @@ type FilterService struct {
 	repo repository.Filters
 }
 
+func (s *FilterService) AddStatus(ctx context.Context, status models.Status) error {
+	panic("implement me")
+}
+
+func (s *FilterService) GetStatus(ctx context.Context) ([]models.Status, error) {
+	panic("implement me")
+}
+
+func (s *FilterService) DeleteStatus(ctx context.Context, name string) error {
+	panic("implement me")
+}
+
 func (s *FilterService) AddPrice(ctx context.Context, city models.Price) error {
 	return s.repo.AddPrice(ctx, city)
 }

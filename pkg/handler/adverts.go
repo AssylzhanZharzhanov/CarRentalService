@@ -2,6 +2,7 @@ package handler
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	"path/filepath"
 	"strconv"
@@ -102,6 +103,10 @@ func (h *Handler) getAllAdverts(c *gin.Context) {
 		query["category"] = category
 	}
 
+	if status := c.Query("status"); status != "" {
+		query["status"] = status
+	}
+
 	if rentType := c.Query("rent_type"); rentType != "" {
 		query["rent_type"] = rentType
 	}
@@ -111,12 +116,21 @@ func (h *Handler) getAllAdverts(c *gin.Context) {
 	}
 
 	if c.Query("minPrice") != "" && c.Query("maxPrice") != "" {
-
 		minPrice, _ := strconv.Atoi(c.Query("minPrice"))
 		maxPrice, _ := strconv.Atoi(c.Query("maxPrice"))
 
 		query["price"] = bson.M{"$gte": minPrice, "$lte": maxPrice}
+	} else if c.Query("minPrice") != "" &&  c.Query("maxPrice") == "" {
+		minPrice, _ := strconv.Atoi(c.Query("minPrice"))
+
+		query["price"] = bson.M{"$gte": minPrice}
+	} else if c.Query("minPrice") == "" &&  c.Query("maxPrice") != "" {
+		maxPrice, _ := strconv.Atoi(c.Query("maxPrice"))
+
+		query["price"] = bson.M{"$lte": maxPrice}
 	}
+
+	log.Println(query)
 
 	adverts, err := h.service.GetAllAdverts(c.Request.Context(), query)
 	if err != nil {

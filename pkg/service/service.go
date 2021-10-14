@@ -33,7 +33,6 @@ type Authentication interface {
 	ParseToken(accessToken string) (string, error)
 }
 
-
 type Search interface {
 	GetCarModels(ctx context.Context) error
 }
@@ -66,10 +65,10 @@ type Filters interface {
 	AddPrice(ctx context.Context, city models.Price) error
 	GetPrices(ctx context.Context) ([]models.Price, error)
 	DeletePrices(ctx context.Context, name string) error
-}
 
-type Statuses interface {
-	AddStatus(ctx context.Context, )
+	AddStatus(ctx context.Context, status models.Status) error
+	GetStatus(ctx context.Context) ([]models.Status, error)
+	DeleteStatus(ctx context.Context, name string) error
 }
 
 type Service struct {

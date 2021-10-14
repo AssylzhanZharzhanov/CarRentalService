@@ -51,7 +51,7 @@ func (r *AdvertMongo) CreateAdvert(ctx context.Context, advert models.AdvertInpu
 func (r *AdvertMongo) GetAllAdverts(ctx context.Context, filter bson.M) ([]models.AdvertOutput, error) {
 	adverts := make([]models.AdvertOutput, 0)
 
-	cur, err := r.db.Collection(advertsCollection).Find(ctx, bson.M{})
+	cur, err := r.db.Collection(advertsCollection).Find(ctx, filter)
 	if err != nil {
 		return adverts, err
 	}
@@ -111,13 +111,11 @@ func (r *AdvertMongo) UploadImage(ctx context.Context, advertId string, urls []s
 		})
 	}
 
-	res, err := r.db.Collection(advertsCollection).UpdateOne(ctx, filter, bson.M{"$push": bson.M{"images": bson.M{"$each": imageList}}})
+	_, err := r.db.Collection(advertsCollection).UpdateOne(ctx, filter, bson.M{"$push": bson.M{"images": bson.M{"$each": imageList}}})
 	if err != nil {
 		log.Println(err.Error())
 		return err
 	}
-
-	log.Println(res.UpsertedCount)
 
 	return err
 }

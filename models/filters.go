@@ -17,3 +17,7 @@ type Price struct {
 	Min  int  				`json:"min,omitempty" bson:"min"`
 	Max  int 				`json:"max,omitempty" bson:"max"`
 }
+
+type Status struct {
+	Name string `json:"name" bson:"name"`
+}
