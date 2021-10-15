@@ -19,7 +19,7 @@ type FilterRepository struct {
 }
 
 func (r *FilterRepository) AddRentType(ctx context.Context, rentType models.RentTypes) error {
-	_, err := r.db.Collection(priceCollection).InsertOne(ctx, rentType)
+	_, err := r.db.Collection(rentTypeCollection).InsertOne(ctx, rentType)
 	return err
 }
 
