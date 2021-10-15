@@ -5,7 +5,7 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(api-ads.region.app www.api-ads.region.app)
+domains=(api-ads.region.app)
 rsa_key_size=4096
 data_path="./data/certbot"
 email="hello@treelab.kz" # Adding a valid address is strongly recommended
