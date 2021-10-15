@@ -3,9 +3,7 @@ version: '3.4'
 services:
     nginx:
         container_name: region_nginx
-        build:
-            context: ./
-            dockerfile: ./nginx/Dockerfile
+        image: nginx:1.16-alpine
         restart: unless-stopped
         volumes:
             - ./nginx/conf.d:/etc/nginx/conf.d
