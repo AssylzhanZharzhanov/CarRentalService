@@ -87,4 +87,5 @@ type UpdateAdvertInput struct {
 	HasAdvertisement bool          `json:"has_advertisement,omitempty" bson:"has_advertisement,omitempty"`
 	Advertisement    Advertisement `json:"advertisement,omitempty" bson:"advertisement,omitempty"`
 	Feedbacks        []Feedback    `json:"feedbacks,omitempty" bson:"feedbacks,omitempty"`
+	Reason           string        `json:"reason,omitempty" bson:"reason,omitempty"`
 }

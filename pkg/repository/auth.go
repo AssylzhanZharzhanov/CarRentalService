@@ -17,12 +17,6 @@ type AuthMongo struct {
 	db *mongo.Database
 }
 
-func NewAuthMongo(db *mongo.Database) *AuthMongo {
-	return &AuthMongo{
-		db: db,
-	}
-}
-
 func (r *AuthMongo) VerifyCode(ctx context.Context, code string) (models.Code, error) {
 	var output models.Code
 	err := r.db.Collection(codeCollection).FindOne(ctx, bson.M{"code": code}).Decode(&output)
@@ -53,4 +47,9 @@ func (r *AuthMongo) CreateCode(ctx context.Context, code models.Code) error {
 	return err
 }
 
+func NewAuthMongo(db *mongo.Database) *AuthMongo {
+	return &AuthMongo{
+		db: db,
+	}
+}
 
