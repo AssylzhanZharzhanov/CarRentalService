@@ -43,14 +43,21 @@ func (s *AuthService) VerifyCode(ctx context.Context, code string) (string, erro
 		return "", err
 	}
 
-	user := models.User{
-		Phone:  output.Phone,
-		Bookmarks: make([]primitive.ObjectID, 0),
-	}
 
-	userID, err := s.repo.CreateUser(ctx, user)
+
+	userID, err := s.repo.GetUser(ctx, output.Phone)
 	if err != nil {
-		return "", err
+
+		user := models.User{
+			ID: primitive.NewObjectID(),
+			Phone:  output.Phone,
+			Bookmarks: make([]primitive.ObjectID, 0),
+		}
+
+		userID, err = s.repo.CreateUser(ctx, user)
+		if err != nil {
+			return "", err
+		}
 	}
 
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, &tokenClaims{
@@ -140,7 +147,6 @@ func (s *AuthService) SendSMS(ctx context.Context, phone string) (string, error)
 
 	err := s.repo.CreateCode(ctx, code)
 	if err != nil{
-		log.Println(err.Error())
 		return "", err
 	}
 
@@ -152,7 +158,7 @@ func (s *AuthService) SignIn(ctx context.Context, user models.User) (string, err
 }
 
 func (s *AuthService) SignUp(ctx context.Context, user models.User) (string, error) {
-	return s.repo.GetUser(ctx, user)
+	return s.repo.GetUser(ctx, user.Phone)
 }
 
 func generatePassword(password string)  string {

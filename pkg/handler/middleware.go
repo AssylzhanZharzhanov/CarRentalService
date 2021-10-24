@@ -3,6 +3,7 @@ package handler
 import (
 	"errors"
 	"github.com/gin-gonic/gin"
+	"log"
 	"net/http"
 	"strings"
 )
@@ -67,6 +68,8 @@ func getUserId(c *gin.Context) (string, error) {
 	if !ok {
 		return userId, errors.New("user id is of invalid type")
 	}
+
+	log.Printf("userId: %s", userId)
 
 	return userId, nil
 }

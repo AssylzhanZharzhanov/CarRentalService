@@ -15,7 +15,7 @@ const (
 
 type Authentication interface {
 	CreateUser(ctx context.Context, user models.User) (string, error)
-	GetUser(ctx context.Context, user models.User) (string, error)
+	GetUser(ctx context.Context, phone string) (string, error)
 	CreateCode(ctx context.Context, code models.Code)  error
 	VerifyCode(ctx context.Context, code string) (models.Code, error)
 }

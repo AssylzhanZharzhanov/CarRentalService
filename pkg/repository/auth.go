@@ -35,8 +35,11 @@ func (r *AuthMongo) CreateUser(ctx context.Context, user models.User) (string, e
 	return res.InsertedID.(primitive.ObjectID).Hex(), nil
 }
 
-func (r *AuthMongo) GetUser(ctx context.Context, user models.User) (string, error) {
-	return "", nil
+func (r *AuthMongo) GetUser(ctx context.Context, phone string) (string, error) {
+	user := models.User{}
+	err := r.db.Collection(usersCollection).FindOne(ctx, bson.M{"phone": phone}).Decode(&user)
+
+	return user.ID.Hex(), err
 }
 
 func (r *AuthMongo) CreateCode(ctx context.Context, code models.Code) error {

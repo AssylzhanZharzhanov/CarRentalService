@@ -16,7 +16,7 @@ type AdvertService struct {
 }
 
 const (
-	defaultStatusValue = "На рассмотрении"
+	defaultStatusValue = "На модерации"
 )
 
 func (s *AdvertService) GetMyAdverts(ctx context.Context, userId string) ([]models.AdvertOutput, error) {
