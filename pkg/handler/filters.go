@@ -177,3 +177,46 @@ func (h *Handler) deletePrice(c *gin.Context) {
 		"status": "ok",
 	})
 }
+
+func (h *Handler) getStatuses(c *gin.Context) {
+	statuses, err := h.service.GetStatus(c.Request.Context())
+
+	if err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, err.Error())
+		return
+	}
+
+	c.JSON(http.StatusOK, statuses)
+}
+
+func (h *Handler) addStatus(c *gin.Context) {
+	var status models.Status
+
+	if err := c.BindJSON(&status); err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, "bind error")
+		return
+	}
+
+	err := h.service.AddStatus(c.Request.Context(), status)
+	if err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, "can not add")
+		return
+	}
+
+	c.JSON(http.StatusOK, map[string]interface{}{
+		"status": "ok",
+	})
+}
+
+func (h *Handler) updateStatus(c *gin.Context) {
+	value := c.Query("value")
+	err := h.service.DeleteStatus(c.Request.Context(), value)
+	if err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, err.Error())
+		return
+	}
+
+	c.JSON(http.StatusOK, map[string]interface{}{
+		"status": "ok",
+	})
+}

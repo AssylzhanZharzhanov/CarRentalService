@@ -9,6 +9,7 @@ import (
 	"github.com/dgrijalva/jwt-go"
 	"gitlab.com/zharzhanov/region/models"
 	"gitlab.com/zharzhanov/region/pkg/repository"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"io"
 	"log"
 	"net/http"
@@ -42,7 +43,12 @@ func (s *AuthService) VerifyCode(ctx context.Context, code string) (string, erro
 		return "", err
 	}
 
-	userID, err := s.repo.CreateUser(ctx, models.User{Phone: output.Phone})
+	user := models.User{
+		Phone:  output.Phone,
+		Bookmarks: make([]primitive.ObjectID, 0),
+	}
+
+	userID, err := s.repo.CreateUser(ctx, user)
 	if err != nil {
 		return "", err
 	}
@@ -72,6 +78,7 @@ func (s *AuthService) ParseToken(accessToken string) (string, error) {
 	})
 
 	if err != nil {
+		log.Println(err.Error())
 		return "", err
 	}
 
@@ -139,8 +146,6 @@ func (s *AuthService) SendSMS(ctx context.Context, phone string) (string, error)
 
 	return generatedCode, nil
 }
-
-
 
 func (s *AuthService) SignIn(ctx context.Context, user models.User) (string, error) {
 	return s.repo.CreateUser(ctx, user)

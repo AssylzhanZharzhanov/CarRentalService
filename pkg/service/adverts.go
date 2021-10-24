@@ -14,6 +14,10 @@ type AdvertService struct {
 	repo repository.Adverts
 }
 
+const (
+	defaultStatusValue = "На рассмотрении"
+)
+
 func (s *AdvertService) GetMyAdverts(ctx context.Context, userId string) ([]models.AdvertOutput, error) {
 	return s.repo.GetMyAdverts(ctx, userId)
 }
@@ -32,6 +36,7 @@ func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.AdvertIn
 	advert.TitleSearch = strings.Fields(strings.ToLower(advert.Title))
 	advert.Feedbacks = make([]models.Feedback, 0)
 	advert.Images = make([]models.Image, 0)
+	advert.Status = defaultStatusValue
 
 	advertId, err := s.repo.CreateAdvert(ctx, advert)
 	if err != nil {

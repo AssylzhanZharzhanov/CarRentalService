@@ -11,15 +11,15 @@ type FilterService struct {
 }
 
 func (s *FilterService) AddStatus(ctx context.Context, status models.Status) error {
-	panic("implement me")
+	return s.repo.AddStatus(ctx, status)
 }
 
 func (s *FilterService) GetStatus(ctx context.Context) ([]models.Status, error) {
-	panic("implement me")
+	return s.repo.GetStatuses(ctx)
 }
 
 func (s *FilterService) DeleteStatus(ctx context.Context, name string) error {
-	panic("implement me")
+	return s.repo.DeleteStatus(ctx, name)
 }
 
 func (s *FilterService) AddPrice(ctx context.Context, city models.Price) error {

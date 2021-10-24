@@ -18,7 +18,7 @@ type Advert struct {
 	Description      string             `json:"description" bson:"description" form:"description"`
 	RentType         string             `json:"rent_type" bson:"rent_type" form:"rent_type"`
 	Price            int                `json:"price" bson:"price" form:"price"`
-	Images           []primitive.ObjectID `json:"images" bson:"images" form:"images"`
+	Images           []Image `json:"images" bson:"images" form:"images"`
 	HasAdvertisement bool               `json:"has_advertisement" bson:"has_advertisement,omitempty"`
 	Advertisement    Advertisement      `json:"advertisement" bson:"advertisement,omitempty"`
 	Feedbacks        []Feedback         `json:"feedbacks" bson:"feedbacks,omitempty"`
@@ -46,6 +46,7 @@ type AdvertOutput struct {
 
 type AdvertInput struct {
 	Title            string             ` bson:"title" form:"title" binding:"required"`
+	Status           string             `json:"status" bson:"status"`
 	UserID           primitive.ObjectID `json:"user_id" bson:"user_id"`
 	City             string             ` bson:"city" form:"city" binding:"required"`
 	Category         string             ` bson:"category" form:"category" binding:"required"`
@@ -77,6 +78,7 @@ func ToAdvert(advert *Advert) *Advert {
 }
 
 type UpdateAdvertInput struct {
+	Status           string        `json:"status" bson:"status"`
 	Category         string        `json:"category" bson:"category"`
 	Title            string        `json:"title" bson:"title"`
 	Description      string        `json:"description" bson:"description"`

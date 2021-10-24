@@ -93,6 +93,13 @@ func (h *Handler) InitRoutes() *gin.Engine {
 				prices.POST("/", h.addPrice)
 				prices.DELETE("/", h.deletePrice)
 			}
+
+			statuses := filters.Group("/statuses")
+			{
+				statuses.GET("/", h.getStatuses)
+				statuses.POST("/", h.addStatus)
+				statuses.PUT("/", h.updateStatus)
+			}
 		}
 
 		images := api.Group("/images", h.GetUserIdentity)
@@ -100,6 +107,11 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			images.POST("/", h.uploadImage)
 			images.GET("/:id", h.getImageById)
 			images.DELETE("/", h.deleteImage)
+		}
+
+		search := api.Group("/search")
+		{
+			search.GET("/", h.searchCarMark)
 		}
 	}
 

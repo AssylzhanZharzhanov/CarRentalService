@@ -2,7 +2,6 @@ package handler
 
 import (
 	"fmt"
-	"log"
 	"net/http"
 	"path/filepath"
 	"strconv"
@@ -129,8 +128,6 @@ func (h *Handler) getAllAdverts(c *gin.Context) {
 
 		query["price"] = bson.M{"$lte": maxPrice}
 	}
-
-	log.Println(query)
 
 	adverts, err := h.service.GetAllAdverts(c.Request.Context(), query)
 	if err != nil {

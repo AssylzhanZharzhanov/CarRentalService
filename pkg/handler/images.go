@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
-	"log"
 	"net/http"
 	"path"
 	"path/filepath"
@@ -56,7 +55,6 @@ func (h *Handler) UploadMultipleImages(c *gin.Context) {
 	var fileNames []string
 	for _, file := range files {
 		filename := filepath.Base(file.Filename)
-		log.Println(filename)
 		fileNames = append(fileNames, filename)
 		if err := c.SaveUploadedFile(file, filename); err != nil {
 			c.String(http.StatusBadRequest, fmt.Sprintf("upload file err: %s", err.Error()))

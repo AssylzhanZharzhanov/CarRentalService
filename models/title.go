@@ -2,6 +2,6 @@ package models
 
 type CarModels struct {
 	Model       string   `json:"model" bson:"model"`
-	ModelSearch []string `json:"modelSearch" bson:"modelSearch"`
+	Mark        string   `json:"mark" bson:"mark"`
 	Count       int      `json:"count" bson:"count"`
 }

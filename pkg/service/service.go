@@ -22,7 +22,7 @@ type Adverts interface {
 
 type Bookmarks interface {
 	AddUserBookmark(ctx context.Context, userId string, advertId string) error
-	GetUserBookmarks(ctx context.Context, userId string) ([]models.Advert, error)
+	GetUserBookmarks(ctx context.Context, userId string) ([]models.AdvertOutput, error)
 }
 
 type Authentication interface {
@@ -34,7 +34,7 @@ type Authentication interface {
 }
 
 type Search interface {
-	GetCarModels(ctx context.Context) error
+	GetCarModels(ctx context.Context, brand string) ([]models.CarModels, error)
 }
 
 type Images interface {

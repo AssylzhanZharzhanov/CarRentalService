@@ -27,7 +27,7 @@ func main() {
 		MongoHost:     os.Getenv("mongo_host"),
 		DbName:        os.Getenv("mongo_db"),
 	})
-	mongo.CreateIndexes(db)
+	//mongo.CreateIndexes(db)
 
 	repos := repository.NewRepository(db)
 	services := service.NewService(repos)

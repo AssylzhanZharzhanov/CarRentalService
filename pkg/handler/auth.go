@@ -16,7 +16,7 @@ func (h *Handler) verifyCode (c *gin.Context) {
 
 	token, err := h.service.VerifyCode(c.Request.Context(), code.Code)
 	if err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, notFoundError)
+		newErrorResponse(c, http.StatusNotFound, notFoundError)
 		return
 	}
 

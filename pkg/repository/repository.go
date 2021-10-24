@@ -22,7 +22,7 @@ type Authentication interface {
 
 type Bookmarks interface {
 	AddUserBookmark(ctx context.Context, userId string, advertId string) error
-	GetUserBookmarks(ctx context.Context, userId string) ([]models.Advert, error)
+	GetUserBookmarks(ctx context.Context, userId string) ([]models.AdvertOutput, error)
 }
 
 type Feedback interface {
@@ -42,7 +42,7 @@ type Adverts interface {
 
 type Search interface {
 	SpellChecker() error
-	GetCarModels(ctx context.Context) error
+	GetCarModels(ctx context.Context, brand string) ([]models.CarModels, error)
 }
 
 type Users interface {
@@ -71,6 +71,10 @@ type Filters interface {
 	AddPrice(ctx context.Context, price models.Price) error
 	GetPrices(ctx context.Context) ([]models.Price, error)
 	DeletePrices(ctx context.Context, name string) error
+
+	AddStatus(ctx context.Context, status models.Status) error
+	GetStatuses(ctx context.Context) ([]models.Status, error)
+	DeleteStatus(ctx context.Context, name string) error
 }
 
 type Repository struct {

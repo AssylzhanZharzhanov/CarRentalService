@@ -14,7 +14,7 @@ func (s *BookmarkService) AddUserBookmark(ctx context.Context, userId string, ad
 	return s.repo.AddUserBookmark(ctx, userId, advertId)
 }
 
-func (s *BookmarkService) GetUserBookmarks(ctx context.Context, userId string) ([]models.Advert, error) {
+func (s *BookmarkService) GetUserBookmarks(ctx context.Context, userId string) ([]models.AdvertOutput, error) {
 	return s.repo.GetUserBookmarks(ctx, userId)
 }
 
