@@ -78,14 +78,13 @@ func ToAdvert(advert *Advert) *Advert {
 }
 
 type UpdateAdvertInput struct {
-	Status           string        `json:"status" bson:"status"`
-	Category         string        `json:"category" bson:"category"`
-	Title            string        `json:"title" bson:"title"`
-	Description      string        `json:"description" bson:"description"`
-	RentType         string        `json:"rent_type" bson:"rent_type"`
-	Price            int32         `json:"price" bson:"price"`
-	HasAdvertisement bool          `json:"has_advertisement" bson:"has_advertisement,omitempty"`
-	Advertisement    Advertisement `json:"advertisement" bson:"advertisement,omitempty"`
+	Status           string        `json:"status,omitempty" bson:"status,omitempty"`
+	Category         string        `json:"category,omitempty" bson:"category,omitempty"`
+	Title            string        `json:"title,omitempty" bson:"title,omitempty"`
+	Description      string        `json:"description,omitempty" bson:"description,omitempty"`
+	RentType         string        `json:"rent_type,omitempty" bson:"rent_type"`
+	Price            int32         `json:"price,omitempty" bson:"price"`
+	HasAdvertisement bool          `json:"has_advertisement,omitempty" bson:"has_advertisement,omitempty"`
+	Advertisement    Advertisement `json:"advertisement,omitempty" bson:"advertisement,omitempty"`
 	Feedbacks        []Feedback    `json:"feedbacks,omitempty" bson:"feedbacks,omitempty"`
-	CreatedAt        time.Time     `json:"createdAt" bson:"createdAt,omitempty"`
 }

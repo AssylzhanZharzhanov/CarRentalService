@@ -2,7 +2,9 @@ package handler
 
 import (
 	"fmt"
+	"log"
 	"net/http"
+	"path"
 	"path/filepath"
 	"strconv"
 	"strings"
@@ -11,6 +13,13 @@ import (
 	"gitlab.com/zharzhanov/region/models"
 	"go.mongodb.org/mongo-driver/bson"
 )
+
+type Filter struct {
+	City     string `json:"city" bson:"city,omitempty"`
+	Category string `json:"category" bson:"category,omitempty"`
+	RentType string `json:"rent_type" bson:"rent_type,omitempty"`
+	Price    int    `json:"price" bson:"price,omitempty"`
+}
 
 // @Summary Create Advert
 // @Tags adverts
@@ -43,9 +52,10 @@ func (h *Handler) createAdvert(c *gin.Context) {
 	var imageUrls []string
 	for _, file := range files {
 		filename := filepath.Base(file.Filename)
+		dst := path.Join("./static", filename)
 		fileNames = append(fileNames, filename)
 		imageUrls = append(imageUrls, staticFileHost + filename)
-		if err := c.SaveUploadedFile(file, filename); err != nil {
+		if err := c.SaveUploadedFile(file, dst); err != nil {
 			c.String(http.StatusBadRequest, fmt.Sprintf("upload file err: %s", err.Error()))
 			return
 		}
@@ -64,13 +74,6 @@ func (h *Handler) createAdvert(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, id)
-}
-
-type Filter struct {
-	City     string `json:"city" bson:"city,omitempty"`
-	Category string `json:"category" bson:"category,omitempty"`
-	RentType string `json:"rent_type" bson:"rent_type,omitempty"`
-	Price    int    `json:"price" bson:"price,omitempty"`
 }
 
 // @Summary Get all adverts
@@ -158,6 +161,8 @@ func (h *Handler) updateAdvert(c *gin.Context) {
 		newErrorResponse(c, http.StatusInternalServerError, inputError)
 		return
 	}
+
+	log.Println(newAdvert)
 
 	err := h.service.UpdateAdvert(c.Request.Context(), id, newAdvert)
 	if err != nil {

@@ -32,12 +32,6 @@ func (r *AdvertMongo) GetMyAdverts(ctx context.Context, userId string) ([]models
 	return adverts, nil
 }
 
-func NewAdvertMongo(db *mongo.Database, advertCollection string) *AdvertMongo {
-	return &AdvertMongo{
-		db:db,
-	}
-}
-
 func (r *AdvertMongo) CreateAdvert(ctx context.Context, advert models.AdvertInput) (string, error) {
 	res, err := r.db.Collection(advertsCollection).InsertOne(ctx, advert)
 
@@ -75,6 +69,7 @@ func (r *AdvertMongo) GetAdvertById(ctx context.Context, id string) (models.Adve
 
 	return advert, nil
 }
+
 func (r *AdvertMongo) UpdateAdvert(ctx context.Context, id string, advert models.UpdateAdvertInput) error {
 	objId, _ := primitive.ObjectIDFromHex(id)
 
@@ -120,3 +115,8 @@ func (r *AdvertMongo) UploadImage(ctx context.Context, advertId string, urls []s
 	return err
 }
 
+func NewAdvertMongo(db *mongo.Database, advertCollection string) *AdvertMongo {
+	return &AdvertMongo{
+		db:db,
+	}
+}

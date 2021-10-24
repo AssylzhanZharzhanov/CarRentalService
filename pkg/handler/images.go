@@ -9,7 +9,8 @@ import (
 	"path/filepath"
 )
 
-const staticFileHost = "http://161.35.196.24/static/"
+//const staticFileHost = "http://127.0.0.1/static/"
+const staticFileHost = "https://api-ads.region.app/static/"
 //const staticFileHost = "http://localhost/static"
 
 func (h *Handler) uploadImage(c *gin.Context) {
@@ -61,7 +62,6 @@ func (h *Handler) UploadMultipleImages(c *gin.Context) {
 			return
 		}
 	}
-
 
 }
 
