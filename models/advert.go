@@ -82,8 +82,8 @@ type UpdateAdvertInput struct {
 	Category         string        `json:"category,omitempty" bson:"category,omitempty"`
 	Title            string        `json:"title,omitempty" bson:"title,omitempty"`
 	Description      string        `json:"description,omitempty" bson:"description,omitempty"`
-	RentType         string        `json:"rent_type,omitempty" bson:"rent_type"`
-	Price            int32         `json:"price,omitempty" bson:"price"`
+	RentType         string        `json:"rent_type,omitempty" bson:"rent_type,omitempty"`
+	Price            int32         `json:"price,omitempty" bson:"price,omitempty"`
 	HasAdvertisement bool          `json:"has_advertisement,omitempty" bson:"has_advertisement,omitempty"`
 	Advertisement    Advertisement `json:"advertisement,omitempty" bson:"advertisement,omitempty"`
 	Feedbacks        []Feedback    `json:"feedbacks,omitempty" bson:"feedbacks,omitempty"`

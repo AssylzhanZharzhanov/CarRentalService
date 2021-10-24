@@ -22,6 +22,7 @@ const (
 	usersCollection = "users"
 	advertsCollection = "adverts"
 	paymentsCollection = "payments"
+	carBrandsCollection = "car_brands"
 )
 
 func NewMongoDB(cfg Config) *mongo.Database {

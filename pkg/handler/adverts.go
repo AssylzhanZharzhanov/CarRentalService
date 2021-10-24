@@ -52,6 +52,7 @@ func (h *Handler) createAdvert(c *gin.Context) {
 	var imageUrls []string
 	for _, file := range files {
 		filename := filepath.Base(file.Filename)
+		log.Printf("file: %v", file)
 		dst := path.Join("./static", filename)
 		fileNames = append(fileNames, filename)
 		imageUrls = append(imageUrls, staticFileHost + filename)

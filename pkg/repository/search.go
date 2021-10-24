@@ -20,10 +20,19 @@ func (r *SearchMongo) GetCarModels(ctx context.Context, brand string) ([]models.
 	carModels := make([]models.CarModels, 0)
 
 	//searchStage := bson.D{{"$search", bson.D{{"autocomplete", bson.D{{"path", "brand"}, {"query", brand}}}}}}
-	limitStage := bson.D{{"$limit", 10}}
-	projectStage := bson.D{{"$project", bson.D{{"_id", 0}, {"brand", 1}}}}
+	//limitStage := bson.D{{"$limit", 10}}
+	//projectStage := bson.D{{"$project", bson.D{{"_id", 0}, {"brand", 1}}}}
 
-	showInfoCursor, err := r.db.Aggregate(ctx, mongo.Pipeline{limitStage, projectStage})
+	showInfoCursor, err := r.db.Aggregate(ctx, bson.A{
+		bson.M{"$search": bson.M{"autocomplete": bson.M{
+			"query": brand,
+			"path": "full_name",
+			"tokenOrder": "any",
+		}}},
+		//bson.M{
+		//	"$limit": 10,
+		//},
+	})
 	if err != nil {
 		return carModels, err
 	}

@@ -6,6 +6,7 @@ import (
 	"gitlab.com/zharzhanov/region/pkg/repository"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
+	"log"
 	"strings"
 	"time"
 )
@@ -43,7 +44,10 @@ func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.AdvertIn
 		return "", err
 	}
 
-	_ = s.repo.UploadImage(ctx, advertId, imageUrl)
+	err = s.repo.UploadImage(ctx, advertId, imageUrl)
+	if err != nil {
+		log.Println(err.Error())
+	}
 
 	return advertId, nil
 }

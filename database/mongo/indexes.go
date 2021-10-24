@@ -37,14 +37,28 @@ func (s *Index) UserIndex() error {
 	return nil
 }
 
-func TitleSearchIndex(db *mongo.Database, collection string) error {
+func (s *Index) TitleSearchIndex() error {
 	adverts := mongo.IndexModel{
 		Keys: bson.M{
-			"title_search": 1,
+			"title": 1,
 		},
 		Options: options.Index().SetUnique(true),
 	}
-	_, err := db.Collection(collection).Indexes().CreateOne(context.Background(), adverts)
+	_, err := s.db.Collection(advertsCollection).Indexes().CreateOne(context.Background(), adverts)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func (s *Index) CarBrandIndex() error {
+	adverts := mongo.IndexModel{
+		Keys: bson.M{
+			"full_name": 1,
+		},
+		Options: options.Index().SetUnique(true),
+	}
+	_, err := s.db.Collection(carBrandsCollection).Indexes().CreateOne(context.Background(), adverts)
 	if err != nil {
 		return err
 	}
