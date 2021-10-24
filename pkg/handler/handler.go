@@ -114,7 +114,8 @@ func (h *Handler) InitRoutes() *gin.Engine {
 
 		search := api.Group("/search")
 		{
-			search.GET("/", h.searchCarMark)
+			search.GET("/autocomplete", h.searchCarMark)
+			search.GET("/adverts", h.getSearchAdverts)
 		}
 	}
 

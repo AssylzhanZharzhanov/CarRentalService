@@ -36,6 +36,7 @@ type Authentication interface {
 
 type Search interface {
 	GetCarModels(ctx context.Context, brand string) ([]models.CarModels, error)
+	GetAdverts(ctx context.Context, name string) ([]models.AdvertOutput, error)
 }
 
 type Images interface {

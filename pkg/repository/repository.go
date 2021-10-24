@@ -44,6 +44,7 @@ type Adverts interface {
 type Search interface {
 	SpellChecker() error
 	GetCarModels(ctx context.Context, brand string) ([]models.CarModels, error)
+	GetAdverts(ctx context.Context, name string) ([]models.AdvertOutput, error)
 }
 
 type Users interface {
@@ -94,7 +95,7 @@ func NewRepository(db *mongo.Database) *Repository {
 		Authentication: NewAuthMongo(db),
 		Adverts:        NewAdvertMongo(db, advertsCollection),
 		Images:         NewImageMongo(db),
-		Search:         NewSearchMongo(db, advertsCollection),
+		Search:         NewSearchMongo(db),
 		Feedback:       NewFeedbackMongo(db, advertsCollection),
 		Filters:        NewFilterRepository(db),
 		Bookmarks:      NewBookmarkMongo(db),
