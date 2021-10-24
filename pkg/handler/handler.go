@@ -64,6 +64,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 		{
 			bookmark.POST("/", h.addBookmark)
 			bookmark.GET("/", h.getBookmarks)
+			bookmark.DELETE("/:id",  h.deleteBookmark)
 		}
 
 		filters := api.Group("/filters")

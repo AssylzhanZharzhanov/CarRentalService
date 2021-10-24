@@ -10,6 +10,10 @@ type BookmarkService struct {
 	repo repository.Bookmarks
 }
 
+func (s *BookmarkService) RemoveUserBookmark(ctx context.Context, userId string, advertId string) error {
+	return s.repo.RemoveUserBookmark(ctx, userId, advertId)
+}
+
 func (s *BookmarkService) AddUserBookmark(ctx context.Context, userId string, advertId string) error {
 	return s.repo.AddUserBookmark(ctx, userId, advertId)
 }

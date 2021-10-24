@@ -13,6 +13,16 @@ type BookmarkMongo struct {
 	db *mongo.Database
 }
 
+func (r *BookmarkMongo) RemoveUserBookmark(ctx context.Context, userId string, advertId string) error {
+	userObjId, _ := primitive.ObjectIDFromHex(userId)
+	advertObjId, _ := primitive.ObjectIDFromHex(advertId)
+
+	filter := bson.M{"_id": userObjId}
+	_, err := r.db.Collection(usersCollection).UpdateOne(ctx, filter, bson.M{"$pull": bson.M{"bookmarks": advertObjId}})
+
+	return err
+}
+
 func (r *BookmarkMongo) AddUserBookmark(ctx context.Context, userId string, advertId string) error {
 	userObjId, _ := primitive.ObjectIDFromHex(userId)
 	advertObjId, _ := primitive.ObjectIDFromHex(advertId)

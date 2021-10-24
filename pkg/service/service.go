@@ -23,6 +23,7 @@ type Adverts interface {
 type Bookmarks interface {
 	AddUserBookmark(ctx context.Context, userId string, advertId string) error
 	GetUserBookmarks(ctx context.Context, userId string) ([]models.AdvertOutput, error)
+	RemoveUserBookmark(ctx context.Context, userId string, advertId string) error
 }
 
 type Authentication interface {
