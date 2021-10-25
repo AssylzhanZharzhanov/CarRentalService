@@ -38,8 +38,6 @@ func (h *Handler) InitRoutes() *gin.Engine {
 		}
 	}
 
-
-
 	api := router.Group("/api")
 	{
 		users := api.Group("/users", h.GetUserIdentity)
