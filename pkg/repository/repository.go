@@ -13,6 +13,9 @@ const (
 	imageCollection = "images"
 )
 
+type Admin interface {
+}
+
 type Authentication interface {
 	CreateUser(ctx context.Context, user models.User) (string, error)
 	GetUser(ctx context.Context, phone string) (string, error)
@@ -88,6 +91,7 @@ type Repository struct {
 	Feedback
 	Filters
 	Bookmarks
+	Admin
 }
 
 func NewRepository(db *mongo.Database) *Repository {
@@ -99,5 +103,6 @@ func NewRepository(db *mongo.Database) *Repository {
 		Feedback:       NewFeedbackMongo(db, advertsCollection),
 		Filters:        NewFilterRepository(db),
 		Bookmarks:      NewBookmarkMongo(db),
+		Admin: 			NewAdminMongo(db),
 	}
 }

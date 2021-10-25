@@ -31,7 +31,14 @@ func (h *Handler) InitRoutes() *gin.Engine {
 		auth.POST("/sign-in", h.signIn)
 		auth.POST("/code", h.generateCode)
 		auth.POST("/code/verify", h.verifyCode)
+
+		admin := auth.Group("/admin")
+		{
+			admin.POST("/sign-in", h.adminSignIn)
+		}
 	}
+
+
 
 	api := router.Group("/api")
 	{

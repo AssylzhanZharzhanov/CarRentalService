@@ -11,6 +11,10 @@ import (
 type Users interface {
 }
 
+type Admin interface {
+	GetUser(ctx context.Context, phone string) (string, error)
+}
+
 type Adverts interface {
 	CreateAdvert(ctx context.Context, advert models.AdvertInput, imageUrl []string, userId string) (string, error)
 	GetAllAdverts(ctx context.Context, filter bson.M) ([]models.AdvertOutput, error)
@@ -81,6 +85,7 @@ type Service struct {
 	Feedback
 	Filters
 	Bookmarks
+	Admin
 }
 
 func NewService(repos *repository.Repository) *Service {
@@ -92,5 +97,6 @@ func NewService(repos *repository.Repository) *Service {
 		Feedback: 		NewFeedbackService(repos),
 		Filters:        NewFilterService(repos),
 		Bookmarks:      NewBookmarkService(repos),
+		Admin:          NewAdminService(repos),
 	}
 }

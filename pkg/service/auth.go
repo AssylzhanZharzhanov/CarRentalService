@@ -43,8 +43,6 @@ func (s *AuthService) VerifyCode(ctx context.Context, code string) (string, erro
 		return "", err
 	}
 
-
-
 	userID, err := s.repo.GetUser(ctx, output.Phone)
 	if err != nil {
 

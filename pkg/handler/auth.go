@@ -67,6 +67,7 @@ func (h *Handler) signIn(c *gin.Context) {
 
 	if err := c.BindJSON(&user); err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
+		return
 	}
 
 	token, err := h.service.SignIn(c.Request.Context(), user)
@@ -74,6 +75,8 @@ func (h *Handler) signIn(c *gin.Context) {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 	}
 
-	c.JSON(http.StatusOK, token)
+	c.JSON(http.StatusOK, map[string]interface{}{
+		"token": token,
+	})
 }
 
