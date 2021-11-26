@@ -11,20 +11,20 @@ import (
 	"time"
 )
 
-type AdvertService struct {
-	repo repository.Adverts
-}
-
 const (
 	defaultStatusValue = "На модерации"
 )
 
-func (s *AdvertService) GetMyAdverts(ctx context.Context, userId string) ([]models.AdvertOutput, error) {
-	return s.repo.GetMyAdverts(ctx, userId)
+type AdvertService struct {
+	repo repository.Adverts
 }
 
 func NewAdvertService(repo *repository.Repository) *AdvertService {
 	return &AdvertService{repo: repo.Adverts}
+}
+
+func (s *AdvertService) GetMyAdverts(ctx context.Context, userId string) ([]models.Advert, error) {
+	return s.repo.GetMyAdverts(ctx, userId)
 }
 
 func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.AdvertInput, imageUrl []string, userId string) (string, error) {
@@ -52,18 +52,18 @@ func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.AdvertIn
 	return advertId, nil
 }
 
-func (s *AdvertService) GetAllAdverts(ctx context.Context, filter bson.M) ([]models.AdvertOutput, error) {
+func (s *AdvertService) GetAllAdverts(ctx context.Context, filter bson.M) ([]models.Advert, error) {
 	return s.repo.GetAllAdverts(ctx, filter)
 }
 
-func (s *AdvertService) GetAdvertById(ctx context.Context, id string) (models.AdvertOutput, error) {
+func (s *AdvertService) GetAdvertById(ctx context.Context, id string) (models.Advert, error) {
 	return s.repo.GetAdvertById(ctx, id)
 }
 
-func (s *AdvertService) UpdateAdvert(ctx context.Context, id string, advert models.UpdateAdvertInput) error {
+func (s *AdvertService) UpdateAdvert(ctx context.Context, id string, advert models.AdvertInput) error {
 	return s.repo.UpdateAdvert(ctx, id, advert)
 }
 
-func (s *AdvertService) DeleteAdvert(ctx context.Context, id string) error {
-	return s.repo.DeleteAdvert(ctx, id)
+func (s *AdvertService) DeleteAdvert(ctx context.Context, advertId string) error {
+	return s.repo.DeleteAdvert(ctx, advertId)
 }

@@ -54,15 +54,17 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			adverts.POST("/", h.createAdvert)
 			adverts.GET("/", h.getAllAdverts)
 			adverts.GET("/:id", h.getAdvertById)
+			adverts.GET("/my", h.getUserAdverts)
 			adverts.PUT("/:id", h.updateAdvert)
 			adverts.DELETE("/:id", h.deleteAdvert)
-			adverts.GET("/my", h.getUserAdverts)
 		}
 
 		feedback := api.Group("/feedback", h.GetUserIdentity)
 		{
 			feedback.POST("/", h.addFeedback)
 			feedback.GET("/:id",h.getFeedback)
+			feedback.PUT("/:id", h.updateFeedback)
+			feedback.DELETE("/:id", h.deleteFeedback)
 		}
 
 		bookmark := api.Group("/bookmarks", h.GetUserIdentity)

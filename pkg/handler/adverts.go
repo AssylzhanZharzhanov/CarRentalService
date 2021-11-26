@@ -68,18 +68,20 @@ func (h *Handler) createAdvert(c *gin.Context) {
 		return
 	}
 
-	id, err := h.service.CreateAdvert(c.Request.Context(), advert, imageUrls, userId)
+	_, err = h.service.CreateAdvert(c.Request.Context(), advert, imageUrls, userId)
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, createObjectError)
 		return
 	}
 
-	c.JSON(http.StatusOK, id)
+	c.JSON(http.StatusOK, map[string]interface{}{
+		"status": "ok",
+	})
 }
 
 // @Summary Get all adverts
 // @Tags adverts
-// @Description get all adverts
+// @Description Get all adverts
 // @ID get-all-adverts
 // @Accept json
 // @Produce json
@@ -142,6 +144,18 @@ func (h *Handler) getAllAdverts(c *gin.Context) {
 	c.JSON(http.StatusOK, adverts)
 }
 
+// @Summary Get advert by id
+// @Tags adverts
+// @Description Get advert by id
+// @ID get-advert-by-id
+// @Accept json
+// @Produce json
+// @Param id path int true "Payment ID"
+// @Success 200 {array} models.Advert
+// @Failure 400,404 {object} errorResponse
+// @Failure 500 {object} errorResponse
+// @Failure default {object} errorResponse
+// @Router /api/adverts/{id} [get]
 func (h *Handler) getAdvertById(c *gin.Context) {
 	id := c.Param("id")
 
@@ -154,10 +168,22 @@ func (h *Handler) getAdvertById(c *gin.Context) {
 	c.JSON(http.StatusOK, advert)
 }
 
+// @Summary Get advert by id
+// @Tags adverts
+// @Description Get advert by id
+// @ID get-advert-by-id
+// @Accept json
+// @Produce json
+// @Param id path int true "Payment ID"
+// @Success 200 {json} models.Advert
+// @Failure 400,404 {object} errorResponse
+// @Failure 500 {object} errorResponse
+// @Failure default {object} errorResponse
+// @Router /api/adverts/{id} [put]
 func (h *Handler) updateAdvert(c *gin.Context) {
 	id := c.Param("id")
 
-	var newAdvert models.UpdateAdvertInput
+	var newAdvert models.AdvertInput
 	if err := c.BindJSON(&newAdvert); err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, inputError)
 		return

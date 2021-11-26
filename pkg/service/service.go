@@ -17,16 +17,16 @@ type Admin interface {
 
 type Adverts interface {
 	CreateAdvert(ctx context.Context, advert models.AdvertInput, imageUrl []string, userId string) (string, error)
-	GetAllAdverts(ctx context.Context, filter bson.M) ([]models.AdvertOutput, error)
-	GetAdvertById(ctx context.Context, id string) (models.AdvertOutput, error)
-	UpdateAdvert(ctx context.Context, id string, advert models.UpdateAdvertInput) error
+	GetAllAdverts(ctx context.Context, filter bson.M) ([]models.Advert, error)
+	GetAdvertById(ctx context.Context, id string) (models.Advert, error)
+	GetMyAdverts(ctx context.Context, userId string) ([]models.Advert, error)
+	UpdateAdvert(ctx context.Context, id string, advert models.AdvertInput) error
 	DeleteAdvert(ctx context.Context, id string) error
-	GetMyAdverts(ctx context.Context, userId string) ([]models.AdvertOutput, error)
 }
 
 type Bookmarks interface {
 	AddUserBookmark(ctx context.Context, userId string, advertId string) error
-	GetUserBookmarks(ctx context.Context, userId string) ([]models.AdvertOutput, error)
+	GetUserBookmarks(ctx context.Context, userId string) ([]models.Advert, error)
 	RemoveUserBookmark(ctx context.Context, userId string, advertId string) error
 }
 
@@ -40,7 +40,7 @@ type Authentication interface {
 
 type Search interface {
 	GetCarModels(ctx context.Context, brand string) ([]models.CarModels, error)
-	GetAdverts(ctx context.Context, name string) ([]models.AdvertOutput, error)
+	GetAdverts(ctx context.Context, name string) ([]models.Advert, error)
 }
 
 type Images interface {
@@ -53,6 +53,8 @@ type Images interface {
 type Feedback interface {
 	AddFeedback(ctx context.Context, feedback models.Feedback, advertId string) error
 	GetFeedbackByUserId(ctx context.Context, feedbackId string) (*models.Feedback, error)
+	UpdateFeedback(ctx context.Context, feedbackId string, feedback models.Feedback) error
+	DeleteFeedback(ctx context.Context, feedbackId string) error
 }
 
 type Filters interface {

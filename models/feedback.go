@@ -11,5 +11,11 @@ type Feedback struct {
 	UserId    primitive.ObjectID `json:"user_id" bson:"user_id"`
 	Comment   string             `json:"comment" bson:"comment"`
 	Rating    int                `json:"rating" bson:"rating"`
-	CreatedAt time.Time          `json:"createdAt,omitempty" bson:"createdAt,omitempty"`
+	CreatedAt time.Time          `json:"createdAt" bson:"createdAt"`
 }
+
+type FeedbackInput struct {
+	Comment   string             `json:"comment,omitempty" bson:"comment"`
+	Rating    int                `json:"rating" bson:"rating"`
+}
+

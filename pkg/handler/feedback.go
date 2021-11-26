@@ -46,3 +46,37 @@ func (h *Handler) getFeedback( c *gin.Context) {
 
 	c.JSON(http.StatusOK, feedback)
 }
+
+func (h *Handler) updateFeedback( c *gin.Context) {
+	feedbackId := c.Query("feedbackId")
+
+	var feedback models.Feedback
+	if err := c.BindJSON(&feedback); err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, err.Error())
+		return
+	}
+
+	err := h.service.UpdateFeedback(c.Request.Context(), feedbackId, feedback)
+	if err != nil {
+		newErrorResponse(c, http.StatusNotFound, err.Error())
+		return
+	}
+
+	c.JSON(http.StatusOK, map[string]interface{}{
+		"status": "ok",
+	})
+}
+
+func (h *Handler) deleteFeedback( c *gin.Context) {
+	feedbackId := c.Query("feedbackId")
+
+	err := h.service.DeleteFeedback(c.Request.Context(), feedbackId)
+	if err != nil {
+		newErrorResponse(c, http.StatusNotFound, err.Error())
+		return
+	}
+
+	c.JSON(http.StatusOK, map[string]interface{}{
+		"status": "ok",
+	})
+}

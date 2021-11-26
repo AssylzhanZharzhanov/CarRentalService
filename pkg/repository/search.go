@@ -20,8 +20,8 @@ func NewSearchMongo(db *mongo.Database) *SearchMongo {
 	return &SearchMongo{db: db}
 }
 
-func (r *SearchMongo) GetAdverts(ctx context.Context, name string) ([]models.AdvertOutput, error) {
-	adverts := make([]models.AdvertOutput, 0)
+func (r *SearchMongo) GetAdverts(ctx context.Context, name string) ([]models.Advert, error) {
+	adverts := make([]models.Advert, 0)
 	searchValue := fmt.Sprintf("^%s", strings.ToLower(name))
 
 	cur, err := r.db.Collection(advertsCollection).Find(ctx, bson.M{"title_search": bson.M{"$regex": searchValue}})
