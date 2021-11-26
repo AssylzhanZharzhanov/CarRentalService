@@ -1,0 +1,221 @@
+basePath: /
+definitions:
+  handler.errorResponse:
+    properties:
+      message:
+        type: string
+    type: object
+  models.Advert:
+    properties:
+      advertisement:
+        $ref: '#/definitions/models.Advertisement'
+      category:
+        type: string
+      city:
+        type: string
+      createdAt:
+        type: string
+      description:
+        type: string
+      feedbacks:
+        items:
+          $ref: '#/definitions/models.Feedback'
+        type: array
+      has_advertisement:
+        type: boolean
+      id:
+        type: string
+      images:
+        items:
+          type: string
+        type: array
+      phone:
+        type: string
+      price:
+        type: integer
+      rent_type:
+        type: string
+      status:
+        type: string
+      title:
+        type: string
+      title_search:
+        items:
+          type: string
+        type: array
+      total_rating:
+        type: number
+    type: object
+  models.AdvertInput:
+    properties:
+      category:
+        type: string
+      city:
+        type: string
+      createdAt:
+        type: string
+      description:
+        type: string
+      has_advertisement:
+        type: boolean
+      image:
+        type: string
+      phone:
+        type: string
+      price:
+        type: integer
+      rentType:
+        type: string
+      title:
+        type: string
+      title_search:
+        items:
+          type: string
+        type: array
+    required:
+    - category
+    - city
+    - description
+    - phone
+    - price
+    - rentType
+    - title
+    type: object
+  models.Advertisement:
+    properties:
+      _id:
+        type: string
+      expiration_date:
+        type: string
+      inspiration_date:
+        type: string
+      status:
+        type: string
+      type:
+        type: string
+    type: object
+  models.Feedback:
+    properties:
+      comment:
+        type: string
+      createdAt:
+        type: string
+      id:
+        type: string
+      rating:
+        type: integer
+      user_id:
+        type: string
+    type: object
+host: localhost
+info:
+  contact: {}
+  description: REST API for Region.app Объявления.
+  termsOfService: http://swagger.io/terms/
+  title: Swagger Region.app Объявления API
+  version: "1.0"
+paths:
+  /api/adverts:
+    get:
+      consumes:
+      - application/json
+      description: get all adverts
+      operationId: get-all-adverts
+      parameters:
+      - description: City
+        in: path
+        name: city
+        required: true
+        type: string
+      - description: Category
+        in: path
+        name: category
+        required: true
+        type: string
+      - description: Rent type
+        in: path
+        name: rent_type
+        required: true
+        type: string
+      - description: Minimum price
+        in: path
+        name: minPrice
+        required: true
+        type: string
+      - description: Maximum price
+        in: path
+        name: maxPrice
+        required: true
+        type: string
+      - description: Title
+        in: path
+        name: title
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Advert'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Get all adverts
+      tags:
+      - adverts
+    post:
+      consumes:
+      - multipart/form-data
+      description: create advert
+      operationId: create-advert
+      parameters:
+      - description: advert body
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/models.AdvertInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: integer
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Create Advert
+      tags:
+      - adverts
+swagger: "2.0"

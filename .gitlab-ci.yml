@@ -1,41 +1,51 @@
+image: docker
+
+services:
+  - docker:dind
+
 stages:
   - test
-  - deploy 
+  - build
+  - deploy
 
-before_script:
-  - echo deploy
-  - go version
+#test:
+#  stage: test
+#  tags:
+#    - dev-server
+#    - prod-server
+#  variables:
+#    GIT_CLEAN_FLAGS: -x -f -e data/**
+#  script:
+#    - echo test is started
+#    - go test -v ./...
 
-test:
-  stage: test
+build:
+  stage: build
   tags:
-    - dev
+    - dev-server
+  variables:
+    GIT_CLEAN_FLAGS: -x -f -e mongo/**
   script:
-    - echo test is started
-    - go test -v ./...
+    - docker image prune -f
+    - docker-compose stop server && docker-compose rm -f server
+    - sudo docker-compose build server
 
-deploy-to-dev:
-  stage: deploy  
-  script:
-    - echo deploy on dev server
-    - docker stop server
-    - docker rm server
-    - make run
+dev_server:
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
   only:
     - developer
   tags:
-    - dev
+    - dev-server
+  script:
+    - docker-compose up -d server
 
 deploy-to-prod:
   stage: deploy
-  tags: 
-    - meetup-prod
+  tags:
+    - prod-server
   only:
     - master
   script:
     - echo deploy on prod server
-    - docker stop server
-    - docker rm server
-    - make run
-
-# push -> test -> build image docker -> push to dockerhub -> download and launch image

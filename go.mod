@@ -1,19 +1,30 @@
 module gitlab.com/zharzhanov/region
 
-go 1.13
+go 1.16
 
 require (
+	github.com/client9/misspell v0.3.4 // indirect
+	github.com/cpuguy83/go-md2man/v2 v2.0.1 // indirect
+	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
+	github.com/gin-contrib/cors v1.3.1 // indirect
 	github.com/gin-gonic/gin v1.7.2
-	github.com/golang/protobuf v1.5.2 // indirect
-	github.com/json-iterator/go v1.1.11 // indirect
-	github.com/modern-go/reflect2 v1.0.1 // indirect
+	github.com/go-openapi/jsonreference v0.19.6 // indirect
+	github.com/go-openapi/swag v0.19.15 // indirect
+	github.com/google/uuid v1.3.0 // indirect
+	github.com/mailru/easyjson v0.7.7 // indirect
+	github.com/sajari/fuzzy v1.0.0 // indirect
+	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/sirupsen/logrus v1.8.1
-	github.com/stretchr/testify v1.7.0 // indirect
-	go.mongodb.org/mongo-driver v1.5.4
-	golang.org/x/net v0.0.0-20210405180319-a5a99cb37ef4 // indirect
-	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
-	golang.org/x/sys v0.0.0-20210510120138-977fb7262007 // indirect
-	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
-	gopkg.in/yaml.v2 v2.4.0 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
+	github.com/subosito/twilio v0.0.1 // indirect
+	github.com/swaggo/files v0.0.0-20210815190702-a29dd2bc99b2 // indirect
+	github.com/swaggo/gin-swagger v1.3.1 // indirect
+	github.com/swaggo/swag v1.7.3 // indirect
+	github.com/twilio/twilio-go v0.15.0 // indirect
+	github.com/urfave/cli v1.20.0 // indirect
+	github.com/vonage/vonage-go-sdk v0.13.1 // indirect
+	go.mongodb.org/mongo-driver v1.7.2
+	golang.org/x/net v0.0.0-20210907225631-ff17edfbf26d // indirect
+	golang.org/x/sys v0.0.0-20210906170528-6f6e22806c34 // indirect
+	golang.org/x/text v0.3.7 // indirect
+	gopkg.in/go-playground/validator.v8 v8.18.2 // indirect
 )
