@@ -12,6 +12,14 @@ type FeedbackMongo struct {
 	db *mongo.Collection
 }
 
+func (r *FeedbackMongo) UpdateFeedback(ctx context.Context, feedbackId string, feedback models.Feedback) error {
+	panic("implement me")
+}
+
+func (r *FeedbackMongo) DeleteFeedback(ctx context.Context, feedbackId string) error {
+	panic("implement me")
+}
+
 func (r *FeedbackMongo) AddFeedback(ctx context.Context, feedback models.Feedback, advertId string) error {
 	objId, _ := primitive.ObjectIDFromHex(advertId)
 	feedback.Id = primitive.NewObjectID()

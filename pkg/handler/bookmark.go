@@ -2,7 +2,6 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
-	"log"
 	"net/http"
 )
 
@@ -14,9 +13,6 @@ func (h *Handler) addBookmark(c *gin.Context) {
 	}
 
 	advertId := c.Query("advertId")
-	log.Printf("advertId: %s", advertId)
-	log.Printf("userId: %s", userId)
-
 	err = h.service.AddUserBookmark(c.Request.Context(), userId, advertId)
 	if err != nil {
 		newErrorResponse(c, http.StatusNotFound, err.Error())

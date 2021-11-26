@@ -33,10 +33,10 @@ func (r *BookmarkMongo) AddUserBookmark(ctx context.Context, userId string, adve
 	return err
 }
 
-func (r *BookmarkMongo) GetUserBookmarks(ctx context.Context, userId string) ([]models.AdvertOutput, error) {
+func (r *BookmarkMongo) GetUserBookmarks(ctx context.Context, userId string) ([]models.Advert, error) {
 	userObjId, _ := primitive.ObjectIDFromHex(userId)
 
-	adverts := make([]models.AdvertOutput, 0)
+	adverts := make([]models.Advert, 0)
 
 	var user models.User
 	err := r.db.Collection(usersCollection).FindOne(ctx, bson.M{"_id": userObjId}).Decode(&user)

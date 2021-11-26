@@ -15,7 +15,7 @@ func NewSearchService(repository *repository.Repository) *SearchService {
 	return &SearchService{repo: repository.Search}
 }
 
-func (s *SearchService) GetAdverts(ctx context.Context, name string) ([]models.AdvertOutput, error) {
+func (s *SearchService) GetAdverts(ctx context.Context, name string) ([]models.Advert, error) {
 	return s.repo.GetAdverts(ctx, name)
 }
 

@@ -25,29 +25,31 @@ type Authentication interface {
 
 type Bookmarks interface {
 	AddUserBookmark(ctx context.Context, userId string, advertId string) error
-	GetUserBookmarks(ctx context.Context, userId string) ([]models.AdvertOutput, error)
+	GetUserBookmarks(ctx context.Context, userId string) ([]models.Advert, error)
 	RemoveUserBookmark(ctx context.Context, userId string, advertId string) error
 }
 
 type Feedback interface {
 	AddFeedback(ctx context.Context, feedback models.Feedback, advertId string) error
 	UpdateRating(ctx context.Context, advertId string) error
+	UpdateFeedback(ctx context.Context,  feedbackId string, feedback models.Feedback) error
+	DeleteFeedback(ctx context.Context, feedbackId string) error
 }
 
 type Adverts interface {
 	CreateAdvert(ctx context.Context, advert models.AdvertInput) (string, error)
-	GetAllAdverts(ctx context.Context, filter bson.M) ([]models.AdvertOutput, error)
-	GetAdvertById(ctx context.Context, id string) (models.AdvertOutput, error)
-	UpdateAdvert(ctx context.Context, id string, advert models.UpdateAdvertInput) error
+	GetMyAdverts(ctx context.Context, userId string) ([]models.Advert, error)
+	GetAllAdverts(ctx context.Context, filter bson.M) ([]models.Advert, error)
+	GetAdvertById(ctx context.Context, id string) (models.Advert, error)
+	UpdateAdvert(ctx context.Context, id string, advert models.AdvertInput) error
 	DeleteAdvert(ctx context.Context, id string) error
 	UploadImage(ctx context.Context, advertId string, url []string) error
-	GetMyAdverts(ctx context.Context, userId string) ([]models.AdvertOutput, error)
 }
 
 type Search interface {
 	SpellChecker() error
 	GetCarModels(ctx context.Context, brand string) ([]models.CarModels, error)
-	GetAdverts(ctx context.Context, name string) ([]models.AdvertOutput, error)
+	GetAdverts(ctx context.Context, name string) ([]models.Advert, error)
 }
 
 type Users interface {
@@ -97,7 +99,7 @@ type Repository struct {
 func NewRepository(db *mongo.Database) *Repository {
 	return &Repository{
 		Authentication: NewAuthMongo(db),
-		Adverts:        NewAdvertMongo(db, advertsCollection),
+		Adverts:        NewAdvertMongo(db),
 		Images:         NewImageMongo(db),
 		Search:         NewSearchMongo(db),
 		Feedback:       NewFeedbackMongo(db, advertsCollection),
