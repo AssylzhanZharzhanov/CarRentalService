@@ -59,6 +59,17 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			adverts.DELETE("/:id", h.deleteAdvert)
 		}
 
+		advertisements := api.Group("/", h.GetUserIdentity)
+		{
+			advertisements.POST("/", h.addAdvertisement)
+			advertisements.GET("/", h.getAdvertisements)
+			advertisements.GET("/:id", h.getAdvertisementByID)
+			advertisements.PUT("/:id", h.updateAdvertisement)
+			advertisements.DELETE("/:id", h.deleteAdvertisement)
+			advertisements.POST("/connect", h.connectAdvertisement)
+			advertisements.PUT("/connect", h.updateConnectedAdvertisement)
+		}
+
 		feedback := api.Group("/feedback", h.GetUserIdentity)
 		{
 			feedback.POST("/", h.addFeedback)
@@ -87,7 +98,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			{
 				cities.GET("/", h.getCities)
 				cities.POST("/", h.addCity)
-				cities.DELETE("/", h.deleteCity)
+				cities.DELETE("/:id", h.deleteCity)
 			}
 
 			rentTypes := filters.Group("/rent_types")

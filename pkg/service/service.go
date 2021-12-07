@@ -24,6 +24,14 @@ type Adverts interface {
 	DeleteAdvert(ctx context.Context, id string) error
 }
 
+type Advertisements interface {
+	CreateAdvertisement(ctx context.Context, advertisement models.AdvertisementInput) error
+	GetAdvertisements(ctx context.Context) ([]models.Advertisement, error)
+	GetAdvertisementByID(ctx context.Context) (models.Advertisement, error)
+	UpdateAdvertisement(ctx context.Context, id string, advertisement models.AdvertisementInput) error
+	DeleteAdvertisement(ctx context.Context, id string) error
+}
+
 type Bookmarks interface {
 	AddUserBookmark(ctx context.Context, userId string, advertId string) error
 	GetUserBookmarks(ctx context.Context, userId string) ([]models.Advert, error)
@@ -82,6 +90,7 @@ type Filters interface {
 type Service struct {
 	Authentication
 	Adverts
+	Advertisements
 	Images
 	Search
 	Feedback
@@ -94,6 +103,7 @@ func NewService(repos *repository.Repository) *Service {
 	return &Service{
 		Authentication: NewAuthService(repos),
 		Adverts:        NewAdvertService(repos),
+		Advertisements: NewAdvertisementService(repos),
 		Images:         NewImageService(repos),
 		Search:         NewSearchService(repos),
 		Feedback: 		NewFeedbackService(repos),

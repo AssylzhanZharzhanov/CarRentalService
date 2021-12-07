@@ -92,17 +92,6 @@ func (h *Handler) deleteCategory(c *gin.Context) {
 	})
 }
 
-func (h *Handler) getCities(c *gin.Context) {
-	cities, err := h.service.GetCities(c.Request.Context())
-
-	if err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, err.Error())
-		return
-	}
-
-	c.JSON(http.StatusOK, cities)
-}
-
 func (h *Handler) addCity(c *gin.Context) {
 	var city models.City
 
@@ -122,8 +111,19 @@ func (h *Handler) addCity(c *gin.Context) {
 	})
 }
 
+func (h *Handler) getCities(c *gin.Context) {
+	cities, err := h.service.GetCities(c.Request.Context())
+
+	if err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, err.Error())
+		return
+	}
+
+	c.JSON(http.StatusOK, cities)
+}
+
 func (h *Handler) deleteCity(c *gin.Context) {
-	value := c.Query("value")
+	value := c.Param("id")
 	err := h.service.DeleteCity(c.Request.Context(), value)
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())

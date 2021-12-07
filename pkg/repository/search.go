@@ -22,13 +22,13 @@ func NewSearchMongo(db *mongo.Database) *SearchMongo {
 
 func (r *SearchMongo) GetAdverts(ctx context.Context, name string) ([]models.Advert, error) {
 	adverts := make([]models.Advert, 0)
-	searchValue := fmt.Sprintf("^%s", strings.ToLower(name))
+	searchValue := fmt.Sprintf("\"%s\"", strings.ToLower(name))
 
-	cur, err := r.db.Collection(advertsCollection).Find(ctx, bson.M{"title_search": bson.M{"$regex": searchValue}})
-
+	cur, err := r.db.Collection(advertsCollection).Find(ctx, bson.M{"$text": bson.M{"$search": searchValue, "$caseSensitive": false}})
 	if err != nil {
 		return adverts, err
 	}
+
 	if err = cur.All(ctx, &adverts); err != nil {
 		return adverts, err
 	}
@@ -38,23 +38,10 @@ func (r *SearchMongo) GetAdverts(ctx context.Context, name string) ([]models.Adv
 
 func (r *SearchMongo) GetCarModels(ctx context.Context, value string) ([]models.CarModels, error) {
 	carModels := make([]models.CarModels, 0)
-	searchValue := fmt.Sprintf("^%s", value)
+	searchValue := fmt.Sprintf("\"%s\"", value)
 
-	cur, err := r.db.Collection(carBrandsCollection).Find(ctx, bson.M{"text_search": bson.M{"$regex": searchValue}})
-	//searchStage := bson.D{{"$search", bson.D{{"autocomplete", bson.D{{"path", "brand"}, {"query", brand}}}}}}
-	//limitStage := bson.D{{"$limit", 10}}
-	//projectStage := bson.D{{"$project", bson.D{{"_id", 0}, {"brand", 1}}}}
+	cur, err := r.db.Collection(carBrandsCollection).Find(ctx, bson.M{"$text": bson.M{"$search": searchValue, "$caseSensitive": false}})
 
-	//showInfoCursor, err := r.db.Aggregate(ctx, bson.A{
-	//	bson.M{"$search": bson.M{"autocomplete": bson.M{
-	//		"query": brand,
-	//		"path": "full_name",
-	//		"tokenOrder": "any",
-	//	}}},
-	//	//bson.M{
-	//	//	"$limit": 10,
-	//	//},
-	//})
 	if err != nil {
 		return carModels, err
 	}

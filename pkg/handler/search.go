@@ -20,11 +20,11 @@ func (h *Handler) searchCarMark(c *gin.Context) {
 
 func (h *Handler) getSearchAdverts(c *gin.Context) {
 	value := c.Query("value")
-	brands, err := h.service.GetAdverts(c.Request.Context(), value)
+	res, err := h.service.GetAdverts(c.Request.Context(), value)
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 		return
 	}
 
-	c.JSON(http.StatusOK, brands)
+	c.JSON(http.StatusOK, res)
 }

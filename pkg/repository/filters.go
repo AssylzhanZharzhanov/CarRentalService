@@ -104,6 +104,7 @@ func (r *FilterRepository) AddCity(ctx context.Context, city models.City) error 
 
 func (r *FilterRepository) GetCities(ctx context.Context) ([]models.City, error) {
 	cities := make([]models.City, 0)
+
 	cur, err := r.db.Collection(citiesCollection).Find(ctx, bson.M{})
 	if err != nil {
 		return cities, err
@@ -117,9 +118,7 @@ func (r *FilterRepository) GetCities(ctx context.Context) ([]models.City, error)
 }
 
 func (r *FilterRepository) DeleteCity(ctx context.Context, name string) error {
-
 	_, err := r.db.Collection(citiesCollection).DeleteOne(ctx, bson.M{"name": name})
-
 	return err
 }
 

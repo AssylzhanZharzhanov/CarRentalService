@@ -2,16 +2,15 @@ package handler
 
 import (
 	"fmt"
+	"github.com/gin-gonic/gin"
+	"gitlab.com/zharzhanov/region/models"
+	"go.mongodb.org/mongo-driver/bson"
 	"log"
 	"net/http"
 	"path"
 	"path/filepath"
 	"strconv"
 	"strings"
-
-	"github.com/gin-gonic/gin"
-	"gitlab.com/zharzhanov/region/models"
-	"go.mongodb.org/mongo-driver/bson"
 )
 
 type Filter struct {
@@ -112,32 +111,30 @@ func (h *Handler) getAllAdverts(c *gin.Context) {
 		query["status"] = status
 	}
 
+	//array
 	if rentType := c.Query("rent_type"); rentType != "" {
 		query["rent_type"] = rentType
 	}
 
 	if title := c.Query("title"); title != "" {
-		query["title_search"] = bson.M{"$regex": "[" + strings.ToLower(title) + "]"}
+		query["$text"] = bson.M{"$search": fmt.Sprintf("\"%s\"", strings.ToLower(title))}
 	}
 
 	if c.Query("minPrice") != "" && c.Query("maxPrice") != "" {
 		minPrice, _ := strconv.Atoi(c.Query("minPrice"))
 		maxPrice, _ := strconv.Atoi(c.Query("maxPrice"))
-
 		query["price"] = bson.M{"$gte": minPrice, "$lte": maxPrice}
 	} else if c.Query("minPrice") != "" &&  c.Query("maxPrice") == "" {
 		minPrice, _ := strconv.Atoi(c.Query("minPrice"))
-
 		query["price"] = bson.M{"$gte": minPrice}
 	} else if c.Query("minPrice") == "" &&  c.Query("maxPrice") != "" {
 		maxPrice, _ := strconv.Atoi(c.Query("maxPrice"))
-
 		query["price"] = bson.M{"$lte": maxPrice}
 	}
 
 	adverts, err := h.service.GetAllAdverts(c.Request.Context(), query)
 	if err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, notFoundError)
+		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 		return
 	}
 
