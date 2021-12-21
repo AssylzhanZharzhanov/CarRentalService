@@ -23,8 +23,8 @@ func NewAdvertService(repo *repository.Repository) *AdvertService {
 	return &AdvertService{repo: repo.Adverts}
 }
 
-func (s *AdvertService) GetMyAdverts(ctx context.Context, userId string) ([]models.Advert, error) {
-	return s.repo.GetMyAdverts(ctx, userId)
+func (s *AdvertService) GetUserAdverts(ctx context.Context, userId string, status string) ([]models.Advert, error) {
+	return s.repo.GetUserAdverts(ctx, userId, status)
 }
 
 func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.AdvertInput, imageUrl []string, userId string) (string, error) {

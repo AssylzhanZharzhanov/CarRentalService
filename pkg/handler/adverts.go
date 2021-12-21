@@ -214,14 +214,51 @@ func (h *Handler) deleteAdvert(c *gin.Context) {
 	})
 }
 
-func (h *Handler) getUserAdverts(c *gin.Context) {
+func (h *Handler) getUserActiveAdverts(c *gin.Context) {
 	userId, err := getUserId(c)
 	if err != nil {
 		newErrorResponse(c, http.StatusInternalServerError, "user not found")
 		return
 	}
 
-	adverts, err := h.service.Adverts.GetMyAdverts(c.Request.Context(), userId)
+	status := "Успешно"
+
+	adverts, err := h.service.Adverts.GetUserAdverts(c.Request.Context(), userId, status)
+	if err != nil {
+		newErrorResponse(c, http.StatusNotFound, "user not found")
+		return
+	}
+
+	c.JSON(http.StatusOK, adverts)
+}
+
+func (h *Handler) getUserArchiveAdverts(c *gin.Context) {
+	userId, err := getUserId(c)
+	if err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, "user not found")
+		return
+	}
+
+	status := "Архив"
+	log.Println(status)
+	adverts, err := h.service.Adverts.GetUserAdverts(c.Request.Context(), userId, status)
+	if err != nil {
+		newErrorResponse(c, http.StatusNotFound, "user not found")
+		return
+	}
+
+	c.JSON(http.StatusOK, adverts)
+}
+
+func (h *Handler) getUserModerationAdverts(c *gin.Context) {
+	userId, err := getUserId(c)
+	if err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, "user not found")
+		return
+	}
+
+	status := "На модерации"
+	adverts, err := h.service.Adverts.GetUserAdverts(c.Request.Context(), userId, status)
 	if err != nil {
 		newErrorResponse(c, http.StatusNotFound, "user not found")
 		return

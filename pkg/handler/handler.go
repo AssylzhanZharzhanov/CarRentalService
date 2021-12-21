@@ -54,9 +54,11 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			adverts.POST("/", h.createAdvert)
 			adverts.GET("/", h.getAllAdverts)
 			adverts.GET("/:id", h.getAdvertById)
-			adverts.GET("/my", h.getUserAdverts)
 			adverts.PUT("/:id", h.updateAdvert)
 			adverts.DELETE("/:id", h.deleteAdvert)
+			adverts.GET("/users/active", h.getUserActiveAdverts)
+			adverts.GET("/users/archive", h.getUserArchiveAdverts)
+			adverts.GET("/users/moderation", h.getUserModerationAdverts)
 		}
 
 		advertisements := api.Group("/", h.GetUserIdentity)
