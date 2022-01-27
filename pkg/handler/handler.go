@@ -101,30 +101,30 @@ func (h *Handler) InitRoutes() *gin.Engine {
 
 			cities := filters.Group("/cities")
 			{
-				cities.GET("/", h.getCities)
-				cities.POST("/", h.addCity)
+				cities.GET("", h.getCities)
+				cities.POST("", h.addCity)
 				cities.DELETE("/:id", h.deleteCity)
 			}
 
 			rentTypes := filters.Group("/rent_types")
 			{
-				rentTypes.GET("/", h.getRentTypes)
-				rentTypes.POST("/", h.addRentType)
-				rentTypes.DELETE("/", h.deleteRentType)
+				rentTypes.GET("", h.getRentTypes)
+				rentTypes.POST("", h.addRentType)
+				rentTypes.DELETE("", h.deleteRentType)
 			}
 
 			prices := filters.Group("/prices")
 			{
-				prices.GET("/", h.getPrice)
-				prices.POST("/", h.addPrice)
-				prices.DELETE("/", h.deletePrice)
+				prices.GET("", h.getPrice)
+				prices.POST("", h.addPrice)
+				prices.DELETE("", h.deletePrice)
 			}
 
 			statuses := filters.Group("/statuses")
 			{
-				statuses.GET("/", h.getStatuses)
-				statuses.POST("/", h.addStatus)
-				statuses.PUT("/", h.updateStatus)
+				statuses.GET("", h.getStatuses)
+				statuses.POST("", h.addStatus)
+				statuses.PUT("", h.updateStatus)
 			}
 		}
 
