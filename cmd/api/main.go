@@ -28,13 +28,6 @@ func main() {
 		DbName:        os.Getenv("mongo_db"),
 	})
 
-	//mongo.CreateIndexes(db)
-	//index := mongo.NewIndex(db)
-	//err := index.CarBrandIndex()
-	//if err != nil {
-	//	log.Fatalf("error occured during starting web service: %s", err.Error())
-	//}
-
 	repos := repository.NewRepository(db)
 	services := service.NewService(repos)
 	handler := handler.NewHandler(services)
