@@ -2,11 +2,13 @@ package repository
 
 import (
 	"context"
+	"fmt"
 	"gitlab.com/zharzhanov/region/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 	"log"
+	"strings"
 )
 
 type AdvertMongo struct {
@@ -38,6 +40,23 @@ func (r *AdvertMongo) CreateAdvert(ctx context.Context, advert models.AdvertInpu
 	}
 
 	return res.InsertedID.(primitive.ObjectID).Hex(), nil
+}
+
+func (r *AdvertMongo) GetSimilarAdverts(ctx context.Context, title string, price int) ([]models.Advert, error) {
+	adverts := make([]models.Advert, 0)
+
+	searchValue := fmt.Sprintf("\"%s\"", strings.ToLower(title))
+
+	cur, err := r.db.Collection(advertsCollection).Find(ctx, bson.M{"$text": bson.M{"$search": searchValue, "$caseSensitive": false}, "price": bson.M{"$lte": price}})
+	if err != nil {
+		return adverts, err
+	}
+
+	if err = cur.All(ctx, &adverts); err != nil {
+		return adverts, err
+	}
+
+	return adverts, err
 }
 
 func (r *AdvertMongo) GetAllAdverts(ctx context.Context, filter bson.M) ([]models.Advert, error) {

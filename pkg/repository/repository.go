@@ -41,6 +41,8 @@ type Adverts interface {
 	GetUserAdverts(ctx context.Context, userId string, status string) ([]models.Advert, error)
 	GetAllAdverts(ctx context.Context, filter bson.M) ([]models.Advert, error)
 	GetAdvertById(ctx context.Context, id string) (models.Advert, error)
+	GetMyAdverts(ctx context.Context, userId string) ([]models.Advert, error)
+	GetSimilarAdverts(ctx context.Context, title string, price int) ([]models.Advert, error)
 	UpdateAdvert(ctx context.Context, id string, advert models.AdvertInput) error
 	DeleteAdvert(ctx context.Context, id string) error
 	UploadImage(ctx context.Context, advertId string, url []string) error
