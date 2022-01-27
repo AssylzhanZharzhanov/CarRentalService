@@ -15,6 +15,10 @@ type AdvertMongo struct {
 	db *mongo.Database
 }
 
+func (r *AdvertMongo) GetMyAdverts(ctx context.Context, userId string) ([]models.Advert, error) {
+	panic("implement me")
+}
+
 func (r *AdvertMongo) GetUserAdverts(ctx context.Context, userId string, status string) ([]models.Advert, error) {
 	userObjId, _ := primitive.ObjectIDFromHex(userId)
 	filter := bson.M{"user_id": userObjId, "status": status}
@@ -30,7 +34,8 @@ func (r *AdvertMongo) GetUserAdverts(ctx context.Context, userId string, status 
 		return adverts, err
 	}
 
-	return adverts, nil}
+	return adverts, nil
+}
 
 func (r *AdvertMongo) CreateAdvert(ctx context.Context, advert models.AdvertInput) (string, error) {
 	res, err := r.db.Collection(advertsCollection).InsertOne(ctx, advert)
@@ -78,7 +83,7 @@ func (r *AdvertMongo) GetAdvertById(ctx context.Context, id string) (models.Adve
 	objId, _ := primitive.ObjectIDFromHex(id)
 
 	advert := models.Advert{}
-	err := r.db.Collection(advertsCollection).FindOne(ctx,bson.M{"_id": objId}).Decode(&advert)
+	err := r.db.Collection(advertsCollection).FindOne(ctx, bson.M{"_id": objId}).Decode(&advert)
 
 	if err != nil {
 		return advert, err
@@ -90,7 +95,7 @@ func (r *AdvertMongo) GetAdvertById(ctx context.Context, id string) (models.Adve
 func (r *AdvertMongo) UpdateAdvert(ctx context.Context, id string, advert models.AdvertInput) error {
 	objId, _ := primitive.ObjectIDFromHex(id)
 
-	_, err := r.db.Collection(advertsCollection).UpdateOne(ctx, bson.D{{"_id", objId}},  bson.M{ "$set": advert})
+	_, err := r.db.Collection(advertsCollection).UpdateOne(ctx, bson.D{{"_id", objId}}, bson.M{"$set": advert})
 	if err != nil {
 		return err
 	}
@@ -118,7 +123,7 @@ func (r *AdvertMongo) UploadImage(ctx context.Context, advertId string, urls []s
 
 	for _, url := range urls {
 		imageList = append(imageList, models.Image{
-			ID: primitive.NewObjectID(),
+			ID:  primitive.NewObjectID(),
 			Url: url,
 		})
 	}
@@ -134,6 +139,6 @@ func (r *AdvertMongo) UploadImage(ctx context.Context, advertId string, urls []s
 
 func NewAdvertMongo(db *mongo.Database) *AdvertMongo {
 	return &AdvertMongo{
-		db:db,
+		db: db,
 	}
 }
