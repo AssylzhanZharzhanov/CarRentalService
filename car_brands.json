@@ -1,0 +1,7236 @@
+[{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16904"
+  },
+  "brand": "Alfa romeo",
+  "model": "Mito",
+  "full_name": "Alfa romeo Mito",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "Mito"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16905"
+  },
+  "brand": "Alfa romeo",
+  "model": "75",
+  "full_name": "Alfa romeo 75",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "75"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16906"
+  },
+  "brand": "Alfa romeo",
+  "model": "Spider",
+  "full_name": "Alfa romeo Spider",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "Spider"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16907"
+  },
+  "brand": "Alfa romeo",
+  "model": "Gtv",
+  "full_name": "Alfa romeo Gtv",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "Gtv"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16908"
+  },
+  "brand": "Alfa romeo",
+  "model": "Gt",
+  "full_name": "Alfa romeo Gt",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "Gt"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16909"
+  },
+  "brand": "Alfa romeo",
+  "model": "Brera",
+  "full_name": "Alfa romeo Brera",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "Brera"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1690a"
+  },
+  "brand": "Alfa romeo",
+  "model": "166",
+  "full_name": "Alfa romeo 166",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "166"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1690b"
+  },
+  "brand": "Alfa romeo",
+  "model": "164",
+  "full_name": "Alfa romeo 164",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "164"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1690c"
+  },
+  "brand": "Alfa romeo",
+  "model": "33",
+  "full_name": "Alfa romeo 33",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "33"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1690d"
+  },
+  "brand": "Alfa romeo",
+  "model": "147",
+  "full_name": "Alfa romeo 147",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "147"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1690e"
+  },
+  "brand": "Alfa romeo",
+  "model": "146",
+  "full_name": "Alfa romeo 146",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "146"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1690f"
+  },
+  "brand": "Alfa romeo",
+  "model": "145",
+  "full_name": "Alfa romeo 145",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "145"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16910"
+  },
+  "brand": "Alfa romeo",
+  "model": "159",
+  "full_name": "Alfa romeo 159",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "159"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16911"
+  },
+  "brand": "Alfa romeo",
+  "model": "156",
+  "full_name": "Alfa romeo 156",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "156"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16912"
+  },
+  "brand": "Alfa romeo",
+  "model": "4c",
+  "full_name": "Alfa romeo 4c",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "4c"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16913"
+  },
+  "brand": "Alfa romeo",
+  "model": "Giulietta",
+  "full_name": "Alfa romeo Giulietta",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "Giulietta"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16914"
+  },
+  "brand": "Alfa romeo",
+  "model": "155",
+  "full_name": "Alfa romeo 155",
+  "text_search": [
+    "Alfa",
+    "romeo",
+    "155"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16915"
+  },
+  "brand": "Aston martin",
+  "model": "Virage",
+  "full_name": "Aston martin Virage",
+  "text_search": [
+    "Aston",
+    "martin",
+    "Virage"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16916"
+  },
+  "brand": "Aston martin",
+  "model": "Vantage",
+  "full_name": "Aston martin Vantage",
+  "text_search": [
+    "Aston",
+    "martin",
+    "Vantage"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16917"
+  },
+  "brand": "Aston martin",
+  "model": "Vanquish",
+  "full_name": "Aston martin Vanquish",
+  "text_search": [
+    "Aston",
+    "martin",
+    "Vanquish"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16918"
+  },
+  "brand": "Aston martin",
+  "model": "Rapide",
+  "full_name": "Aston martin Rapide",
+  "text_search": [
+    "Aston",
+    "martin",
+    "Rapide"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16919"
+  },
+  "brand": "Aston martin",
+  "model": "Db9",
+  "full_name": "Aston martin Db9",
+  "text_search": [
+    "Aston",
+    "martin",
+    "Db9"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1691a"
+  },
+  "brand": "Aston martin",
+  "model": "Db7",
+  "full_name": "Aston martin Db7",
+  "text_search": [
+    "Aston",
+    "martin",
+    "Db7"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1691b"
+  },
+  "brand": "Aston martin",
+  "model": "Dbs",
+  "full_name": "Aston martin Dbs",
+  "text_search": [
+    "Aston",
+    "martin",
+    "Dbs"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1691c"
+  },
+  "brand": "Audi",
+  "model": "A8",
+  "full_name": "Audi A8",
+  "text_search": [
+    "Audi",
+    "A8"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1691d"
+  },
+  "brand": "Audi",
+  "model": "90 serisi",
+  "full_name": "Audi 90 serisi",
+  "text_search": [
+    "Audi",
+    "90",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1691e"
+  },
+  "brand": "Audi",
+  "model": "100 serisi",
+  "full_name": "Audi 100 serisi",
+  "text_search": [
+    "Audi",
+    "100",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1691f"
+  },
+  "brand": "Audi",
+  "model": "R8",
+  "full_name": "Audi R8",
+  "text_search": [
+    "Audi",
+    "R8"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16920"
+  },
+  "brand": "Audi",
+  "model": "S serisi",
+  "full_name": "Audi S serisi",
+  "text_search": [
+    "Audi",
+    "S",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16921"
+  },
+  "brand": "Audi",
+  "model": "Rs",
+  "full_name": "Audi Rs",
+  "text_search": [
+    "Audi",
+    "Rs"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16922"
+  },
+  "brand": "Audi",
+  "model": "Tt",
+  "full_name": "Audi Tt",
+  "text_search": [
+    "Audi",
+    "Tt"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16923"
+  },
+  "brand": "Audi",
+  "model": "A7",
+  "full_name": "Audi A7",
+  "text_search": [
+    "Audi",
+    "A7"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16924"
+  },
+  "brand": "Audi",
+  "model": "80 serisi",
+  "full_name": "Audi 80 serisi",
+  "text_search": [
+    "Audi",
+    "80",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16925"
+  },
+  "brand": "Audi",
+  "model": "Q7",
+  "full_name": "Audi Q7",
+  "text_search": [
+    "Audi",
+    "Q7"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16926"
+  },
+  "brand": "Audi",
+  "model": "Q5",
+  "full_name": "Audi Q5",
+  "text_search": [
+    "Audi",
+    "Q5"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16927"
+  },
+  "brand": "Audi",
+  "model": "Q3",
+  "full_name": "Audi Q3",
+  "text_search": [
+    "Audi",
+    "Q3"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16928"
+  },
+  "brand": "Audi",
+  "model": "A6",
+  "full_name": "Audi A6",
+  "text_search": [
+    "Audi",
+    "A6"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16929"
+  },
+  "brand": "Audi",
+  "model": "A5",
+  "full_name": "Audi A5",
+  "text_search": [
+    "Audi",
+    "A5"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1692a"
+  },
+  "brand": "Audi",
+  "model": "A4",
+  "full_name": "Audi A4",
+  "text_search": [
+    "Audi",
+    "A4"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1692b"
+  },
+  "brand": "Audi",
+  "model": "A1",
+  "full_name": "Audi A1",
+  "text_search": [
+    "Audi",
+    "A1"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1692c"
+  },
+  "brand": "Audi",
+  "model": "A3",
+  "full_name": "Audi A3",
+  "text_search": [
+    "Audi",
+    "A3"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1692d"
+  },
+  "brand": "Bentley",
+  "model": "Mulsanne",
+  "full_name": "Bentley Mulsanne",
+  "text_search": [
+    "Bentley",
+    "Mulsanne"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1692e"
+  },
+  "brand": "Bentley",
+  "model": "Arnage",
+  "full_name": "Bentley Arnage",
+  "text_search": [
+    "Bentley",
+    "Arnage"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1692f"
+  },
+  "brand": "Bentley",
+  "model": "Continental",
+  "full_name": "Bentley Continental",
+  "text_search": [
+    "Bentley",
+    "Continental"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16930"
+  },
+  "brand": "Bmw",
+  "model": "X4",
+  "full_name": "Bmw X4",
+  "text_search": [
+    "Bmw",
+    "X4"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16931"
+  },
+  "brand": "Bmw",
+  "model": "8 serisi",
+  "full_name": "Bmw 8 serisi",
+  "text_search": [
+    "Bmw",
+    "8",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16932"
+  },
+  "brand": "Bmw",
+  "model": "M serisi",
+  "full_name": "Bmw M serisi",
+  "text_search": [
+    "Bmw",
+    "M",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16933"
+  },
+  "brand": "Bmw",
+  "model": "Z serisi",
+  "full_name": "Bmw Z serisi",
+  "text_search": [
+    "Bmw",
+    "Z",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16934"
+  },
+  "brand": "Bmw",
+  "model": "X6",
+  "full_name": "Bmw X6",
+  "text_search": [
+    "Bmw",
+    "X6"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16935"
+  },
+  "brand": "Bmw",
+  "model": "X5",
+  "full_name": "Bmw X5",
+  "text_search": [
+    "Bmw",
+    "X5"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16936"
+  },
+  "brand": "Bmw",
+  "model": "X3",
+  "full_name": "Bmw X3",
+  "text_search": [
+    "Bmw",
+    "X3"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16937"
+  },
+  "brand": "Bmw",
+  "model": "7 serisi",
+  "full_name": "Bmw 7 serisi",
+  "text_search": [
+    "Bmw",
+    "7",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16938"
+  },
+  "brand": "Bmw",
+  "model": "6 serisi",
+  "full_name": "Bmw 6 serisi",
+  "text_search": [
+    "Bmw",
+    "6",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16939"
+  },
+  "brand": "Bmw",
+  "model": "5 serisi",
+  "full_name": "Bmw 5 serisi",
+  "text_search": [
+    "Bmw",
+    "5",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1693a"
+  },
+  "brand": "Bmw",
+  "model": "4 serisi",
+  "full_name": "Bmw 4 serisi",
+  "text_search": [
+    "Bmw",
+    "4",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1693b"
+  },
+  "brand": "Bmw",
+  "model": "3 serisi",
+  "full_name": "Bmw 3 serisi",
+  "text_search": [
+    "Bmw",
+    "3",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1693c"
+  },
+  "brand": "Bmw",
+  "model": "2 serisi",
+  "full_name": "Bmw 2 serisi",
+  "text_search": [
+    "Bmw",
+    "2",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1693d"
+  },
+  "brand": "Bmw",
+  "model": "1 serisi",
+  "full_name": "Bmw 1 serisi",
+  "text_search": [
+    "Bmw",
+    "1",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1693e"
+  },
+  "brand": "Bmw",
+  "model": "X1",
+  "full_name": "Bmw X1",
+  "text_search": [
+    "Bmw",
+    "X1"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1693f"
+  },
+  "brand": "Cadillac",
+  "model": "Sts",
+  "full_name": "Cadillac Sts",
+  "text_search": [
+    "Cadillac",
+    "Sts"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16940"
+  },
+  "brand": "Cadillac",
+  "model": "Srx",
+  "full_name": "Cadillac Srx",
+  "text_search": [
+    "Cadillac",
+    "Srx"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16941"
+  },
+  "brand": "Cadillac",
+  "model": "Fleetwood",
+  "full_name": "Cadillac Fleetwood",
+  "text_search": [
+    "Cadillac",
+    "Fleetwood"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16942"
+  },
+  "brand": "Cadillac",
+  "model": "Escalade",
+  "full_name": "Cadillac Escalade",
+  "text_search": [
+    "Cadillac",
+    "Escalade"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16943"
+  },
+  "brand": "Cadillac",
+  "model": "Seville",
+  "full_name": "Cadillac Seville",
+  "text_search": [
+    "Cadillac",
+    "Seville"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16944"
+  },
+  "brand": "Cadillac",
+  "model": "Cts",
+  "full_name": "Cadillac Cts",
+  "text_search": [
+    "Cadillac",
+    "Cts"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16945"
+  },
+  "brand": "Cadillac",
+  "model": "Brougham",
+  "full_name": "Cadillac Brougham",
+  "text_search": [
+    "Cadillac",
+    "Brougham"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16946"
+  },
+  "brand": "Cadillac",
+  "model": "Bls",
+  "full_name": "Cadillac Bls",
+  "text_search": [
+    "Cadillac",
+    "Bls"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16947"
+  },
+  "brand": "Cadillac",
+  "model": "Deville",
+  "full_name": "Cadillac Deville",
+  "text_search": [
+    "Cadillac",
+    "Deville"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16948"
+  },
+  "brand": "Chery",
+  "model": "Alia",
+  "full_name": "Chery Alia",
+  "text_search": [
+    "Chery",
+    "Alia"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16949"
+  },
+  "brand": "Chery",
+  "model": "Chance",
+  "full_name": "Chery Chance",
+  "text_search": [
+    "Chery",
+    "Chance"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1694a"
+  },
+  "brand": "Chery",
+  "model": "Kimo",
+  "full_name": "Chery Kimo",
+  "text_search": [
+    "Chery",
+    "Kimo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1694b"
+  },
+  "brand": "Chery",
+  "model": "Niche",
+  "full_name": "Chery Niche",
+  "text_search": [
+    "Chery",
+    "Niche"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1694c"
+  },
+  "brand": "Chery",
+  "model": "Tiggo",
+  "full_name": "Chery Tiggo",
+  "text_search": [
+    "Chery",
+    "Tiggo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1694d"
+  },
+  "brand": "Chevrolet",
+  "model": "Tahoe",
+  "full_name": "Chevrolet Tahoe",
+  "text_search": [
+    "Chevrolet",
+    "Tahoe"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1694e"
+  },
+  "brand": "Chevrolet",
+  "model": "Evanda",
+  "full_name": "Chevrolet Evanda",
+  "text_search": [
+    "Chevrolet",
+    "Evanda"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1694f"
+  },
+  "brand": "Chevrolet",
+  "model": "Corvette",
+  "full_name": "Chevrolet Corvette",
+  "text_search": [
+    "Chevrolet",
+    "Corvette"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16950"
+  },
+  "brand": "Chevrolet",
+  "model": "Caprice",
+  "full_name": "Chevrolet Caprice",
+  "text_search": [
+    "Chevrolet",
+    "Caprice"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16951"
+  },
+  "brand": "Chevrolet",
+  "model": "Camaro",
+  "full_name": "Chevrolet Camaro",
+  "text_search": [
+    "Chevrolet",
+    "Camaro"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16952"
+  },
+  "brand": "Chevrolet",
+  "model": "Blazer",
+  "full_name": "Chevrolet Blazer",
+  "text_search": [
+    "Chevrolet",
+    "Blazer"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16953"
+  },
+  "brand": "Chevrolet",
+  "model": "Rezzo",
+  "full_name": "Chevrolet Rezzo",
+  "text_search": [
+    "Chevrolet",
+    "Rezzo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16954"
+  },
+  "brand": "Chevrolet",
+  "model": "Spark",
+  "full_name": "Chevrolet Spark",
+  "text_search": [
+    "Chevrolet",
+    "Spark"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16955"
+  },
+  "brand": "Chevrolet",
+  "model": "Trax",
+  "full_name": "Chevrolet Trax",
+  "text_search": [
+    "Chevrolet",
+    "Trax"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16956"
+  },
+  "brand": "Chevrolet",
+  "model": "Epica",
+  "full_name": "Chevrolet Epica",
+  "text_search": [
+    "Chevrolet",
+    "Epica"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16957"
+  },
+  "brand": "Chevrolet",
+  "model": "Lacetti",
+  "full_name": "Chevrolet Lacetti",
+  "text_search": [
+    "Chevrolet",
+    "Lacetti"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16958"
+  },
+  "brand": "Chevrolet",
+  "model": "Kalos",
+  "full_name": "Chevrolet Kalos",
+  "text_search": [
+    "Chevrolet",
+    "Kalos"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16959"
+  },
+  "brand": "Chevrolet",
+  "model": "Cruze",
+  "full_name": "Chevrolet Cruze",
+  "text_search": [
+    "Chevrolet",
+    "Cruze"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1695a"
+  },
+  "brand": "Chevrolet",
+  "model": "Captiva",
+  "full_name": "Chevrolet Captiva",
+  "text_search": [
+    "Chevrolet",
+    "Captiva"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1695b"
+  },
+  "brand": "Chevrolet",
+  "model": "Aveo",
+  "full_name": "Chevrolet Aveo",
+  "text_search": [
+    "Chevrolet",
+    "Aveo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1695c"
+  },
+  "brand": "Chrysler",
+  "model": "Voyager",
+  "full_name": "Chrysler Voyager",
+  "text_search": [
+    "Chrysler",
+    "Voyager"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1695d"
+  },
+  "brand": "Chrysler",
+  "model": "Pt cruiser",
+  "full_name": "Chrysler Pt cruiser",
+  "text_search": [
+    "Chrysler",
+    "Pt",
+    "cruiser"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1695e"
+  },
+  "brand": "Chrysler",
+  "model": "Pacifica",
+  "full_name": "Chrysler Pacifica",
+  "text_search": [
+    "Chrysler",
+    "Pacifica"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1695f"
+  },
+  "brand": "Chrysler",
+  "model": "Neon",
+  "full_name": "Chrysler Neon",
+  "text_search": [
+    "Chrysler",
+    "Neon"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16960"
+  },
+  "brand": "Chrysler",
+  "model": "Lhs",
+  "full_name": "Chrysler Lhs",
+  "text_search": [
+    "Chrysler",
+    "Lhs"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16961"
+  },
+  "brand": "Chrysler",
+  "model": "Grand voyager",
+  "full_name": "Chrysler Grand voyager",
+  "text_search": [
+    "Chrysler",
+    "Grand",
+    "voyager"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16962"
+  },
+  "brand": "Chrysler",
+  "model": "Le baron",
+  "full_name": "Chrysler Le baron",
+  "text_search": [
+    "Chrysler",
+    "Le",
+    "baron"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16963"
+  },
+  "brand": "Chrysler",
+  "model": "Concorde",
+  "full_name": "Chrysler Concorde",
+  "text_search": [
+    "Chrysler",
+    "Concorde"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16964"
+  },
+  "brand": "Chrysler",
+  "model": "300 m",
+  "full_name": "Chrysler 300 m",
+  "text_search": [
+    "Chrysler",
+    "300",
+    "m"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16965"
+  },
+  "brand": "Chrysler",
+  "model": "Stratus",
+  "full_name": "Chrysler Stratus",
+  "text_search": [
+    "Chrysler",
+    "Stratus"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16966"
+  },
+  "brand": "Chrysler",
+  "model": "Sebring",
+  "full_name": "Chrysler Sebring",
+  "text_search": [
+    "Chrysler",
+    "Sebring"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16967"
+  },
+  "brand": "Chrysler",
+  "model": "300 c",
+  "full_name": "Chrysler 300 c",
+  "text_search": [
+    "Chrysler",
+    "300",
+    "c"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16968"
+  },
+  "brand": "Chrysler",
+  "model": "Crossfire",
+  "full_name": "Chrysler Crossfire",
+  "text_search": [
+    "Chrysler",
+    "Crossfire"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16969"
+  },
+  "brand": "Citroen",
+  "model": "C1",
+  "full_name": "Citroen C1",
+  "text_search": [
+    "Citroen",
+    "C1"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1696a"
+  },
+  "brand": "Citroen",
+  "model": "Zx",
+  "full_name": "Citroen Zx",
+  "text_search": [
+    "Citroen",
+    "Zx"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1696b"
+  },
+  "brand": "Citroen",
+  "model": "Bx",
+  "full_name": "Citroen Bx",
+  "text_search": [
+    "Citroen",
+    "Bx"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1696c"
+  },
+  "brand": "Citroen",
+  "model": "Ax",
+  "full_name": "Citroen Ax",
+  "text_search": [
+    "Citroen",
+    "Ax"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1696d"
+  },
+  "brand": "Citroen",
+  "model": "Xsara",
+  "full_name": "Citroen Xsara",
+  "text_search": [
+    "Citroen",
+    "Xsara"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1696e"
+  },
+  "brand": "Citroen",
+  "model": "Saxo",
+  "full_name": "Citroen Saxo",
+  "text_search": [
+    "Citroen",
+    "Saxo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1696f"
+  },
+  "brand": "Citroen",
+  "model": "C3 picasso",
+  "full_name": "Citroen C3 picasso",
+  "text_search": [
+    "Citroen",
+    "C3",
+    "picasso"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16970"
+  },
+  "brand": "Citroen",
+  "model": "C2",
+  "full_name": "Citroen C2",
+  "text_search": [
+    "Citroen",
+    "C2"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16971"
+  },
+  "brand": "Citroen",
+  "model": "Berlingo",
+  "full_name": "Citroen Berlingo",
+  "text_search": [
+    "Citroen",
+    "Berlingo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16972"
+  },
+  "brand": "Citroen",
+  "model": "Xantia",
+  "full_name": "Citroen Xantia",
+  "text_search": [
+    "Citroen",
+    "Xantia"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16973"
+  },
+  "brand": "Citroen",
+  "model": "Ds5",
+  "full_name": "Citroen Ds5",
+  "text_search": [
+    "Citroen",
+    "Ds5"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16974"
+  },
+  "brand": "Citroen",
+  "model": "C3",
+  "full_name": "Citroen C3",
+  "text_search": [
+    "Citroen",
+    "C3"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16975"
+  },
+  "brand": "Citroen",
+  "model": "C4",
+  "full_name": "Citroen C4",
+  "text_search": [
+    "Citroen",
+    "C4"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16976"
+  },
+  "brand": "Citroen",
+  "model": "C4 picasso",
+  "full_name": "Citroen C4 picasso",
+  "text_search": [
+    "Citroen",
+    "C4",
+    "picasso"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16977"
+  },
+  "brand": "Citroen",
+  "model": "C4 cactus",
+  "full_name": "Citroen C4 cactus",
+  "text_search": [
+    "Citroen",
+    "C4",
+    "cactus"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16978"
+  },
+  "brand": "Citroen",
+  "model": "Nemo",
+  "full_name": "Citroen Nemo",
+  "text_search": [
+    "Citroen",
+    "Nemo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16979"
+  },
+  "brand": "Citroen",
+  "model": "C5",
+  "full_name": "Citroen C5",
+  "text_search": [
+    "Citroen",
+    "C5"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1697a"
+  },
+  "brand": "Citroen",
+  "model": "Ds3",
+  "full_name": "Citroen Ds3",
+  "text_search": [
+    "Citroen",
+    "Ds3"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1697b"
+  },
+  "brand": "Citroen",
+  "model": "Ds4",
+  "full_name": "Citroen Ds4",
+  "text_search": [
+    "Citroen",
+    "Ds4"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1697c"
+  },
+  "brand": "Citroen",
+  "model": "C-elysee",
+  "full_name": "Citroen C-elysee",
+  "text_search": [
+    "Citroen",
+    "C-elysee"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1697d"
+  },
+  "brand": "Dacia",
+  "model": "Nova",
+  "full_name": "Dacia Nova",
+  "text_search": [
+    "Dacia",
+    "Nova"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1697e"
+  },
+  "brand": "Dacia",
+  "model": "1310",
+  "full_name": "Dacia 1310",
+  "text_search": [
+    "Dacia",
+    "1310"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1697f"
+  },
+  "brand": "Dacia",
+  "model": "Solenza",
+  "full_name": "Dacia Solenza",
+  "text_search": [
+    "Dacia",
+    "Solenza"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16980"
+  },
+  "brand": "Dacia",
+  "model": "Logan",
+  "full_name": "Dacia Logan",
+  "text_search": [
+    "Dacia",
+    "Logan"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16981"
+  },
+  "brand": "Dacia",
+  "model": "Lodgy",
+  "full_name": "Dacia Lodgy",
+  "text_search": [
+    "Dacia",
+    "Lodgy"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16982"
+  },
+  "brand": "Dacia",
+  "model": "Logan mcv",
+  "full_name": "Dacia Logan mcv",
+  "text_search": [
+    "Dacia",
+    "Logan",
+    "mcv"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16983"
+  },
+  "brand": "Dacia",
+  "model": "Duster",
+  "full_name": "Dacia Duster",
+  "text_search": [
+    "Dacia",
+    "Duster"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16984"
+  },
+  "brand": "Dacia",
+  "model": "Dokker",
+  "full_name": "Dacia Dokker",
+  "text_search": [
+    "Dacia",
+    "Dokker"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16985"
+  },
+  "brand": "Dacia",
+  "model": "Sandero",
+  "full_name": "Dacia Sandero",
+  "text_search": [
+    "Dacia",
+    "Sandero"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16986"
+  },
+  "brand": "Daewoo",
+  "model": "Matiz",
+  "full_name": "Daewoo Matiz",
+  "text_search": [
+    "Daewoo",
+    "Matiz"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16987"
+  },
+  "brand": "Daewoo",
+  "model": "Tico",
+  "full_name": "Daewoo Tico",
+  "text_search": [
+    "Daewoo",
+    "Tico"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16988"
+  },
+  "brand": "Daewoo",
+  "model": "Super saloon",
+  "full_name": "Daewoo Super saloon",
+  "text_search": [
+    "Daewoo",
+    "Super",
+    "saloon"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16989"
+  },
+  "brand": "Daewoo",
+  "model": "Racer",
+  "full_name": "Daewoo Racer",
+  "text_search": [
+    "Daewoo",
+    "Racer"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1698a"
+  },
+  "brand": "Daewoo",
+  "model": "Musso",
+  "full_name": "Daewoo Musso",
+  "text_search": [
+    "Daewoo",
+    "Musso"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1698b"
+  },
+  "brand": "Daewoo",
+  "model": "Korando",
+  "full_name": "Daewoo Korando",
+  "text_search": [
+    "Daewoo",
+    "Korando"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1698c"
+  },
+  "brand": "Daewoo",
+  "model": "Espero",
+  "full_name": "Daewoo Espero",
+  "text_search": [
+    "Daewoo",
+    "Espero"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1698d"
+  },
+  "brand": "Daewoo",
+  "model": "Nubira",
+  "full_name": "Daewoo Nubira",
+  "text_search": [
+    "Daewoo",
+    "Nubira"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1698e"
+  },
+  "brand": "Daewoo",
+  "model": "Nexia",
+  "full_name": "Daewoo Nexia",
+  "text_search": [
+    "Daewoo",
+    "Nexia"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1698f"
+  },
+  "brand": "Daewoo",
+  "model": "Lanos",
+  "full_name": "Daewoo Lanos",
+  "text_search": [
+    "Daewoo",
+    "Lanos"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16990"
+  },
+  "brand": "Daewoo",
+  "model": "Leganza",
+  "full_name": "Daewoo Leganza",
+  "text_search": [
+    "Daewoo",
+    "Leganza"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16991"
+  },
+  "brand": "Daihatsu",
+  "model": "Yrv",
+  "full_name": "Daihatsu Yrv",
+  "text_search": [
+    "Daihatsu",
+    "Yrv"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16992"
+  },
+  "brand": "Daihatsu",
+  "model": "Move",
+  "full_name": "Daihatsu Move",
+  "text_search": [
+    "Daihatsu",
+    "Move"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16993"
+  },
+  "brand": "Daihatsu",
+  "model": "Materia",
+  "full_name": "Daihatsu Materia",
+  "text_search": [
+    "Daihatsu",
+    "Materia"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16994"
+  },
+  "brand": "Daihatsu",
+  "model": "Feroza",
+  "full_name": "Daihatsu Feroza",
+  "text_search": [
+    "Daihatsu",
+    "Feroza"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16995"
+  },
+  "brand": "Daihatsu",
+  "model": "Cuore",
+  "full_name": "Daihatsu Cuore",
+  "text_search": [
+    "Daihatsu",
+    "Cuore"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16996"
+  },
+  "brand": "Daihatsu",
+  "model": "Charade",
+  "full_name": "Daihatsu Charade",
+  "text_search": [
+    "Daihatsu",
+    "Charade"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16997"
+  },
+  "brand": "Daihatsu",
+  "model": "Applause",
+  "full_name": "Daihatsu Applause",
+  "text_search": [
+    "Daihatsu",
+    "Applause"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16998"
+  },
+  "brand": "Daihatsu",
+  "model": "Sirion",
+  "full_name": "Daihatsu Sirion",
+  "text_search": [
+    "Daihatsu",
+    "Sirion"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16999"
+  },
+  "brand": "Daihatsu",
+  "model": "Terios",
+  "full_name": "Daihatsu Terios",
+  "text_search": [
+    "Daihatsu",
+    "Terios"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1699a"
+  },
+  "brand": "Daihatsu",
+  "model": "Copen",
+  "full_name": "Daihatsu Copen",
+  "text_search": [
+    "Daihatsu",
+    "Copen"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1699b"
+  },
+  "brand": "Dfm",
+  "model": "Rich",
+  "full_name": "Dfm Rich",
+  "text_search": [
+    "Dfm",
+    "Rich"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1699c"
+  },
+  "brand": "Dfm",
+  "model": "Succe",
+  "full_name": "Dfm Succe",
+  "text_search": [
+    "Dfm",
+    "Succe"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1699d"
+  },
+  "brand": "Dodge",
+  "model": "Nitro",
+  "full_name": "Dodge Nitro",
+  "text_search": [
+    "Dodge",
+    "Nitro"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1699e"
+  },
+  "brand": "Dodge",
+  "model": "Viper",
+  "full_name": "Dodge Viper",
+  "text_search": [
+    "Dodge",
+    "Viper"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b1699f"
+  },
+  "brand": "Dodge",
+  "model": "Stealth",
+  "full_name": "Dodge Stealth",
+  "text_search": [
+    "Dodge",
+    "Stealth"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169a0"
+  },
+  "brand": "Dodge",
+  "model": "Ram",
+  "full_name": "Dodge Ram",
+  "text_search": [
+    "Dodge",
+    "Ram"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169a1"
+  },
+  "brand": "Dodge",
+  "model": "Magnum",
+  "full_name": "Dodge Magnum",
+  "text_search": [
+    "Dodge",
+    "Magnum"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169a2"
+  },
+  "brand": "Dodge",
+  "model": "Spirit",
+  "full_name": "Dodge Spirit",
+  "text_search": [
+    "Dodge",
+    "Spirit"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169a3"
+  },
+  "brand": "Dodge",
+  "model": "Intrepid",
+  "full_name": "Dodge Intrepid",
+  "text_search": [
+    "Dodge",
+    "Intrepid"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169a4"
+  },
+  "brand": "Dodge",
+  "model": "Durango",
+  "full_name": "Dodge Durango",
+  "text_search": [
+    "Dodge",
+    "Durango"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169a5"
+  },
+  "brand": "Dodge",
+  "model": "Challenger",
+  "full_name": "Dodge Challenger",
+  "text_search": [
+    "Dodge",
+    "Challenger"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169a6"
+  },
+  "brand": "Dodge",
+  "model": "Journey",
+  "full_name": "Dodge Journey",
+  "text_search": [
+    "Dodge",
+    "Journey"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169a7"
+  },
+  "brand": "Dodge",
+  "model": "Caliber",
+  "full_name": "Dodge Caliber",
+  "text_search": [
+    "Dodge",
+    "Caliber"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169a8"
+  },
+  "brand": "Dodge",
+  "model": "Avenger",
+  "full_name": "Dodge Avenger",
+  "text_search": [
+    "Dodge",
+    "Avenger"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169a9"
+  },
+  "brand": "Ferrari",
+  "model": "Laferrari",
+  "full_name": "Ferrari Laferrari",
+  "text_search": [
+    "Ferrari",
+    "Laferrari"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169aa"
+  },
+  "brand": "Ferrari",
+  "model": "Ff",
+  "full_name": "Ferrari Ff",
+  "text_search": [
+    "Ferrari",
+    "Ff"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169ab"
+  },
+  "brand": "Ferrari",
+  "model": "F serisi",
+  "full_name": "Ferrari F serisi",
+  "text_search": [
+    "Ferrari",
+    "F",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169ac"
+  },
+  "brand": "Ferrari",
+  "model": "California",
+  "full_name": "Ferrari California",
+  "text_search": [
+    "Ferrari",
+    "California"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169ad"
+  },
+  "brand": "Ferrari",
+  "model": "612",
+  "full_name": "Ferrari 612",
+  "text_search": [
+    "Ferrari",
+    "612"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169ae"
+  },
+  "brand": "Ferrari",
+  "model": "F355",
+  "full_name": "Ferrari F355",
+  "text_search": [
+    "Ferrari",
+    "F355"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169af"
+  },
+  "brand": "Ferrari",
+  "model": "575",
+  "full_name": "Ferrari 575",
+  "text_search": [
+    "Ferrari",
+    "575"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169b0"
+  },
+  "brand": "Ferrari",
+  "model": "458",
+  "full_name": "Ferrari 458",
+  "text_search": [
+    "Ferrari",
+    "458"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169b1"
+  },
+  "brand": "Ferrari",
+  "model": "456",
+  "full_name": "Ferrari 456",
+  "text_search": [
+    "Ferrari",
+    "456"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169b2"
+  },
+  "brand": "Ferrari",
+  "model": "430",
+  "full_name": "Ferrari 430",
+  "text_search": [
+    "Ferrari",
+    "430"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169b3"
+  },
+  "brand": "Ferrari",
+  "model": "360",
+  "full_name": "Ferrari 360",
+  "text_search": [
+    "Ferrari",
+    "360"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169b4"
+  },
+  "brand": "Ferrari",
+  "model": "599",
+  "full_name": "Ferrari 599",
+  "text_search": [
+    "Ferrari",
+    "599"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169b5"
+  },
+  "brand": "Fiat",
+  "model": "Uno",
+  "full_name": "Fiat Uno",
+  "text_search": [
+    "Fiat",
+    "Uno"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169b6"
+  },
+  "brand": "Fiat",
+  "model": "Tipo",
+  "full_name": "Fiat Tipo",
+  "text_search": [
+    "Fiat",
+    "Tipo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169b7"
+  },
+  "brand": "Fiat",
+  "model": "Tempra",
+  "full_name": "Fiat Tempra",
+  "text_search": [
+    "Fiat",
+    "Tempra"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169b8"
+  },
+  "brand": "Fiat",
+  "model": "126 bis",
+  "full_name": "Fiat 126 bis",
+  "text_search": [
+    "Fiat",
+    "126",
+    "bis"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169b9"
+  },
+  "brand": "Fiat",
+  "model": "Brava",
+  "full_name": "Fiat Brava",
+  "text_search": [
+    "Fiat",
+    "Brava"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169ba"
+  },
+  "brand": "Fiat",
+  "model": "Idea",
+  "full_name": "Fiat Idea",
+  "text_search": [
+    "Fiat",
+    "Idea"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169bb"
+  },
+  "brand": "Fiat",
+  "model": "Coupe",
+  "full_name": "Fiat Coupe",
+  "text_search": [
+    "Fiat",
+    "Coupe"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169bc"
+  },
+  "brand": "Fiat",
+  "model": "Marea",
+  "full_name": "Fiat Marea",
+  "text_search": [
+    "Fiat",
+    "Marea"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169bd"
+  },
+  "brand": "Fiat",
+  "model": "Siena",
+  "full_name": "Fiat Siena",
+  "text_search": [
+    "Fiat",
+    "Siena"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169be"
+  },
+  "brand": "Fiat",
+  "model": "Stilo",
+  "full_name": "Fiat Stilo",
+  "text_search": [
+    "Fiat",
+    "Stilo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169bf"
+  },
+  "brand": "Fiat",
+  "model": "Albea",
+  "full_name": "Fiat Albea",
+  "text_search": [
+    "Fiat",
+    "Albea"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169c0"
+  },
+  "brand": "Fiat",
+  "model": "Sedici",
+  "full_name": "Fiat Sedici",
+  "text_search": [
+    "Fiat",
+    "Sedici"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169c1"
+  },
+  "brand": "Fiat",
+  "model": "Palio",
+  "full_name": "Fiat Palio",
+  "text_search": [
+    "Fiat",
+    "Palio"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169c2"
+  },
+  "brand": "Fiat",
+  "model": "Bravo",
+  "full_name": "Fiat Bravo",
+  "text_search": [
+    "Fiat",
+    "Bravo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169c3"
+  },
+  "brand": "Fiat",
+  "model": "Punto",
+  "full_name": "Fiat Punto",
+  "text_search": [
+    "Fiat",
+    "Punto"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169c4"
+  },
+  "brand": "Fiat",
+  "model": "Pratico",
+  "full_name": "Fiat Pratico",
+  "text_search": [
+    "Fiat",
+    "Pratico"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169c5"
+  },
+  "brand": "Fiat",
+  "model": "Linea",
+  "full_name": "Fiat Linea",
+  "text_search": [
+    "Fiat",
+    "Linea"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169c6"
+  },
+  "brand": "Fiat",
+  "model": "Panda",
+  "full_name": "Fiat Panda",
+  "text_search": [
+    "Fiat",
+    "Panda"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169c7"
+  },
+  "brand": "Fiat",
+  "model": "Freemont",
+  "full_name": "Fiat Freemont",
+  "text_search": [
+    "Fiat",
+    "Freemont"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169c8"
+  },
+  "brand": "Fiat",
+  "model": "500",
+  "full_name": "Fiat 500",
+  "text_search": [
+    "Fiat",
+    "500"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169c9"
+  },
+  "brand": "Fiat",
+  "model": "500c",
+  "full_name": "Fiat 500c",
+  "text_search": [
+    "Fiat",
+    "500c"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169ca"
+  },
+  "brand": "Fiat",
+  "model": "Egea",
+  "full_name": "Fiat Egea",
+  "text_search": [
+    "Fiat",
+    "Egea"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169cb"
+  },
+  "brand": "Fiat",
+  "model": "500x",
+  "full_name": "Fiat 500x",
+  "text_search": [
+    "Fiat",
+    "500x"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169cc"
+  },
+  "brand": "Fiat",
+  "model": "Fiorino",
+  "full_name": "Fiat Fiorino",
+  "text_search": [
+    "Fiat",
+    "Fiorino"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169cd"
+  },
+  "brand": "Fiat",
+  "model": "Doblo",
+  "full_name": "Fiat Doblo",
+  "text_search": [
+    "Fiat",
+    "Doblo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169ce"
+  },
+  "brand": "Fiat",
+  "model": "Doblo combi",
+  "full_name": "Fiat Doblo combi",
+  "text_search": [
+    "Fiat",
+    "Doblo",
+    "combi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169cf"
+  },
+  "brand": "Fiat",
+  "model": "Doblo cargo",
+  "full_name": "Fiat Doblo cargo",
+  "text_search": [
+    "Fiat",
+    "Doblo",
+    "cargo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169d0"
+  },
+  "brand": "Fiat",
+  "model": "500l",
+  "full_name": "Fiat 500l",
+  "text_search": [
+    "Fiat",
+    "500l"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169d1"
+  },
+  "brand": "Ford",
+  "model": "Escort",
+  "full_name": "Ford Escort",
+  "text_search": [
+    "Ford",
+    "Escort"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169d2"
+  },
+  "brand": "Ford",
+  "model": "Fusion",
+  "full_name": "Ford Fusion",
+  "text_search": [
+    "Ford",
+    "Fusion"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169d3"
+  },
+  "brand": "Ford",
+  "model": "Taunus",
+  "full_name": "Ford Taunus",
+  "text_search": [
+    "Ford",
+    "Taunus"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169d4"
+  },
+  "brand": "Ford",
+  "model": "Explorer",
+  "full_name": "Ford Explorer",
+  "text_search": [
+    "Ford",
+    "Explorer"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169d5"
+  },
+  "brand": "Ford",
+  "model": "Ka",
+  "full_name": "Ford Ka",
+  "text_search": [
+    "Ford",
+    "Ka"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169d6"
+  },
+  "brand": "Ford",
+  "model": "Granada",
+  "full_name": "Ford Granada",
+  "text_search": [
+    "Ford",
+    "Granada"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169d7"
+  },
+  "brand": "Ford",
+  "model": "Orion",
+  "full_name": "Ford Orion",
+  "text_search": [
+    "Ford",
+    "Orion"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169d8"
+  },
+  "brand": "Ford",
+  "model": "Scorpio",
+  "full_name": "Ford Scorpio",
+  "text_search": [
+    "Ford",
+    "Scorpio"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169d9"
+  },
+  "brand": "Ford",
+  "model": "Sierra",
+  "full_name": "Ford Sierra",
+  "text_search": [
+    "Ford",
+    "Sierra"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169da"
+  },
+  "brand": "Ford",
+  "model": "Mustang",
+  "full_name": "Ford Mustang",
+  "text_search": [
+    "Ford",
+    "Mustang"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169db"
+  },
+  "brand": "Ford",
+  "model": "Festiva",
+  "full_name": "Ford Festiva",
+  "text_search": [
+    "Ford",
+    "Festiva"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169dc"
+  },
+  "brand": "Ford",
+  "model": "Transit connect",
+  "full_name": "Ford Transit connect",
+  "text_search": [
+    "Ford",
+    "Transit",
+    "connect"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169dd"
+  },
+  "brand": "Ford",
+  "model": "Tourneo connect",
+  "full_name": "Ford Tourneo connect",
+  "text_search": [
+    "Ford",
+    "Tourneo",
+    "connect"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169de"
+  },
+  "brand": "Ford",
+  "model": "Ranger",
+  "full_name": "Ford Ranger",
+  "text_search": [
+    "Ford",
+    "Ranger"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169df"
+  },
+  "brand": "Ford",
+  "model": "Transit courier",
+  "full_name": "Ford Transit courier",
+  "text_search": [
+    "Ford",
+    "Transit",
+    "courier"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169e0"
+  },
+  "brand": "Ford",
+  "model": "Fiesta",
+  "full_name": "Ford Fiesta",
+  "text_search": [
+    "Ford",
+    "Fiesta"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169e1"
+  },
+  "brand": "Ford",
+  "model": "Mondeo",
+  "full_name": "Ford Mondeo",
+  "text_search": [
+    "Ford",
+    "Mondeo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169e2"
+  },
+  "brand": "Ford",
+  "model": "Kuga",
+  "full_name": "Ford Kuga",
+  "text_search": [
+    "Ford",
+    "Kuga"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169e3"
+  },
+  "brand": "Ford",
+  "model": "Focus",
+  "full_name": "Ford Focus",
+  "text_search": [
+    "Ford",
+    "Focus"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169e4"
+  },
+  "brand": "Ford",
+  "model": "C-max",
+  "full_name": "Ford C-max",
+  "text_search": [
+    "Ford",
+    "C-max"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169e5"
+  },
+  "brand": "Ford",
+  "model": "S-max",
+  "full_name": "Ford S-max",
+  "text_search": [
+    "Ford",
+    "S-max"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169e6"
+  },
+  "brand": "Ford",
+  "model": "Galaxy",
+  "full_name": "Ford Galaxy",
+  "text_search": [
+    "Ford",
+    "Galaxy"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169e7"
+  },
+  "brand": "Ford",
+  "model": "Tourneo courier",
+  "full_name": "Ford Tourneo courier",
+  "text_search": [
+    "Ford",
+    "Tourneo",
+    "courier"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169e8"
+  },
+  "brand": "Ford",
+  "model": "B-max",
+  "full_name": "Ford B-max",
+  "text_search": [
+    "Ford",
+    "B-max"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169e9"
+  },
+  "brand": "Geely",
+  "model": "Echo",
+  "full_name": "Geely Echo",
+  "text_search": [
+    "Geely",
+    "Echo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169ea"
+  },
+  "brand": "Geely",
+  "model": "Emgrand",
+  "full_name": "Geely Emgrand",
+  "text_search": [
+    "Geely",
+    "Emgrand"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169eb"
+  },
+  "brand": "Geely",
+  "model": "Familia",
+  "full_name": "Geely Familia",
+  "text_search": [
+    "Geely",
+    "Familia"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169ec"
+  },
+  "brand": "Geely",
+  "model": "Fc",
+  "full_name": "Geely Fc",
+  "text_search": [
+    "Geely",
+    "Fc"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169ed"
+  },
+  "brand": "Honda",
+  "model": "Legend",
+  "full_name": "Honda Legend",
+  "text_search": [
+    "Honda",
+    "Legend"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169ee"
+  },
+  "brand": "Honda",
+  "model": "Prelude",
+  "full_name": "Honda Prelude",
+  "text_search": [
+    "Honda",
+    "Prelude"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169ef"
+  },
+  "brand": "Honda",
+  "model": "Stream",
+  "full_name": "Honda Stream",
+  "text_search": [
+    "Honda",
+    "Stream"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169f0"
+  },
+  "brand": "Honda",
+  "model": "Shuttle",
+  "full_name": "Honda Shuttle",
+  "text_search": [
+    "Honda",
+    "Shuttle"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169f1"
+  },
+  "brand": "Honda",
+  "model": "S2000",
+  "full_name": "Honda S2000",
+  "text_search": [
+    "Honda",
+    "S2000"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169f2"
+  },
+  "brand": "Honda",
+  "model": "Crx",
+  "full_name": "Honda Crx",
+  "text_search": [
+    "Honda",
+    "Crx"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169f3"
+  },
+  "brand": "Honda",
+  "model": "Integra",
+  "full_name": "Honda Integra",
+  "text_search": [
+    "Honda",
+    "Integra"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169f4"
+  },
+  "brand": "Honda",
+  "model": "Cr-z",
+  "full_name": "Honda Cr-z",
+  "text_search": [
+    "Honda",
+    "Cr-z"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169f5"
+  },
+  "brand": "Honda",
+  "model": "Civic",
+  "full_name": "Honda Civic",
+  "text_search": [
+    "Honda",
+    "Civic"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169f6"
+  },
+  "brand": "Honda",
+  "model": "Jazz",
+  "full_name": "Honda Jazz",
+  "text_search": [
+    "Honda",
+    "Jazz"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169f7"
+  },
+  "brand": "Honda",
+  "model": "Hr-v",
+  "full_name": "Honda Hr-v",
+  "text_search": [
+    "Honda",
+    "Hr-v"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169f8"
+  },
+  "brand": "Honda",
+  "model": "Cr-v",
+  "full_name": "Honda Cr-v",
+  "text_search": [
+    "Honda",
+    "Cr-v"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169f9"
+  },
+  "brand": "Honda",
+  "model": "City",
+  "full_name": "Honda City",
+  "text_search": [
+    "Honda",
+    "City"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169fa"
+  },
+  "brand": "Honda",
+  "model": "Accord",
+  "full_name": "Honda Accord",
+  "text_search": [
+    "Honda",
+    "Accord"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169fb"
+  },
+  "brand": "Hyundai",
+  "model": "Sonata",
+  "full_name": "Hyundai Sonata",
+  "text_search": [
+    "Hyundai",
+    "Sonata"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169fc"
+  },
+  "brand": "Hyundai",
+  "model": "S-coupe",
+  "full_name": "Hyundai S-coupe",
+  "text_search": [
+    "Hyundai",
+    "S-coupe"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169fd"
+  },
+  "brand": "Hyundai",
+  "model": "Matrix",
+  "full_name": "Hyundai Matrix",
+  "text_search": [
+    "Hyundai",
+    "Matrix"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169fe"
+  },
+  "brand": "Hyundai",
+  "model": "I40",
+  "full_name": "Hyundai I40",
+  "text_search": [
+    "Hyundai",
+    "I40"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b169ff"
+  },
+  "brand": "Hyundai",
+  "model": "Grandeur",
+  "full_name": "Hyundai Grandeur",
+  "text_search": [
+    "Hyundai",
+    "Grandeur"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a00"
+  },
+  "brand": "Hyundai",
+  "model": "Genesis",
+  "full_name": "Hyundai Genesis",
+  "text_search": [
+    "Hyundai",
+    "Genesis"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a01"
+  },
+  "brand": "Hyundai",
+  "model": "Galloper",
+  "full_name": "Hyundai Galloper",
+  "text_search": [
+    "Hyundai",
+    "Galloper"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a02"
+  },
+  "brand": "Hyundai",
+  "model": "Coupe",
+  "full_name": "Hyundai Coupe",
+  "text_search": [
+    "Hyundai",
+    "Coupe"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a03"
+  },
+  "brand": "Hyundai",
+  "model": "Ix20",
+  "full_name": "Hyundai Ix20",
+  "text_search": [
+    "Hyundai",
+    "Ix20"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a04"
+  },
+  "brand": "Hyundai",
+  "model": "Atos",
+  "full_name": "Hyundai Atos",
+  "text_search": [
+    "Hyundai",
+    "Atos"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a05"
+  },
+  "brand": "Hyundai",
+  "model": "Excel",
+  "full_name": "Hyundai Excel",
+  "text_search": [
+    "Hyundai",
+    "Excel"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a06"
+  },
+  "brand": "Hyundai",
+  "model": "Accent era",
+  "full_name": "Hyundai Accent era",
+  "text_search": [
+    "Hyundai",
+    "Accent",
+    "era"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a07"
+  },
+  "brand": "Hyundai",
+  "model": "Getz",
+  "full_name": "Hyundai Getz",
+  "text_search": [
+    "Hyundai",
+    "Getz"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a08"
+  },
+  "brand": "Hyundai",
+  "model": "I10",
+  "full_name": "Hyundai I10",
+  "text_search": [
+    "Hyundai",
+    "I10"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a09"
+  },
+  "brand": "Hyundai",
+  "model": "I20",
+  "full_name": "Hyundai I20",
+  "text_search": [
+    "Hyundai",
+    "I20"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a0a"
+  },
+  "brand": "Hyundai",
+  "model": "I30",
+  "full_name": "Hyundai I30",
+  "text_search": [
+    "Hyundai",
+    "I30"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a0b"
+  },
+  "brand": "Hyundai",
+  "model": "Accent blue",
+  "full_name": "Hyundai Accent blue",
+  "text_search": [
+    "Hyundai",
+    "Accent",
+    "blue"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a0c"
+  },
+  "brand": "Hyundai",
+  "model": "Ix55",
+  "full_name": "Hyundai Ix55",
+  "text_search": [
+    "Hyundai",
+    "Ix55"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a0d"
+  },
+  "brand": "Hyundai",
+  "model": "Ix35",
+  "full_name": "Hyundai Ix35",
+  "text_search": [
+    "Hyundai",
+    "Ix35"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a0e"
+  },
+  "brand": "Hyundai",
+  "model": "Tucson",
+  "full_name": "Hyundai Tucson",
+  "text_search": [
+    "Hyundai",
+    "Tucson"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a0f"
+  },
+  "brand": "Hyundai",
+  "model": "Santa fe",
+  "full_name": "Hyundai Santa fe",
+  "text_search": [
+    "Hyundai",
+    "Santa",
+    "fe"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a10"
+  },
+  "brand": "Hyundai",
+  "model": "Elantra",
+  "full_name": "Hyundai Elantra",
+  "text_search": [
+    "Hyundai",
+    "Elantra"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a11"
+  },
+  "brand": "Hyundai",
+  "model": "Accent",
+  "full_name": "Hyundai Accent",
+  "text_search": [
+    "Hyundai",
+    "Accent"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a12"
+  },
+  "brand": "Infiniti",
+  "model": "I30",
+  "full_name": "Infiniti I30",
+  "text_search": [
+    "Infiniti",
+    "I30"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a13"
+  },
+  "brand": "Infiniti",
+  "model": "M",
+  "full_name": "Infiniti M",
+  "text_search": [
+    "Infiniti",
+    "M"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a14"
+  },
+  "brand": "Infiniti",
+  "model": "Fx",
+  "full_name": "Infiniti Fx",
+  "text_search": [
+    "Infiniti",
+    "Fx"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a15"
+  },
+  "brand": "Infiniti",
+  "model": "G",
+  "full_name": "Infiniti G",
+  "text_search": [
+    "Infiniti",
+    "G"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a16"
+  },
+  "brand": "Isuzu",
+  "model": "D-max",
+  "full_name": "Isuzu D-max",
+  "text_search": [
+    "Isuzu",
+    "D-max"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a17"
+  },
+  "brand": "Isuzu",
+  "model": "Gemini",
+  "full_name": "Isuzu Gemini",
+  "text_search": [
+    "Isuzu",
+    "Gemini"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a18"
+  },
+  "brand": "Isuzu",
+  "model": "Trooper",
+  "full_name": "Isuzu Trooper",
+  "text_search": [
+    "Isuzu",
+    "Trooper"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a19"
+  },
+  "brand": "Jaguar",
+  "model": "Xj",
+  "full_name": "Jaguar Xj",
+  "text_search": [
+    "Jaguar",
+    "Xj"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a1a"
+  },
+  "brand": "Jaguar",
+  "model": "Xk8",
+  "full_name": "Jaguar Xk8",
+  "text_search": [
+    "Jaguar",
+    "Xk8"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a1b"
+  },
+  "brand": "Jaguar",
+  "model": "Xjs",
+  "full_name": "Jaguar Xjs",
+  "text_search": [
+    "Jaguar",
+    "Xjs"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a1c"
+  },
+  "brand": "Jaguar",
+  "model": "Xjr",
+  "full_name": "Jaguar Xjr",
+  "text_search": [
+    "Jaguar",
+    "Xjr"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a1d"
+  },
+  "brand": "Jaguar",
+  "model": "Xkr",
+  "full_name": "Jaguar Xkr",
+  "text_search": [
+    "Jaguar",
+    "Xkr"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a1e"
+  },
+  "brand": "Jaguar",
+  "model": "Xf",
+  "full_name": "Jaguar Xf",
+  "text_search": [
+    "Jaguar",
+    "Xf"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a1f"
+  },
+  "brand": "Jaguar",
+  "model": "Sovereign",
+  "full_name": "Jaguar Sovereign",
+  "text_search": [
+    "Jaguar",
+    "Sovereign"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a20"
+  },
+  "brand": "Jaguar",
+  "model": "Daimler",
+  "full_name": "Jaguar Daimler",
+  "text_search": [
+    "Jaguar",
+    "Daimler"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a21"
+  },
+  "brand": "Jaguar",
+  "model": "X-type",
+  "full_name": "Jaguar X-type",
+  "text_search": [
+    "Jaguar",
+    "X-type"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a22"
+  },
+  "brand": "Jaguar",
+  "model": "S-type",
+  "full_name": "Jaguar S-type",
+  "text_search": [
+    "Jaguar",
+    "S-type"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a23"
+  },
+  "brand": "Jaguar",
+  "model": "F-type",
+  "full_name": "Jaguar F-type",
+  "text_search": [
+    "Jaguar",
+    "F-type"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a24"
+  },
+  "brand": "Jeep",
+  "model": "Wrangler",
+  "full_name": "Jeep Wrangler",
+  "text_search": [
+    "Jeep",
+    "Wrangler"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a25"
+  },
+  "brand": "Jeep",
+  "model": "Grand cherokee",
+  "full_name": "Jeep Grand cherokee",
+  "text_search": [
+    "Jeep",
+    "Grand",
+    "cherokee"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a26"
+  },
+  "brand": "Jeep",
+  "model": "Patriot",
+  "full_name": "Jeep Patriot",
+  "text_search": [
+    "Jeep",
+    "Patriot"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a27"
+  },
+  "brand": "Jeep",
+  "model": "Compass",
+  "full_name": "Jeep Compass",
+  "text_search": [
+    "Jeep",
+    "Compass"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a28"
+  },
+  "brand": "Jeep",
+  "model": "Renegade",
+  "full_name": "Jeep Renegade",
+  "text_search": [
+    "Jeep",
+    "Renegade"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a29"
+  },
+  "brand": "Jeep",
+  "model": "Cherokee",
+  "full_name": "Jeep Cherokee",
+  "text_search": [
+    "Jeep",
+    "Cherokee"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a2a"
+  },
+  "brand": "Jeep",
+  "model": "Commander",
+  "full_name": "Jeep Commander",
+  "text_search": [
+    "Jeep",
+    "Commander"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a2b"
+  },
+  "brand": "Kia",
+  "model": "Capital",
+  "full_name": "Kia Capital",
+  "text_search": [
+    "Kia",
+    "Capital"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a2c"
+  },
+  "brand": "Kia",
+  "model": "Venga",
+  "full_name": "Kia Venga",
+  "text_search": [
+    "Kia",
+    "Venga"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a2d"
+  },
+  "brand": "Kia",
+  "model": "Shuma",
+  "full_name": "Kia Shuma",
+  "text_search": [
+    "Kia",
+    "Shuma"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a2e"
+  },
+  "brand": "Kia",
+  "model": "Pride",
+  "full_name": "Kia Pride",
+  "text_search": [
+    "Kia",
+    "Pride"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a2f"
+  },
+  "brand": "Kia",
+  "model": "Opirus",
+  "full_name": "Kia Opirus",
+  "text_search": [
+    "Kia",
+    "Opirus"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a30"
+  },
+  "brand": "Kia",
+  "model": "Magentis",
+  "full_name": "Kia Magentis",
+  "text_search": [
+    "Kia",
+    "Magentis"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a31"
+  },
+  "brand": "Kia",
+  "model": "Clarus",
+  "full_name": "Kia Clarus",
+  "text_search": [
+    "Kia",
+    "Clarus"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a32"
+  },
+  "brand": "Kia",
+  "model": "Carnival",
+  "full_name": "Kia Carnival",
+  "text_search": [
+    "Kia",
+    "Carnival"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a33"
+  },
+  "brand": "Kia",
+  "model": "Carens",
+  "full_name": "Kia Carens",
+  "text_search": [
+    "Kia",
+    "Carens"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a34"
+  },
+  "brand": "Kia",
+  "model": "Sephia",
+  "full_name": "Kia Sephia",
+  "text_search": [
+    "Kia",
+    "Sephia"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a35"
+  },
+  "brand": "Kia",
+  "model": "Sorento",
+  "full_name": "Kia Sorento",
+  "text_search": [
+    "Kia",
+    "Sorento"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a36"
+  },
+  "brand": "Kia",
+  "model": "Soul",
+  "full_name": "Kia Soul",
+  "text_search": [
+    "Kia",
+    "Soul"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a37"
+  },
+  "brand": "Kia",
+  "model": "Pro ceed",
+  "full_name": "Kia Pro ceed",
+  "text_search": [
+    "Kia",
+    "Pro",
+    "ceed"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a38"
+  },
+  "brand": "Kia",
+  "model": "Sportage",
+  "full_name": "Kia Sportage",
+  "text_search": [
+    "Kia",
+    "Sportage"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a39"
+  },
+  "brand": "Kia",
+  "model": "Ceed",
+  "full_name": "Kia Ceed",
+  "text_search": [
+    "Kia",
+    "Ceed"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a3a"
+  },
+  "brand": "Kia",
+  "model": "Rio",
+  "full_name": "Kia Rio",
+  "text_search": [
+    "Kia",
+    "Rio"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a3b"
+  },
+  "brand": "Kia",
+  "model": "Picanto",
+  "full_name": "Kia Picanto",
+  "text_search": [
+    "Kia",
+    "Picanto"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a3c"
+  },
+  "brand": "Kia",
+  "model": "Cerato",
+  "full_name": "Kia Cerato",
+  "text_search": [
+    "Kia",
+    "Cerato"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a3d"
+  },
+  "brand": "Lada",
+  "model": "Vega",
+  "full_name": "Lada Vega",
+  "text_search": [
+    "Lada",
+    "Vega"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a3e"
+  },
+  "brand": "Lada",
+  "model": "Vaz",
+  "full_name": "Lada Vaz",
+  "text_search": [
+    "Lada",
+    "Vaz"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a3f"
+  },
+  "brand": "Lada",
+  "model": "Samara",
+  "full_name": "Lada Samara",
+  "text_search": [
+    "Lada",
+    "Samara"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a40"
+  },
+  "brand": "Lada",
+  "model": "Niva",
+  "full_name": "Lada Niva",
+  "text_search": [
+    "Lada",
+    "Niva"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a41"
+  },
+  "brand": "Lada",
+  "model": "Kalina",
+  "full_name": "Lada Kalina",
+  "text_search": [
+    "Lada",
+    "Kalina"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a42"
+  },
+  "brand": "Lada",
+  "model": "Priora",
+  "full_name": "Lada Priora",
+  "text_search": [
+    "Lada",
+    "Priora"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a43"
+  },
+  "brand": "Lamborghini",
+  "model": "Aventador",
+  "full_name": "Lamborghini Aventador",
+  "text_search": [
+    "Lamborghini",
+    "Aventador"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a44"
+  },
+  "brand": "Lamborghini",
+  "model": "Diablo",
+  "full_name": "Lamborghini Diablo",
+  "text_search": [
+    "Lamborghini",
+    "Diablo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a45"
+  },
+  "brand": "Lamborghini",
+  "model": "Gallardo",
+  "full_name": "Lamborghini Gallardo",
+  "text_search": [
+    "Lamborghini",
+    "Gallardo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a46"
+  },
+  "brand": "Lamborghini",
+  "model": "Huracan",
+  "full_name": "Lamborghini Huracan",
+  "text_search": [
+    "Lamborghini",
+    "Huracan"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a47"
+  },
+  "brand": "Lancia",
+  "model": "Ypsilon",
+  "full_name": "Lancia Ypsilon",
+  "text_search": [
+    "Lancia",
+    "Ypsilon"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a48"
+  },
+  "brand": "Lancia",
+  "model": "Thema",
+  "full_name": "Lancia Thema",
+  "text_search": [
+    "Lancia",
+    "Thema"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a49"
+  },
+  "brand": "Lancia",
+  "model": "Dedra",
+  "full_name": "Lancia Dedra",
+  "text_search": [
+    "Lancia",
+    "Dedra"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a4a"
+  },
+  "brand": "Lancia",
+  "model": "Delta",
+  "full_name": "Lancia Delta",
+  "text_search": [
+    "Lancia",
+    "Delta"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a4b"
+  },
+  "brand": "Lancia",
+  "model": "Kappa",
+  "full_name": "Lancia Kappa",
+  "text_search": [
+    "Lancia",
+    "Kappa"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a4c"
+  },
+  "brand": "Land rover",
+  "model": "Range rover evoque",
+  "full_name": "Land rover Range rover evoque",
+  "text_search": [
+    "Land",
+    "rover",
+    "Range",
+    "rover",
+    "evoque"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a4d"
+  },
+  "brand": "Land rover",
+  "model": "Range rover",
+  "full_name": "Land rover Range rover",
+  "text_search": [
+    "Land",
+    "rover",
+    "Range",
+    "rover"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a4e"
+  },
+  "brand": "Land rover",
+  "model": "Range rover sport",
+  "full_name": "Land rover Range rover sport",
+  "text_search": [
+    "Land",
+    "rover",
+    "Range",
+    "rover",
+    "sport"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a4f"
+  },
+  "brand": "Land rover",
+  "model": "Discovery",
+  "full_name": "Land rover Discovery",
+  "text_search": [
+    "Land",
+    "rover",
+    "Discovery"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a50"
+  },
+  "brand": "Land rover",
+  "model": "Defender",
+  "full_name": "Land rover Defender",
+  "text_search": [
+    "Land",
+    "rover",
+    "Defender"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a51"
+  },
+  "brand": "Land rover",
+  "model": "Freelander",
+  "full_name": "Land rover Freelander",
+  "text_search": [
+    "Land",
+    "rover",
+    "Freelander"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a52"
+  },
+  "brand": "Maserati",
+  "model": "Quattroporte 4",
+  "full_name": "Maserati Quattroporte 4",
+  "text_search": [
+    "Maserati",
+    "Quattroporte",
+    "4"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a53"
+  },
+  "brand": "Maserati",
+  "model": "Gt",
+  "full_name": "Maserati Gt",
+  "text_search": [
+    "Maserati",
+    "Gt"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a54"
+  },
+  "brand": "Maserati",
+  "model": "Granturismo",
+  "full_name": "Maserati Granturismo",
+  "text_search": [
+    "Maserati",
+    "Granturismo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a55"
+  },
+  "brand": "Maserati",
+  "model": "Gransport",
+  "full_name": "Maserati Gransport",
+  "text_search": [
+    "Maserati",
+    "Gransport"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a56"
+  },
+  "brand": "Maserati",
+  "model": "Grancabrio",
+  "full_name": "Maserati Grancabrio",
+  "text_search": [
+    "Maserati",
+    "Grancabrio"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a57"
+  },
+  "brand": "Maserati",
+  "model": "Ghibli",
+  "full_name": "Maserati Ghibli",
+  "text_search": [
+    "Maserati",
+    "Ghibli"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a58"
+  },
+  "brand": "Maserati",
+  "model": "Cambiocorsa",
+  "full_name": "Maserati Cambiocorsa",
+  "text_search": [
+    "Maserati",
+    "Cambiocorsa"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a59"
+  },
+  "brand": "Maserati",
+  "model": "4 serisi",
+  "full_name": "Maserati 4 serisi",
+  "text_search": [
+    "Maserati",
+    "4",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a5a"
+  },
+  "brand": "Maserati",
+  "model": "Spyder",
+  "full_name": "Maserati Spyder",
+  "text_search": [
+    "Maserati",
+    "Spyder"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a5b"
+  },
+  "brand": "Mazda",
+  "model": "Xedos",
+  "full_name": "Mazda Xedos",
+  "text_search": [
+    "Mazda",
+    "Xedos"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a5c"
+  },
+  "brand": "Mazda",
+  "model": "Rx",
+  "full_name": "Mazda Rx",
+  "text_search": [
+    "Mazda",
+    "Rx"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a5d"
+  },
+  "brand": "Mazda",
+  "model": "Premacy",
+  "full_name": "Mazda Premacy",
+  "text_search": [
+    "Mazda",
+    "Premacy"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a5e"
+  },
+  "brand": "Mazda",
+  "model": "Mpv",
+  "full_name": "Mazda Mpv",
+  "text_search": [
+    "Mazda",
+    "Mpv"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a5f"
+  },
+  "brand": "Mazda",
+  "model": "Lantis",
+  "full_name": "Mazda Lantis",
+  "text_search": [
+    "Mazda",
+    "Lantis"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a60"
+  },
+  "brand": "Mazda",
+  "model": "Cx-9",
+  "full_name": "Mazda Cx-9",
+  "text_search": [
+    "Mazda",
+    "Cx-9"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a61"
+  },
+  "brand": "Mazda",
+  "model": "B serisi",
+  "full_name": "Mazda B serisi",
+  "text_search": [
+    "Mazda",
+    "B",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a62"
+  },
+  "brand": "Mazda",
+  "model": "929",
+  "full_name": "Mazda 929",
+  "text_search": [
+    "Mazda",
+    "929"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a63"
+  },
+  "brand": "Mazda",
+  "model": "121",
+  "full_name": "Mazda 121",
+  "text_search": [
+    "Mazda",
+    "121"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a64"
+  },
+  "brand": "Mazda",
+  "model": "626",
+  "full_name": "Mazda 626",
+  "text_search": [
+    "Mazda",
+    "626"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a65"
+  },
+  "brand": "Mazda",
+  "model": "323",
+  "full_name": "Mazda 323",
+  "text_search": [
+    "Mazda",
+    "323"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a66"
+  },
+  "brand": "Mazda",
+  "model": "2",
+  "full_name": "Mazda 2",
+  "text_search": [
+    "Mazda",
+    "2"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a67"
+  },
+  "brand": "Mazda",
+  "model": "Mx-5",
+  "full_name": "Mazda Mx-5",
+  "text_search": [
+    "Mazda",
+    "Mx-5"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a68"
+  },
+  "brand": "Mazda",
+  "model": "Cx-3",
+  "full_name": "Mazda Cx-3",
+  "text_search": [
+    "Mazda",
+    "Cx-3"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a69"
+  },
+  "brand": "Mazda",
+  "model": "Cx-5",
+  "full_name": "Mazda Cx-5",
+  "text_search": [
+    "Mazda",
+    "Cx-5"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a6a"
+  },
+  "brand": "Mazda",
+  "model": "6",
+  "full_name": "Mazda 6",
+  "text_search": [
+    "Mazda",
+    "6"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a6b"
+  },
+  "brand": "Mazda",
+  "model": "3",
+  "full_name": "Mazda 3",
+  "text_search": [
+    "Mazda",
+    "3"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a6c"
+  },
+  "brand": "Mazda",
+  "model": "5",
+  "full_name": "Mazda 5",
+  "text_search": [
+    "Mazda",
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a6d"
+  },
+  "brand": "Mercedes",
+  "model": "Citan",
+  "full_name": "Mercedes Citan",
+  "text_search": [
+    "Mercedes",
+    "Citan"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a6e"
+  },
+  "brand": "Mercedes",
+  "model": "Ml",
+  "full_name": "Mercedes Ml",
+  "text_search": [
+    "Mercedes",
+    "Ml"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a6f"
+  },
+  "brand": "Mercedes",
+  "model": "Sl",
+  "full_name": "Mercedes Sl",
+  "text_search": [
+    "Mercedes",
+    "Sl"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a70"
+  },
+  "brand": "Mercedes",
+  "model": "Slk",
+  "full_name": "Mercedes Slk",
+  "text_search": [
+    "Mercedes",
+    "Slk"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a71"
+  },
+  "brand": "Mercedes",
+  "model": "190 serisi",
+  "full_name": "Mercedes 190 serisi",
+  "text_search": [
+    "Mercedes",
+    "190",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a72"
+  },
+  "brand": "Mercedes",
+  "model": "200 serisi",
+  "full_name": "Mercedes 200 serisi",
+  "text_search": [
+    "Mercedes",
+    "200",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a73"
+  },
+  "brand": "Mercedes",
+  "model": "Clk",
+  "full_name": "Mercedes Clk",
+  "text_search": [
+    "Mercedes",
+    "Clk"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a74"
+  },
+  "brand": "Mercedes",
+  "model": "500 serisi",
+  "full_name": "Mercedes 500 serisi",
+  "text_search": [
+    "Mercedes",
+    "500",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a75"
+  },
+  "brand": "Mercedes",
+  "model": "Cl",
+  "full_name": "Mercedes Cl",
+  "text_search": [
+    "Mercedes",
+    "Cl"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a76"
+  },
+  "brand": "Mercedes",
+  "model": "Clc",
+  "full_name": "Mercedes Clc",
+  "text_search": [
+    "Mercedes",
+    "Clc"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a77"
+  },
+  "brand": "Mercedes",
+  "model": "G serisi",
+  "full_name": "Mercedes G serisi",
+  "text_search": [
+    "Mercedes",
+    "G",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a78"
+  },
+  "brand": "Mercedes",
+  "model": "R serisi",
+  "full_name": "Mercedes R serisi",
+  "text_search": [
+    "Mercedes",
+    "R",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a79"
+  },
+  "brand": "Mercedes",
+  "model": "300 serisi",
+  "full_name": "Mercedes 300 serisi",
+  "text_search": [
+    "Mercedes",
+    "300",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a7a"
+  },
+  "brand": "Mercedes",
+  "model": "Viano",
+  "full_name": "Mercedes Viano",
+  "text_search": [
+    "Mercedes",
+    "Viano"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a7b"
+  },
+  "brand": "Mercedes",
+  "model": "C serisi",
+  "full_name": "Mercedes C serisi",
+  "text_search": [
+    "Mercedes",
+    "C",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a7c"
+  },
+  "brand": "Mercedes",
+  "model": "Vito",
+  "full_name": "Mercedes Vito",
+  "text_search": [
+    "Mercedes",
+    "Vito"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a7d"
+  },
+  "brand": "Mercedes",
+  "model": "Vaneo",
+  "full_name": "Mercedes Vaneo",
+  "text_search": [
+    "Mercedes",
+    "Vaneo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a7e"
+  },
+  "brand": "Mercedes",
+  "model": "B serisi",
+  "full_name": "Mercedes B serisi",
+  "text_search": [
+    "Mercedes",
+    "B",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a7f"
+  },
+  "brand": "Mercedes",
+  "model": "E serisi",
+  "full_name": "Mercedes E serisi",
+  "text_search": [
+    "Mercedes",
+    "E",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a80"
+  },
+  "brand": "Mercedes",
+  "model": "Cls",
+  "full_name": "Mercedes Cls",
+  "text_search": [
+    "Mercedes",
+    "Cls"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a81"
+  },
+  "brand": "Mercedes",
+  "model": "Cla serisi",
+  "full_name": "Mercedes Cla serisi",
+  "text_search": [
+    "Mercedes",
+    "Cla",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a82"
+  },
+  "brand": "Mercedes",
+  "model": "A serisi",
+  "full_name": "Mercedes A serisi",
+  "text_search": [
+    "Mercedes",
+    "A",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a83"
+  },
+  "brand": "Mercedes",
+  "model": "Gla serisi",
+  "full_name": "Mercedes Gla serisi",
+  "text_search": [
+    "Mercedes",
+    "Gla",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a84"
+  },
+  "brand": "Mercedes",
+  "model": "Glc",
+  "full_name": "Mercedes Glc",
+  "text_search": [
+    "Mercedes",
+    "Glc"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a85"
+  },
+  "brand": "Mercedes",
+  "model": "Glk",
+  "full_name": "Mercedes Glk",
+  "text_search": [
+    "Mercedes",
+    "Glk"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a86"
+  },
+  "brand": "Mercedes",
+  "model": "Gle",
+  "full_name": "Mercedes Gle",
+  "text_search": [
+    "Mercedes",
+    "Gle"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a87"
+  },
+  "brand": "Mercedes",
+  "model": "Gl serisi",
+  "full_name": "Mercedes Gl serisi",
+  "text_search": [
+    "Mercedes",
+    "Gl",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a88"
+  },
+  "brand": "Mercedes",
+  "model": "S serisi",
+  "full_name": "Mercedes S serisi",
+  "text_search": [
+    "Mercedes",
+    "S",
+    "serisi"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a89"
+  },
+  "brand": "Mini",
+  "model": "One",
+  "full_name": "Mini One",
+  "text_search": [
+    "Mini",
+    "One"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a8a"
+  },
+  "brand": "Mini",
+  "model": "John cooper",
+  "full_name": "Mini John cooper",
+  "text_search": [
+    "Mini",
+    "John",
+    "cooper"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a8b"
+  },
+  "brand": "Mini",
+  "model": "Cooper clubman",
+  "full_name": "Mini Cooper clubman",
+  "text_search": [
+    "Mini",
+    "Cooper",
+    "clubman"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a8c"
+  },
+  "brand": "Mini",
+  "model": "Cooper paceman",
+  "full_name": "Mini Cooper paceman",
+  "text_search": [
+    "Mini",
+    "Cooper",
+    "paceman"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a8d"
+  },
+  "brand": "Mini",
+  "model": "Cooper s",
+  "full_name": "Mini Cooper s",
+  "text_search": [
+    "Mini",
+    "Cooper",
+    "s"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a8e"
+  },
+  "brand": "Mini",
+  "model": "Cooper",
+  "full_name": "Mini Cooper",
+  "text_search": [
+    "Mini",
+    "Cooper"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a8f"
+  },
+  "brand": "Mini",
+  "model": "Cooper countryman",
+  "full_name": "Mini Cooper countryman",
+  "text_search": [
+    "Mini",
+    "Cooper",
+    "countryman"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a90"
+  },
+  "brand": "Mitsubishi",
+  "model": "Colt",
+  "full_name": "Mitsubishi Colt",
+  "text_search": [
+    "Mitsubishi",
+    "Colt"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a91"
+  },
+  "brand": "Mitsubishi",
+  "model": "Grandis",
+  "full_name": "Mitsubishi Grandis",
+  "text_search": [
+    "Mitsubishi",
+    "Grandis"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a92"
+  },
+  "brand": "Mitsubishi",
+  "model": "Galant",
+  "full_name": "Mitsubishi Galant",
+  "text_search": [
+    "Mitsubishi",
+    "Galant"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a93"
+  },
+  "brand": "Mitsubishi",
+  "model": "Eclipse",
+  "full_name": "Mitsubishi Eclipse",
+  "text_search": [
+    "Mitsubishi",
+    "Eclipse"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a94"
+  },
+  "brand": "Mitsubishi",
+  "model": "Carisma",
+  "full_name": "Mitsubishi Carisma",
+  "text_search": [
+    "Mitsubishi",
+    "Carisma"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a95"
+  },
+  "brand": "Mitsubishi",
+  "model": "Lancer",
+  "full_name": "Mitsubishi Lancer",
+  "text_search": [
+    "Mitsubishi",
+    "Lancer"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a96"
+  },
+  "brand": "Mitsubishi",
+  "model": "3000gt",
+  "full_name": "Mitsubishi 3000gt",
+  "text_search": [
+    "Mitsubishi",
+    "3000gt"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a97"
+  },
+  "brand": "Mitsubishi",
+  "model": "Space star",
+  "full_name": "Mitsubishi Space star",
+  "text_search": [
+    "Mitsubishi",
+    "Space",
+    "star"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a98"
+  },
+  "brand": "Mitsubishi",
+  "model": "Attrage",
+  "full_name": "Mitsubishi Attrage",
+  "text_search": [
+    "Mitsubishi",
+    "Attrage"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a99"
+  },
+  "brand": "Mitsubishi",
+  "model": "L 200",
+  "full_name": "Mitsubishi L 200",
+  "text_search": [
+    "Mitsubishi",
+    "L",
+    "200"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a9a"
+  },
+  "brand": "Mitsubishi",
+  "model": "Pajero",
+  "full_name": "Mitsubishi Pajero",
+  "text_search": [
+    "Mitsubishi",
+    "Pajero"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a9b"
+  },
+  "brand": "Mitsubishi",
+  "model": "Outlander",
+  "full_name": "Mitsubishi Outlander",
+  "text_search": [
+    "Mitsubishi",
+    "Outlander"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a9c"
+  },
+  "brand": "Mitsubishi",
+  "model": "Asx",
+  "full_name": "Mitsubishi Asx",
+  "text_search": [
+    "Mitsubishi",
+    "Asx"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a9d"
+  },
+  "brand": "Nissan",
+  "model": "Terrano",
+  "full_name": "Nissan Terrano",
+  "text_search": [
+    "Nissan",
+    "Terrano"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a9e"
+  },
+  "brand": "Nissan",
+  "model": "Sunny",
+  "full_name": "Nissan Sunny",
+  "text_search": [
+    "Nissan",
+    "Sunny"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16a9f"
+  },
+  "brand": "Nissan",
+  "model": "Skystar",
+  "full_name": "Nissan Skystar",
+  "text_search": [
+    "Nissan",
+    "Skystar"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aa0"
+  },
+  "brand": "Nissan",
+  "model": "Skyline gt-r",
+  "full_name": "Nissan Skyline gt-r",
+  "text_search": [
+    "Nissan",
+    "Skyline",
+    "gt-r"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aa1"
+  },
+  "brand": "Nissan",
+  "model": "Rally raid",
+  "full_name": "Nissan Rally raid",
+  "text_search": [
+    "Nissan",
+    "Rally",
+    "raid"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aa2"
+  },
+  "brand": "Nissan",
+  "model": "Patrol",
+  "full_name": "Nissan Patrol",
+  "text_search": [
+    "Nissan",
+    "Patrol"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aa3"
+  },
+  "brand": "Nissan",
+  "model": "Pathfinder",
+  "full_name": "Nissan Pathfinder",
+  "text_search": [
+    "Nissan",
+    "Pathfinder"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aa4"
+  },
+  "brand": "Nissan",
+  "model": "Nx coupe",
+  "full_name": "Nissan Nx coupe",
+  "text_search": [
+    "Nissan",
+    "Nx",
+    "coupe"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aa5"
+  },
+  "brand": "Nissan",
+  "model": "Murano",
+  "full_name": "Nissan Murano",
+  "text_search": [
+    "Nissan",
+    "Murano"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aa6"
+  },
+  "brand": "Nissan",
+  "model": "Country",
+  "full_name": "Nissan Country",
+  "text_search": [
+    "Nissan",
+    "Country"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aa7"
+  },
+  "brand": "Nissan",
+  "model": "Maxima",
+  "full_name": "Nissan Maxima",
+  "text_search": [
+    "Nissan",
+    "Maxima"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aa8"
+  },
+  "brand": "Nissan",
+  "model": "Micra",
+  "full_name": "Nissan Micra",
+  "text_search": [
+    "Nissan",
+    "Micra"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aa9"
+  },
+  "brand": "Nissan",
+  "model": "200 sx",
+  "full_name": "Nissan 200 sx",
+  "text_search": [
+    "Nissan",
+    "200",
+    "sx"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aaa"
+  },
+  "brand": "Nissan",
+  "model": "Navara",
+  "full_name": "Nissan Navara",
+  "text_search": [
+    "Nissan",
+    "Navara"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aab"
+  },
+  "brand": "Nissan",
+  "model": "Primera",
+  "full_name": "Nissan Primera",
+  "text_search": [
+    "Nissan",
+    "Primera"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aac"
+  },
+  "brand": "Nissan",
+  "model": "Almera",
+  "full_name": "Nissan Almera",
+  "text_search": [
+    "Nissan",
+    "Almera"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aad"
+  },
+  "brand": "Nissan",
+  "model": "X-trail",
+  "full_name": "Nissan X-trail",
+  "text_search": [
+    "Nissan",
+    "X-trail"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aae"
+  },
+  "brand": "Nissan",
+  "model": "Qashqai",
+  "full_name": "Nissan Qashqai",
+  "text_search": [
+    "Nissan",
+    "Qashqai"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aaf"
+  },
+  "brand": "Nissan",
+  "model": "Note",
+  "full_name": "Nissan Note",
+  "text_search": [
+    "Nissan",
+    "Note"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ab0"
+  },
+  "brand": "Nissan",
+  "model": "Juke",
+  "full_name": "Nissan Juke",
+  "text_search": [
+    "Nissan",
+    "Juke"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ab1"
+  },
+  "brand": "Nissan",
+  "model": "Bluebird",
+  "full_name": "Nissan Bluebird",
+  "text_search": [
+    "Nissan",
+    "Bluebird"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ab2"
+  },
+  "brand": "Opel",
+  "model": "Rekord",
+  "full_name": "Opel Rekord",
+  "text_search": [
+    "Opel",
+    "Rekord"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ab3"
+  },
+  "brand": "Opel",
+  "model": "Ascona",
+  "full_name": "Opel Ascona",
+  "text_search": [
+    "Opel",
+    "Ascona"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ab4"
+  },
+  "brand": "Opel",
+  "model": "Calibra",
+  "full_name": "Opel Calibra",
+  "text_search": [
+    "Opel",
+    "Calibra"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ab5"
+  },
+  "brand": "Opel",
+  "model": "Antara",
+  "full_name": "Opel Antara",
+  "text_search": [
+    "Opel",
+    "Antara"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ab6"
+  },
+  "brand": "Opel",
+  "model": "Frontera",
+  "full_name": "Opel Frontera",
+  "text_search": [
+    "Opel",
+    "Frontera"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ab7"
+  },
+  "brand": "Opel",
+  "model": "Gt",
+  "full_name": "Opel Gt",
+  "text_search": [
+    "Opel",
+    "Gt"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ab8"
+  },
+  "brand": "Opel",
+  "model": "Kadett",
+  "full_name": "Opel Kadett",
+  "text_search": [
+    "Opel",
+    "Kadett"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ab9"
+  },
+  "brand": "Opel",
+  "model": "Combo",
+  "full_name": "Opel Combo",
+  "text_search": [
+    "Opel",
+    "Combo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aba"
+  },
+  "brand": "Opel",
+  "model": "Tigra",
+  "full_name": "Opel Tigra",
+  "text_search": [
+    "Opel",
+    "Tigra"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16abb"
+  },
+  "brand": "Opel",
+  "model": "Agila",
+  "full_name": "Opel Agila",
+  "text_search": [
+    "Opel",
+    "Agila"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16abc"
+  },
+  "brand": "Opel",
+  "model": "Cascada",
+  "full_name": "Opel Cascada",
+  "text_search": [
+    "Opel",
+    "Cascada"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16abd"
+  },
+  "brand": "Opel",
+  "model": "Corsa",
+  "full_name": "Opel Corsa",
+  "text_search": [
+    "Opel",
+    "Corsa"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16abe"
+  },
+  "brand": "Opel",
+  "model": "Astra",
+  "full_name": "Opel Astra",
+  "text_search": [
+    "Opel",
+    "Astra"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16abf"
+  },
+  "brand": "Opel",
+  "model": "Insignia",
+  "full_name": "Opel Insignia",
+  "text_search": [
+    "Opel",
+    "Insignia"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ac0"
+  },
+  "brand": "Opel",
+  "model": "Meriva",
+  "full_name": "Opel Meriva",
+  "text_search": [
+    "Opel",
+    "Meriva"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ac1"
+  },
+  "brand": "Opel",
+  "model": "Omega",
+  "full_name": "Opel Omega",
+  "text_search": [
+    "Opel",
+    "Omega"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ac2"
+  },
+  "brand": "Opel",
+  "model": "Mokka",
+  "full_name": "Opel Mokka",
+  "text_search": [
+    "Opel",
+    "Mokka"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ac3"
+  },
+  "brand": "Opel",
+  "model": "Adam",
+  "full_name": "Opel Adam",
+  "text_search": [
+    "Opel",
+    "Adam"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ac4"
+  },
+  "brand": "Opel",
+  "model": "Vectra",
+  "full_name": "Opel Vectra",
+  "text_search": [
+    "Opel",
+    "Vectra"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ac5"
+  },
+  "brand": "Opel",
+  "model": "Zafira",
+  "full_name": "Opel Zafira",
+  "text_search": [
+    "Opel",
+    "Zafira"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ac6"
+  },
+  "brand": "Peugeot",
+  "model": "806",
+  "full_name": "Peugeot 806",
+  "text_search": [
+    "Peugeot",
+    "806"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ac7"
+  },
+  "brand": "Peugeot",
+  "model": "207",
+  "full_name": "Peugeot 207",
+  "text_search": [
+    "Peugeot",
+    "207"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ac8"
+  },
+  "brand": "Peugeot",
+  "model": "605",
+  "full_name": "Peugeot 605",
+  "text_search": [
+    "Peugeot",
+    "605"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ac9"
+  },
+  "brand": "Peugeot",
+  "model": "406",
+  "full_name": "Peugeot 406",
+  "text_search": [
+    "Peugeot",
+    "406"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aca"
+  },
+  "brand": "Peugeot",
+  "model": "405",
+  "full_name": "Peugeot 405",
+  "text_search": [
+    "Peugeot",
+    "405"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16acb"
+  },
+  "brand": "Peugeot",
+  "model": "205",
+  "full_name": "Peugeot 205",
+  "text_search": [
+    "Peugeot",
+    "205"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16acc"
+  },
+  "brand": "Peugeot",
+  "model": "107",
+  "full_name": "Peugeot 107",
+  "text_search": [
+    "Peugeot",
+    "107"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16acd"
+  },
+  "brand": "Peugeot",
+  "model": "407",
+  "full_name": "Peugeot 407",
+  "text_search": [
+    "Peugeot",
+    "407"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ace"
+  },
+  "brand": "Peugeot",
+  "model": "307",
+  "full_name": "Peugeot 307",
+  "text_search": [
+    "Peugeot",
+    "307"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16acf"
+  },
+  "brand": "Peugeot",
+  "model": "306",
+  "full_name": "Peugeot 306",
+  "text_search": [
+    "Peugeot",
+    "306"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ad0"
+  },
+  "brand": "Peugeot",
+  "model": "607",
+  "full_name": "Peugeot 607",
+  "text_search": [
+    "Peugeot",
+    "607"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ad1"
+  },
+  "brand": "Peugeot",
+  "model": "206",
+  "full_name": "Peugeot 206",
+  "text_search": [
+    "Peugeot",
+    "206"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ad2"
+  },
+  "brand": "Peugeot",
+  "model": "Partner",
+  "full_name": "Peugeot Partner",
+  "text_search": [
+    "Peugeot",
+    "Partner"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ad3"
+  },
+  "brand": "Peugeot",
+  "model": "106",
+  "full_name": "Peugeot 106",
+  "text_search": [
+    "Peugeot",
+    "106"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ad4"
+  },
+  "brand": "Peugeot",
+  "model": "301",
+  "full_name": "Peugeot 301",
+  "text_search": [
+    "Peugeot",
+    "301"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ad5"
+  },
+  "brand": "Peugeot",
+  "model": "308",
+  "full_name": "Peugeot 308",
+  "text_search": [
+    "Peugeot",
+    "308"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ad6"
+  },
+  "brand": "Peugeot",
+  "model": "508",
+  "full_name": "Peugeot 508",
+  "text_search": [
+    "Peugeot",
+    "508"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ad7"
+  },
+  "brand": "Peugeot",
+  "model": "208",
+  "full_name": "Peugeot 208",
+  "text_search": [
+    "Peugeot",
+    "208"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ad8"
+  },
+  "brand": "Peugeot",
+  "model": "3008",
+  "full_name": "Peugeot 3008",
+  "text_search": [
+    "Peugeot",
+    "3008"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ad9"
+  },
+  "brand": "Peugeot",
+  "model": "5008",
+  "full_name": "Peugeot 5008",
+  "text_search": [
+    "Peugeot",
+    "5008"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ada"
+  },
+  "brand": "Peugeot",
+  "model": "Rcz",
+  "full_name": "Peugeot Rcz",
+  "text_search": [
+    "Peugeot",
+    "Rcz"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16adb"
+  },
+  "brand": "Peugeot",
+  "model": "Bipper",
+  "full_name": "Peugeot Bipper",
+  "text_search": [
+    "Peugeot",
+    "Bipper"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16adc"
+  },
+  "brand": "Peugeot",
+  "model": "2008",
+  "full_name": "Peugeot 2008",
+  "text_search": [
+    "Peugeot",
+    "2008"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16add"
+  },
+  "brand": "Porsche",
+  "model": "Macan",
+  "full_name": "Porsche Macan",
+  "text_search": [
+    "Porsche",
+    "Macan"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ade"
+  },
+  "brand": "Porsche",
+  "model": "911",
+  "full_name": "Porsche 911",
+  "text_search": [
+    "Porsche",
+    "911"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16adf"
+  },
+  "brand": "Porsche",
+  "model": "924",
+  "full_name": "Porsche 924",
+  "text_search": [
+    "Porsche",
+    "924"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ae0"
+  },
+  "brand": "Porsche",
+  "model": "968",
+  "full_name": "Porsche 968",
+  "text_search": [
+    "Porsche",
+    "968"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ae1"
+  },
+  "brand": "Porsche",
+  "model": "Boxster",
+  "full_name": "Porsche Boxster",
+  "text_search": [
+    "Porsche",
+    "Boxster"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ae2"
+  },
+  "brand": "Porsche",
+  "model": "Cayanne",
+  "full_name": "Porsche Cayanne",
+  "text_search": [
+    "Porsche",
+    "Cayanne"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ae3"
+  },
+  "brand": "Porsche",
+  "model": "Cayman",
+  "full_name": "Porsche Cayman",
+  "text_search": [
+    "Porsche",
+    "Cayman"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ae4"
+  },
+  "brand": "Porsche",
+  "model": "Panamera",
+  "full_name": "Porsche Panamera",
+  "text_search": [
+    "Porsche",
+    "Panamera"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ae5"
+  },
+  "brand": "Proton",
+  "model": "Savvy",
+  "full_name": "Proton Savvy",
+  "text_search": [
+    "Proton",
+    "Savvy"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ae6"
+  },
+  "brand": "Proton",
+  "model": "Saga",
+  "full_name": "Proton Saga",
+  "text_search": [
+    "Proton",
+    "Saga"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ae7"
+  },
+  "brand": "Proton",
+  "model": "Waja",
+  "full_name": "Proton Waja",
+  "text_search": [
+    "Proton",
+    "Waja"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ae8"
+  },
+  "brand": "Proton",
+  "model": "416",
+  "full_name": "Proton 416",
+  "text_search": [
+    "Proton",
+    "416"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16ae9"
+  },
+  "brand": "Proton",
+  "model": "316",
+  "full_name": "Proton 316",
+  "text_search": [
+    "Proton",
+    "316"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aea"
+  },
+  "brand": "Proton",
+  "model": "Gen-2",
+  "full_name": "Proton Gen-2",
+  "text_search": [
+    "Proton",
+    "Gen-2"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aeb"
+  },
+  "brand": "Renault",
+  "model": "Safrane",
+  "full_name": "Renault Safrane",
+  "text_search": [
+    "Renault",
+    "Safrane"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aec"
+  },
+  "brand": "Renault",
+  "model": "R 9",
+  "full_name": "Renault R 9",
+  "text_search": [
+    "Renault",
+    "R",
+    "9"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aed"
+  },
+  "brand": "Renault",
+  "model": "R 5",
+  "full_name": "Renault R 5",
+  "text_search": [
+    "Renault",
+    "R",
+    "5"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aee"
+  },
+  "brand": "Renault",
+  "model": "R 25",
+  "full_name": "Renault R 25",
+  "text_search": [
+    "Renault",
+    "R",
+    "25"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aef"
+  },
+  "brand": "Renault",
+  "model": "R 21",
+  "full_name": "Renault R 21",
+  "text_search": [
+    "Renault",
+    "R",
+    "21"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16af0"
+  },
+  "brand": "Renault",
+  "model": "R 19",
+  "full_name": "Renault R 19",
+  "text_search": [
+    "Renault",
+    "R",
+    "19"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16af1"
+  },
+  "brand": "Renault",
+  "model": "R 12",
+  "full_name": "Renault R 12",
+  "text_search": [
+    "Renault",
+    "R",
+    "12"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16af2"
+  },
+  "brand": "Renault",
+  "model": "R 11",
+  "full_name": "Renault R 11",
+  "text_search": [
+    "Renault",
+    "R",
+    "11"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16af3"
+  },
+  "brand": "Renault",
+  "model": "Modus",
+  "full_name": "Renault Modus",
+  "text_search": [
+    "Renault",
+    "Modus"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16af4"
+  },
+  "brand": "Renault",
+  "model": "Koleos",
+  "full_name": "Renault Koleos",
+  "text_search": [
+    "Renault",
+    "Koleos"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16af5"
+  },
+  "brand": "Renault",
+  "model": "Twingo",
+  "full_name": "Renault Twingo",
+  "text_search": [
+    "Renault",
+    "Twingo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16af6"
+  },
+  "brand": "Renault",
+  "model": "Espace",
+  "full_name": "Renault Espace",
+  "text_search": [
+    "Renault",
+    "Espace"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16af7"
+  },
+  "brand": "Renault",
+  "model": "Grand scenic",
+  "full_name": "Renault Grand scenic",
+  "text_search": [
+    "Renault",
+    "Grand",
+    "scenic"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16af8"
+  },
+  "brand": "Renault",
+  "model": "Symbol",
+  "full_name": "Renault Symbol",
+  "text_search": [
+    "Renault",
+    "Symbol"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16af9"
+  },
+  "brand": "Renault",
+  "model": "Clio",
+  "full_name": "Renault Clio",
+  "text_search": [
+    "Renault",
+    "Clio"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16afa"
+  },
+  "brand": "Renault",
+  "model": "Megane",
+  "full_name": "Renault Megane",
+  "text_search": [
+    "Renault",
+    "Megane"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16afb"
+  },
+  "brand": "Renault",
+  "model": "Laguna",
+  "full_name": "Renault Laguna",
+  "text_search": [
+    "Renault",
+    "Laguna"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16afc"
+  },
+  "brand": "Renault",
+  "model": "Talisman",
+  "full_name": "Renault Talisman",
+  "text_search": [
+    "Renault",
+    "Talisman"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16afd"
+  },
+  "brand": "Renault",
+  "model": "Fluence",
+  "full_name": "Renault Fluence",
+  "text_search": [
+    "Renault",
+    "Fluence"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16afe"
+  },
+  "brand": "Renault",
+  "model": "Kadjar",
+  "full_name": "Renault Kadjar",
+  "text_search": [
+    "Renault",
+    "Kadjar"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16aff"
+  },
+  "brand": "Renault",
+  "model": "Latitude",
+  "full_name": "Renault Latitude",
+  "text_search": [
+    "Renault",
+    "Latitude"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b00"
+  },
+  "brand": "Renault",
+  "model": "Kangoo",
+  "full_name": "Renault Kangoo",
+  "text_search": [
+    "Renault",
+    "Kangoo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b01"
+  },
+  "brand": "Renault",
+  "model": "Scenic",
+  "full_name": "Renault Scenic",
+  "text_search": [
+    "Renault",
+    "Scenic"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b02"
+  },
+  "brand": "Renault",
+  "model": "Captur",
+  "full_name": "Renault Captur",
+  "text_search": [
+    "Renault",
+    "Captur"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b03"
+  },
+  "brand": "Rover",
+  "model": "45",
+  "full_name": "Rover 45",
+  "text_search": [
+    "Rover",
+    "45"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b04"
+  },
+  "brand": "Rover",
+  "model": "Streetwise",
+  "full_name": "Rover Streetwise",
+  "text_search": [
+    "Rover",
+    "Streetwise"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b05"
+  },
+  "brand": "Rover",
+  "model": "820",
+  "full_name": "Rover 820",
+  "text_search": [
+    "Rover",
+    "820"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b06"
+  },
+  "brand": "Rover",
+  "model": "75",
+  "full_name": "Rover 75",
+  "text_search": [
+    "Rover",
+    "75"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b07"
+  },
+  "brand": "Rover",
+  "model": "620",
+  "full_name": "Rover 620",
+  "text_search": [
+    "Rover",
+    "620"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b08"
+  },
+  "brand": "Rover",
+  "model": "420",
+  "full_name": "Rover 420",
+  "text_search": [
+    "Rover",
+    "420"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b09"
+  },
+  "brand": "Rover",
+  "model": "827",
+  "full_name": "Rover 827",
+  "text_search": [
+    "Rover",
+    "827"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b0a"
+  },
+  "brand": "Rover",
+  "model": "414",
+  "full_name": "Rover 414",
+  "text_search": [
+    "Rover",
+    "414"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b0b"
+  },
+  "brand": "Rover",
+  "model": "25",
+  "full_name": "Rover 25",
+  "text_search": [
+    "Rover",
+    "25"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b0c"
+  },
+  "brand": "Rover",
+  "model": "220",
+  "full_name": "Rover 220",
+  "text_search": [
+    "Rover",
+    "220"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b0d"
+  },
+  "brand": "Rover",
+  "model": "218",
+  "full_name": "Rover 218",
+  "text_search": [
+    "Rover",
+    "218"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b0e"
+  },
+  "brand": "Rover",
+  "model": "216",
+  "full_name": "Rover 216",
+  "text_search": [
+    "Rover",
+    "216"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b0f"
+  },
+  "brand": "Rover",
+  "model": "214",
+  "full_name": "Rover 214",
+  "text_search": [
+    "Rover",
+    "214"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b10"
+  },
+  "brand": "Rover",
+  "model": "416",
+  "full_name": "Rover 416",
+  "text_search": [
+    "Rover",
+    "416"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b11"
+  },
+  "brand": "Saab",
+  "model": "9-3",
+  "full_name": "Saab 9-3",
+  "text_search": [
+    "Saab",
+    "9-3"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b12"
+  },
+  "brand": "Saab",
+  "model": "9-5",
+  "full_name": "Saab 9-5",
+  "text_search": [
+    "Saab",
+    "9-5"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b13"
+  },
+  "brand": "Saab",
+  "model": "900",
+  "full_name": "Saab 900",
+  "text_search": [
+    "Saab",
+    "900"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b14"
+  },
+  "brand": "Saab",
+  "model": "9000",
+  "full_name": "Saab 9000",
+  "text_search": [
+    "Saab",
+    "9000"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b15"
+  },
+  "brand": "Seat",
+  "model": "Marbella",
+  "full_name": "Seat Marbella",
+  "text_search": [
+    "Seat",
+    "Marbella"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b16"
+  },
+  "brand": "Seat",
+  "model": "Exeo",
+  "full_name": "Seat Exeo",
+  "text_search": [
+    "Seat",
+    "Exeo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b17"
+  },
+  "brand": "Seat",
+  "model": "Cordoba",
+  "full_name": "Seat Cordoba",
+  "text_search": [
+    "Seat",
+    "Cordoba"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b18"
+  },
+  "brand": "Seat",
+  "model": "Altea",
+  "full_name": "Seat Altea",
+  "text_search": [
+    "Seat",
+    "Altea"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b19"
+  },
+  "brand": "Seat",
+  "model": "Ibiza",
+  "full_name": "Seat Ibiza",
+  "text_search": [
+    "Seat",
+    "Ibiza"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b1a"
+  },
+  "brand": "Seat",
+  "model": "Leon",
+  "full_name": "Seat Leon",
+  "text_search": [
+    "Seat",
+    "Leon"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b1b"
+  },
+  "brand": "Seat",
+  "model": "Toledo",
+  "full_name": "Seat Toledo",
+  "text_search": [
+    "Seat",
+    "Toledo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b1c"
+  },
+  "brand": "Seat",
+  "model": "Alhambra",
+  "full_name": "Seat Alhambra",
+  "text_search": [
+    "Seat",
+    "Alhambra"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b1d"
+  },
+  "brand": "Skoda",
+  "model": "Roomster",
+  "full_name": "Skoda Roomster",
+  "text_search": [
+    "Skoda",
+    "Roomster"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b1e"
+  },
+  "brand": "Skoda",
+  "model": "Forman",
+  "full_name": "Skoda Forman",
+  "text_search": [
+    "Skoda",
+    "Forman"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b1f"
+  },
+  "brand": "Skoda",
+  "model": "Felicia",
+  "full_name": "Skoda Felicia",
+  "text_search": [
+    "Skoda",
+    "Felicia"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b20"
+  },
+  "brand": "Skoda",
+  "model": "Favorit",
+  "full_name": "Skoda Favorit",
+  "text_search": [
+    "Skoda",
+    "Favorit"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b21"
+  },
+  "brand": "Skoda",
+  "model": "Citigo",
+  "full_name": "Skoda Citigo",
+  "text_search": [
+    "Skoda",
+    "Citigo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b22"
+  },
+  "brand": "Skoda",
+  "model": "Superb",
+  "full_name": "Skoda Superb",
+  "text_search": [
+    "Skoda",
+    "Superb"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b23"
+  },
+  "brand": "Skoda",
+  "model": "Octavia",
+  "full_name": "Skoda Octavia",
+  "text_search": [
+    "Skoda",
+    "Octavia"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b24"
+  },
+  "brand": "Skoda",
+  "model": "Rapid",
+  "full_name": "Skoda Rapid",
+  "text_search": [
+    "Skoda",
+    "Rapid"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b25"
+  },
+  "brand": "Skoda",
+  "model": "Fabia",
+  "full_name": "Skoda Fabia",
+  "text_search": [
+    "Skoda",
+    "Fabia"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b26"
+  },
+  "brand": "Skoda",
+  "model": "Yeti",
+  "full_name": "Skoda Yeti",
+  "text_search": [
+    "Skoda",
+    "Yeti"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b27"
+  },
+  "brand": "Smart",
+  "model": "Forfour",
+  "full_name": "Smart Forfour",
+  "text_search": [
+    "Smart",
+    "Forfour"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b28"
+  },
+  "brand": "Smart",
+  "model": "Fortwo",
+  "full_name": "Smart Fortwo",
+  "text_search": [
+    "Smart",
+    "Fortwo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b29"
+  },
+  "brand": "Smart",
+  "model": "Roadster",
+  "full_name": "Smart Roadster",
+  "text_search": [
+    "Smart",
+    "Roadster"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b2a"
+  },
+  "brand": "Ssangyong",
+  "model": "Rodius",
+  "full_name": "Ssangyong Rodius",
+  "text_search": [
+    "Ssangyong",
+    "Rodius"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b2b"
+  },
+  "brand": "Ssangyong",
+  "model": "Rexton",
+  "full_name": "Ssangyong Rexton",
+  "text_search": [
+    "Ssangyong",
+    "Rexton"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b2c"
+  },
+  "brand": "Ssangyong",
+  "model": "Musso",
+  "full_name": "Ssangyong Musso",
+  "text_search": [
+    "Ssangyong",
+    "Musso"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b2d"
+  },
+  "brand": "Ssangyong",
+  "model": "Kyron",
+  "full_name": "Ssangyong Kyron",
+  "text_search": [
+    "Ssangyong",
+    "Kyron"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b2e"
+  },
+  "brand": "Ssangyong",
+  "model": "Korando",
+  "full_name": "Ssangyong Korando",
+  "text_search": [
+    "Ssangyong",
+    "Korando"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b2f"
+  },
+  "brand": "Ssangyong",
+  "model": "Actyon sports",
+  "full_name": "Ssangyong Actyon sports",
+  "text_search": [
+    "Ssangyong",
+    "Actyon",
+    "sports"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b30"
+  },
+  "brand": "Ssangyong",
+  "model": "Actyon",
+  "full_name": "Ssangyong Actyon",
+  "text_search": [
+    "Ssangyong",
+    "Actyon"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b31"
+  },
+  "brand": "Ssangyong",
+  "model": "Tivoli",
+  "full_name": "Ssangyong Tivoli",
+  "text_search": [
+    "Ssangyong",
+    "Tivoli"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b32"
+  },
+  "brand": "Ssangyong",
+  "model": "Korando sports",
+  "full_name": "Ssangyong Korando sports",
+  "text_search": [
+    "Ssangyong",
+    "Korando",
+    "sports"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b33"
+  },
+  "brand": "Subaru",
+  "model": "Tribeca",
+  "full_name": "Subaru Tribeca",
+  "text_search": [
+    "Subaru",
+    "Tribeca"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b34"
+  },
+  "brand": "Subaru",
+  "model": "Svx",
+  "full_name": "Subaru Svx",
+  "text_search": [
+    "Subaru",
+    "Svx"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b35"
+  },
+  "brand": "Subaru",
+  "model": "Leone",
+  "full_name": "Subaru Leone",
+  "text_search": [
+    "Subaru",
+    "Leone"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b36"
+  },
+  "brand": "Subaru",
+  "model": "Legacy",
+  "full_name": "Subaru Legacy",
+  "text_search": [
+    "Subaru",
+    "Legacy"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b37"
+  },
+  "brand": "Subaru",
+  "model": "Impreza",
+  "full_name": "Subaru Impreza",
+  "text_search": [
+    "Subaru",
+    "Impreza"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b38"
+  },
+  "brand": "Subaru",
+  "model": "Justy",
+  "full_name": "Subaru Justy",
+  "text_search": [
+    "Subaru",
+    "Justy"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b39"
+  },
+  "brand": "Subaru",
+  "model": "Brz",
+  "full_name": "Subaru Brz",
+  "text_search": [
+    "Subaru",
+    "Brz"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b3a"
+  },
+  "brand": "Subaru",
+  "model": "Outback",
+  "full_name": "Subaru Outback",
+  "text_search": [
+    "Subaru",
+    "Outback"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b3b"
+  },
+  "brand": "Subaru",
+  "model": "Forester",
+  "full_name": "Subaru Forester",
+  "text_search": [
+    "Subaru",
+    "Forester"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b3c"
+  },
+  "brand": "Subaru",
+  "model": "Xv",
+  "full_name": "Subaru Xv",
+  "text_search": [
+    "Subaru",
+    "Xv"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b3d"
+  },
+  "brand": "Subaru",
+  "model": "Levorg",
+  "full_name": "Subaru Levorg",
+  "text_search": [
+    "Subaru",
+    "Levorg"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b3e"
+  },
+  "brand": "Suzuki",
+  "model": "Vitara",
+  "full_name": "Suzuki Vitara",
+  "text_search": [
+    "Suzuki",
+    "Vitara"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b3f"
+  },
+  "brand": "Suzuki",
+  "model": "Splash",
+  "full_name": "Suzuki Splash",
+  "text_search": [
+    "Suzuki",
+    "Splash"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b40"
+  },
+  "brand": "Suzuki",
+  "model": "Sj",
+  "full_name": "Suzuki Sj",
+  "text_search": [
+    "Suzuki",
+    "Sj"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b41"
+  },
+  "brand": "Suzuki",
+  "model": "Maruti",
+  "full_name": "Suzuki Maruti",
+  "text_search": [
+    "Suzuki",
+    "Maruti"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b42"
+  },
+  "brand": "Suzuki",
+  "model": "Liana",
+  "full_name": "Suzuki Liana",
+  "text_search": [
+    "Suzuki",
+    "Liana"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b43"
+  },
+  "brand": "Suzuki",
+  "model": "Baleno",
+  "full_name": "Suzuki Baleno",
+  "text_search": [
+    "Suzuki",
+    "Baleno"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b44"
+  },
+  "brand": "Suzuki",
+  "model": "Grand vitara",
+  "full_name": "Suzuki Grand vitara",
+  "text_search": [
+    "Suzuki",
+    "Grand",
+    "vitara"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b45"
+  },
+  "brand": "Suzuki",
+  "model": "Sx4",
+  "full_name": "Suzuki Sx4",
+  "text_search": [
+    "Suzuki",
+    "Sx4"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b46"
+  },
+  "brand": "Suzuki",
+  "model": "Alto",
+  "full_name": "Suzuki Alto",
+  "text_search": [
+    "Suzuki",
+    "Alto"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b47"
+  },
+  "brand": "Suzuki",
+  "model": "Swift",
+  "full_name": "Suzuki Swift",
+  "text_search": [
+    "Suzuki",
+    "Swift"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b48"
+  },
+  "brand": "Suzuki",
+  "model": "Jimny",
+  "full_name": "Suzuki Jimny",
+  "text_search": [
+    "Suzuki",
+    "Jimny"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b49"
+  },
+  "brand": "Tata",
+  "model": "Vista",
+  "full_name": "Tata Vista",
+  "text_search": [
+    "Tata",
+    "Vista"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b4a"
+  },
+  "brand": "Tata",
+  "model": "Xenon",
+  "full_name": "Tata Xenon",
+  "text_search": [
+    "Tata",
+    "Xenon"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b4b"
+  },
+  "brand": "Tata",
+  "model": "Telcoline",
+  "full_name": "Tata Telcoline",
+  "text_search": [
+    "Tata",
+    "Telcoline"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b4c"
+  },
+  "brand": "Tata",
+  "model": "Indigo",
+  "full_name": "Tata Indigo",
+  "text_search": [
+    "Tata",
+    "Indigo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b4d"
+  },
+  "brand": "Tata",
+  "model": "Manza",
+  "full_name": "Tata Manza",
+  "text_search": [
+    "Tata",
+    "Manza"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b4e"
+  },
+  "brand": "Tata",
+  "model": "Indica",
+  "full_name": "Tata Indica",
+  "text_search": [
+    "Tata",
+    "Indica"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b4f"
+  },
+  "brand": "Tata",
+  "model": "Safari",
+  "full_name": "Tata Safari",
+  "text_search": [
+    "Tata",
+    "Safari"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b50"
+  },
+  "brand": "Tofaş",
+  "model": "Doğan",
+  "full_name": "Tofaş Doğan",
+  "text_search": [
+    "Tofaş",
+    "Doğan"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b51"
+  },
+  "brand": "Tofaş",
+  "model": "Kartal",
+  "full_name": "Tofaş Kartal",
+  "text_search": [
+    "Tofaş",
+    "Kartal"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b52"
+  },
+  "brand": "Tofaş",
+  "model": "Murat",
+  "full_name": "Tofaş Murat",
+  "text_search": [
+    "Tofaş",
+    "Murat"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b53"
+  },
+  "brand": "Tofaş",
+  "model": "Şahin",
+  "full_name": "Tofaş Şahin",
+  "text_search": [
+    "Tofaş",
+    "Şahin"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b54"
+  },
+  "brand": "Tofaş",
+  "model": "Serçe",
+  "full_name": "Tofaş Serçe",
+  "text_search": [
+    "Tofaş",
+    "Serçe"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b55"
+  },
+  "brand": "Toyota",
+  "model": "4runner",
+  "full_name": "Toyota 4runner",
+  "text_search": [
+    "Toyota",
+    "4runner"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b56"
+  },
+  "brand": "Toyota",
+  "model": "Starlet",
+  "full_name": "Toyota Starlet",
+  "text_search": [
+    "Toyota",
+    "Starlet"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b57"
+  },
+  "brand": "Toyota",
+  "model": "Fj cruiser",
+  "full_name": "Toyota Fj cruiser",
+  "text_search": [
+    "Toyota",
+    "Fj",
+    "cruiser"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b58"
+  },
+  "brand": "Toyota",
+  "model": "Cressida",
+  "full_name": "Toyota Cressida",
+  "text_search": [
+    "Toyota",
+    "Cressida"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b59"
+  },
+  "brand": "Toyota",
+  "model": "Corona",
+  "full_name": "Toyota Corona",
+  "text_search": [
+    "Toyota",
+    "Corona"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b5a"
+  },
+  "brand": "Toyota",
+  "model": "Urban cruiser",
+  "full_name": "Toyota Urban cruiser",
+  "text_search": [
+    "Toyota",
+    "Urban",
+    "cruiser"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b5b"
+  },
+  "brand": "Toyota",
+  "model": "Camry",
+  "full_name": "Toyota Camry",
+  "text_search": [
+    "Toyota",
+    "Camry"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b5c"
+  },
+  "brand": "Toyota",
+  "model": "Hilux",
+  "full_name": "Toyota Hilux",
+  "text_search": [
+    "Toyota",
+    "Hilux"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b5d"
+  },
+  "brand": "Toyota",
+  "model": "Carina",
+  "full_name": "Toyota Carina",
+  "text_search": [
+    "Toyota",
+    "Carina"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b5e"
+  },
+  "brand": "Toyota",
+  "model": "Land cruiser",
+  "full_name": "Toyota Land cruiser",
+  "text_search": [
+    "Toyota",
+    "Land",
+    "cruiser"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b5f"
+  },
+  "brand": "Toyota",
+  "model": "Gt 86",
+  "full_name": "Toyota Gt 86",
+  "text_search": [
+    "Toyota",
+    "Gt",
+    "86"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b60"
+  },
+  "brand": "Toyota",
+  "model": "Rav4",
+  "full_name": "Toyota Rav4",
+  "text_search": [
+    "Toyota",
+    "Rav4"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b61"
+  },
+  "brand": "Toyota",
+  "model": "Avensis",
+  "full_name": "Toyota Avensis",
+  "text_search": [
+    "Toyota",
+    "Avensis"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b62"
+  },
+  "brand": "Toyota",
+  "model": "Verso",
+  "full_name": "Toyota Verso",
+  "text_search": [
+    "Toyota",
+    "Verso"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b63"
+  },
+  "brand": "Toyota",
+  "model": "Corolla",
+  "full_name": "Toyota Corolla",
+  "text_search": [
+    "Toyota",
+    "Corolla"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b64"
+  },
+  "brand": "Toyota",
+  "model": "Auris",
+  "full_name": "Toyota Auris",
+  "text_search": [
+    "Toyota",
+    "Auris"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b65"
+  },
+  "brand": "Toyota",
+  "model": "Yaris",
+  "full_name": "Toyota Yaris",
+  "text_search": [
+    "Toyota",
+    "Yaris"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b66"
+  },
+  "brand": "Toyota",
+  "model": "Prius",
+  "full_name": "Toyota Prius",
+  "text_search": [
+    "Toyota",
+    "Prius"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b67"
+  },
+  "brand": "Volkswagen",
+  "model": "Caddy",
+  "full_name": "Volkswagen Caddy",
+  "text_search": [
+    "Volkswagen",
+    "Caddy"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b68"
+  },
+  "brand": "Volkswagen",
+  "model": "Amarok",
+  "full_name": "Volkswagen Amarok",
+  "text_search": [
+    "Volkswagen",
+    "Amarok"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b69"
+  },
+  "brand": "Volkswagen",
+  "model": "Bora",
+  "full_name": "Volkswagen Bora",
+  "text_search": [
+    "Volkswagen",
+    "Bora"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b6a"
+  },
+  "brand": "Volkswagen",
+  "model": "Vento",
+  "full_name": "Volkswagen Vento",
+  "text_search": [
+    "Volkswagen",
+    "Vento"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b6b"
+  },
+  "brand": "Volkswagen",
+  "model": "Lupo",
+  "full_name": "Volkswagen Lupo",
+  "text_search": [
+    "Volkswagen",
+    "Lupo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b6c"
+  },
+  "brand": "Volkswagen",
+  "model": "Touran",
+  "full_name": "Volkswagen Touran",
+  "text_search": [
+    "Volkswagen",
+    "Touran"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b6d"
+  },
+  "brand": "Volkswagen",
+  "model": "Transporter",
+  "full_name": "Volkswagen Transporter",
+  "text_search": [
+    "Volkswagen",
+    "Transporter"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b6e"
+  },
+  "brand": "Volkswagen",
+  "model": "Eos",
+  "full_name": "Volkswagen Eos",
+  "text_search": [
+    "Volkswagen",
+    "Eos"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b6f"
+  },
+  "brand": "Volkswagen",
+  "model": "Touareg",
+  "full_name": "Volkswagen Touareg",
+  "text_search": [
+    "Volkswagen",
+    "Touareg"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b70"
+  },
+  "brand": "Volkswagen",
+  "model": "Caravelle",
+  "full_name": "Volkswagen Caravelle",
+  "text_search": [
+    "Volkswagen",
+    "Caravelle"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b71"
+  },
+  "brand": "Volkswagen",
+  "model": "Scirocco",
+  "full_name": "Volkswagen Scirocco",
+  "text_search": [
+    "Volkswagen",
+    "Scirocco"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b72"
+  },
+  "brand": "Volkswagen",
+  "model": "Beetle",
+  "full_name": "Volkswagen Beetle",
+  "text_search": [
+    "Volkswagen",
+    "Beetle"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b73"
+  },
+  "brand": "Volkswagen",
+  "model": "Cc",
+  "full_name": "Volkswagen Cc",
+  "text_search": [
+    "Volkswagen",
+    "Cc"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b74"
+  },
+  "brand": "Volkswagen",
+  "model": "Tiguan",
+  "full_name": "Volkswagen Tiguan",
+  "text_search": [
+    "Volkswagen",
+    "Tiguan"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b75"
+  },
+  "brand": "Volkswagen",
+  "model": "Passat",
+  "full_name": "Volkswagen Passat",
+  "text_search": [
+    "Volkswagen",
+    "Passat"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b76"
+  },
+  "brand": "Volkswagen",
+  "model": "Jetta",
+  "full_name": "Volkswagen Jetta",
+  "text_search": [
+    "Volkswagen",
+    "Jetta"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b77"
+  },
+  "brand": "Volkswagen",
+  "model": "Golf",
+  "full_name": "Volkswagen Golf",
+  "text_search": [
+    "Volkswagen",
+    "Golf"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b78"
+  },
+  "brand": "Volkswagen",
+  "model": "Polo",
+  "full_name": "Volkswagen Polo",
+  "text_search": [
+    "Volkswagen",
+    "Polo"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b79"
+  },
+  "brand": "Volkswagen",
+  "model": "Passat variant",
+  "full_name": "Volkswagen Passat variant",
+  "text_search": [
+    "Volkswagen",
+    "Passat",
+    "variant"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b7a"
+  },
+  "brand": "Volvo",
+  "model": "S70",
+  "full_name": "Volvo S70",
+  "text_search": [
+    "Volvo",
+    "S70"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b7b"
+  },
+  "brand": "Volvo",
+  "model": "S40",
+  "full_name": "Volvo S40",
+  "text_search": [
+    "Volvo",
+    "S40"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b7c"
+  },
+  "brand": "Volvo",
+  "model": "C70",
+  "full_name": "Volvo C70",
+  "text_search": [
+    "Volvo",
+    "C70"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b7d"
+  },
+  "brand": "Volvo",
+  "model": "C30",
+  "full_name": "Volvo C30",
+  "text_search": [
+    "Volvo",
+    "C30"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b7e"
+  },
+  "brand": "Volvo",
+  "model": "960",
+  "full_name": "Volvo 960",
+  "text_search": [
+    "Volvo",
+    "960"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b7f"
+  },
+  "brand": "Volvo",
+  "model": "940",
+  "full_name": "Volvo 940",
+  "text_search": [
+    "Volvo",
+    "940"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b80"
+  },
+  "brand": "Volvo",
+  "model": "850",
+  "full_name": "Volvo 850",
+  "text_search": [
+    "Volvo",
+    "850"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b81"
+  },
+  "brand": "Volvo",
+  "model": "V60",
+  "full_name": "Volvo V60",
+  "text_search": [
+    "Volvo",
+    "V60"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b82"
+  },
+  "brand": "Volvo",
+  "model": "Xc70",
+  "full_name": "Volvo Xc70",
+  "text_search": [
+    "Volvo",
+    "Xc70"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b83"
+  },
+  "brand": "Volvo",
+  "model": "Xc60",
+  "full_name": "Volvo Xc60",
+  "text_search": [
+    "Volvo",
+    "Xc60"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b84"
+  },
+  "brand": "Volvo",
+  "model": "S80",
+  "full_name": "Volvo S80",
+  "text_search": [
+    "Volvo",
+    "S80"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b85"
+  },
+  "brand": "Volvo",
+  "model": "S60",
+  "full_name": "Volvo S60",
+  "text_search": [
+    "Volvo",
+    "S60"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b86"
+  },
+  "brand": "Volvo",
+  "model": "V40 cross country",
+  "full_name": "Volvo V40 cross country",
+  "text_search": [
+    "Volvo",
+    "V40",
+    "cross",
+    "country"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b87"
+  },
+  "brand": "Volvo",
+  "model": "V40",
+  "full_name": "Volvo V40",
+  "text_search": [
+    "Volvo",
+    "V40"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b88"
+  },
+  "brand": "Volvo",
+  "model": "V50",
+  "full_name": "Volvo V50",
+  "text_search": [
+    "Volvo",
+    "V50"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b89"
+  },
+  "brand": "Volvo",
+  "model": "Xc90",
+  "full_name": "Volvo Xc90",
+  "text_search": [
+    "Volvo",
+    "Xc90"
+  ]
+},{
+  "_id": {
+    "$oid": "6175e4f29ed045d670b16b8a"
+  },
+  "brand": "Volvo",
+  "model": "V70",
+  "full_name": "Volvo V70",
+  "text_search": [
+    "Volvo",
+    "V70"
+  ]
+}]

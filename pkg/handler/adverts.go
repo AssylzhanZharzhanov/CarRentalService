@@ -165,6 +165,63 @@ func (h *Handler) getAdvertById(c *gin.Context) {
 	c.JSON(http.StatusOK, advert)
 }
 
+// @Summary Get user adverts
+// @Tags adverts
+// @Description Get user adverts
+// @ID get-user-adverts
+// @Accept json
+// @Produce json
+// @Param id path int true "Payment ID"
+// @Success 200 {array} models.Advert
+// @Failure 400,404 {object} errorResponse
+// @Failure 500 {object} errorResponse
+// @Failure default {object} errorResponse
+// @Router /api/adverts/{id} [get]
+func (h *Handler) getUserAdverts(c *gin.Context) {
+	userId, err := getUserId(c)
+	if err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, "user not found")
+		return
+	}
+
+	adverts, err := h.service.Adverts.GetMyAdverts(c.Request.Context(), userId)
+	if err != nil {
+		newErrorResponse(c, http.StatusNotFound, "user not found")
+		return
+	}
+
+	c.JSON(http.StatusOK, adverts)
+}
+
+func (h *Handler) getTopAdverts(c *gin.Context) {
+	userId, err := getUserId(c)
+	if err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, "user not found")
+		return
+	}
+
+	adverts, err := h.service.Adverts.GetMyAdverts(c.Request.Context(), userId)
+	if err != nil {
+		newErrorResponse(c, http.StatusNotFound, "user not found")
+		return
+	}
+
+	c.JSON(http.StatusOK, adverts)
+}
+
+func (h *Handler) getSimilarAdverts(c *gin.Context) {
+	title := c.Query("title")
+	price, _ := strconv.Atoi(c.Query("price"))
+
+	adverts, err := h.service.Adverts.GetSimilarAdverts(c.Request.Context(), title, price)
+	if err != nil {
+		newErrorResponse(c, http.StatusNotFound, "adverts not found")
+		return
+	}
+
+	c.JSON(http.StatusOK, adverts)
+}
+
 // @Summary Get advert by id
 // @Tags adverts
 // @Description Get advert by id
@@ -212,20 +269,4 @@ func (h *Handler) deleteAdvert(c *gin.Context) {
 	c.JSON(http.StatusOK, map[string]interface{}{
 		"status": "ok",
 	})
-}
-
-func (h *Handler) getUserAdverts(c *gin.Context) {
-	userId, err := getUserId(c)
-	if err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, "user not found")
-		return
-	}
-
-	adverts, err := h.service.Adverts.GetMyAdverts(c.Request.Context(), userId)
-	if err != nil {
-		newErrorResponse(c, http.StatusNotFound, "user not found")
-		return
-	}
-
-	c.JSON(http.StatusOK, adverts)
 }
