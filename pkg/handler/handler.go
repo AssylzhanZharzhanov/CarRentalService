@@ -21,7 +21,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 
 	router.MaxMultipartMemory = 100 << 20
 
-	//router.Use(CORSMiddleware())
+	router.Use(CORSMiddleware())
 
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
