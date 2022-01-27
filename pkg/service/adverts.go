@@ -24,7 +24,7 @@ func NewAdvertService(repo *repository.Repository) *AdvertService {
 }
 
 func (s *AdvertService) GetMyAdverts(ctx context.Context, userId string) ([]models.Advert, error) {
-	panic("implement me")
+	return s.repo.GetMyAdverts(ctx, userId)
 }
 
 func (s *AdvertService) GetSimilarAdverts(ctx context.Context, title string, price int) ([]models.Advert, error) {
