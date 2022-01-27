@@ -94,9 +94,9 @@ func (h *Handler) InitRoutes() *gin.Engine {
 		{
 			categories := filters.Group("/categories")
 			{
-				categories.GET("/", h.getCategories)
-				categories.POST("/", h.addCategory)
-				categories.DELETE("/", h.deleteCategory)
+				categories.GET("", h.getCategories)
+				categories.POST("", h.addCategory)
+				categories.DELETE("", h.deleteCategory)
 			}
 
 			cities := filters.Group("/cities")
