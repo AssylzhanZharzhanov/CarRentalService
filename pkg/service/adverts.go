@@ -19,16 +19,16 @@ type AdvertService struct {
 	repo repository.Adverts
 }
 
+func NewAdvertService(repo *repository.Repository) *AdvertService {
+	return &AdvertService{repo: repo.Adverts}
+}
+
 func (s *AdvertService) GetMyAdverts(ctx context.Context, userId string) ([]models.Advert, error) {
 	panic("implement me")
 }
 
 func (s *AdvertService) GetSimilarAdverts(ctx context.Context, title string, price int) ([]models.Advert, error) {
 	return s.repo.GetSimilarAdverts(ctx, title, price)
-}
-
-func NewAdvertService(repo *repository.Repository) *AdvertService {
-	return &AdvertService{repo: repo.Adverts}
 }
 
 func (s *AdvertService) GetUserAdverts(ctx context.Context, userId string, status string) ([]models.Advert, error) {
