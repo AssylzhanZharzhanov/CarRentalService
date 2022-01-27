@@ -15,8 +15,32 @@ type AdvertMongo struct {
 	db *mongo.Database
 }
 
+func (r *AdvertMongo) CreateAdvert(ctx context.Context, advert models.AdvertInput) (string, error) {
+	res, err := r.db.Collection(advertsCollection).InsertOne(ctx, advert)
+
+	if err != nil {
+		return "", err
+	}
+
+	return res.InsertedID.(primitive.ObjectID).Hex(), nil
+}
+
 func (r *AdvertMongo) GetMyAdverts(ctx context.Context, userId string) ([]models.Advert, error) {
-	panic("implement me")
+	userObjId, _ := primitive.ObjectIDFromHex(userId)
+	filter := bson.M{"user_id": userObjId}
+
+	adverts := make([]models.Advert, 0)
+
+	cur, err := r.db.Collection(advertsCollection).Find(ctx, filter)
+	if err != nil {
+		return adverts, err
+	}
+
+	if err = cur.All(ctx, &adverts); err != nil {
+		return adverts, err
+	}
+
+	return adverts, nil
 }
 
 func (r *AdvertMongo) GetUserAdverts(ctx context.Context, userId string, status string) ([]models.Advert, error) {
@@ -35,16 +59,6 @@ func (r *AdvertMongo) GetUserAdverts(ctx context.Context, userId string, status 
 	}
 
 	return adverts, nil
-}
-
-func (r *AdvertMongo) CreateAdvert(ctx context.Context, advert models.AdvertInput) (string, error) {
-	res, err := r.db.Collection(advertsCollection).InsertOne(ctx, advert)
-
-	if err != nil {
-		return "", err
-	}
-
-	return res.InsertedID.(primitive.ObjectID).Hex(), nil
 }
 
 func (r *AdvertMongo) GetSimilarAdverts(ctx context.Context, title string, price int) ([]models.Advert, error) {
