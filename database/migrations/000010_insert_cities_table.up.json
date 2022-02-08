@@ -1,0 +1,182 @@
+[
+  {
+    "insert":"cities",
+    "documents":[
+        {
+          "city": "Almaty",
+          "city_ru": "Алматы",
+          "lat": 43.25,
+          "lng": 76.9,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Nur-Sultan",
+          "city_ru": "Нур-Султан",
+          "lat": 51.1333,
+          "lng": 71.4333,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Shymkent",
+          "city_ru": "Шымкент",
+          "lat": 42.3,
+          "lng": 69.6,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Qaraghandy",
+          "city_ru": "Караганды",
+          "lat": 49.8,
+          "lng": 73.1167,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Taraz",
+          "city_ru": "Тараз",
+          "lat": 42.8833,
+          "lng": 71.3667,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Aqtöbe",
+          "city_ru": "Актобе",
+          "lat": 50.3,
+          "lng": 57.1667,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Pavlodar",
+          "city_ru": "Павлодар",
+          "lat": 52.3156,
+          "lng": 76.9564,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Semey",
+          "city_ru": "Семей",
+          "lat": 50.4111,
+          "lng": 80.2275,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Öskemen",
+          "city_ru": "Усть-Каменогорск",
+          "lat": 49.99,
+          "lng": 82.6149,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Oral",
+          "city_ru": "Уральск",
+          "lat": 51.2333,
+          "lng": 51.3667,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Türkistan",
+          "city_ru": "Туркестан",
+          "lat": 43.3,
+          "lng": 68.2436,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Qostanay",
+          "city_ru": "Костанай",
+          "lat": 53.2144,
+          "lng": 63.6246,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Petropavl",
+          "city_ru": "Петропавл",
+          "lat": 54.8622,
+          "lng": 69.1408,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Qyzylorda",
+          "city_ru": "Кызылорда",
+          "lat": 44.8479,
+          "lng": 65.4999,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Temirtaū",
+          "city_ru": "Темиртау",
+          "lat": 50.0667,
+          "lng": 72.9667,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Aqtaū",
+          "city_ru": "Актау",
+          "lat": 43.65,
+          "lng": 51.15,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Atyraū",
+          "city_ru": "Атырау",
+          "lat": 47.1167,
+          "lng": 51.8833,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Ekibastuz",
+          "city_ru": "Экибастуз",
+          "lat": 51.7298,
+          "lng": 75.3266,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Mangghystaū",
+          "city_ru": "Мангистау",
+          "lat": 43.6905,
+          "lng": 51.1417,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Kökshetaū",
+          "city_ru": "Кокшетау",
+          "lat": 53.2824,
+          "lng": 69.3969,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Taldyqorghan",
+          "city_ru": "Талдыкорган",
+          "lat": 45.0167,
+          "lng": 78.3667,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Rudnyy",
+          "city_ru": "Рудный",
+          "lat": 52.9527,
+          "lng": 63.13,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Zhezqazghan",
+          "city_ru": "Жезказган",
+          "lat": 47.7833,
+          "lng": 67.7,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Kentaū",
+          "city_ru": "Кентау",
+          "lat": 43.5169,
+          "lng": 68.5044,
+          "country": "Kazakhstan"
+        },
+        {
+          "city": "Balqash",
+          "city_ru": "Балхаш",
+          "lat": 46.85,
+          "lng": 75,
+          "country": "Kazakhstan"
+        }
+    ]
+  }
+]

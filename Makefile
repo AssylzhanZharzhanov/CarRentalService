@@ -15,16 +15,13 @@ stop:
 rebuild: stop
 	go mod download && CGO_ENABLED=0 GOOS=linux go build -o ./.bin/app ./cmd/api/main.go && docker-compose up -d --remove-orphans --build server
 
-createdb:
-	docker run --name=postgres -e POSTGRES_PASSWORD='qwerty' -p 5432:5432 -d --rm postgres
-
-dropdb:
-	docker stop postgres && docker rm postgres
-
-migrateup:
+migrate_up:
 	 migrate -path ./schema -database "postgres://postgres:qwerty@localhost:5432/postgres?sslmode=disable" up
 
-migratedown:
+migrate_drop:
+	 migrate -path ./schema -database "postgres://postgres:qwerty@localhost:5432/postgres?sslmode=disable" drop
+
+migrate_down:
 	 migrate -path ./schema -database "postgres://postgres:qwerty@localhost:5432/postgres?sslmode=disable" down
 
 .DEFAULT_GOAL := run
