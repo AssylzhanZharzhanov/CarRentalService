@@ -16,7 +16,7 @@ func (h *Handler) addAdvertisement(c *gin.Context) {
 
 	err := h.service.CreateAdvertisement(c.Request.Context(), advertisement)
 	if err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, createObjectError)
+		newErrorResponse(c, http.StatusInternalServerError, cannotCreateError)
 		return
 	}
 
