@@ -63,13 +63,13 @@ func (h *Handler) createAdvert(c *gin.Context) {
 
 	userId, err := getUserId(c)
 	if err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, "user not found")
+		newErrorResponse(c, http.StatusInternalServerError, notFoundError)
 		return
 	}
 
 	_, err = h.service.CreateAdvert(c.Request.Context(), advert, imageUrls, userId)
 	if err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, createObjectError)
+		newErrorResponse(c, http.StatusInternalServerError, cannotCreateError)
 		return
 	}
 
@@ -134,7 +134,7 @@ func (h *Handler) getAllAdverts(c *gin.Context) {
 
 	adverts, err := h.service.GetAllAdverts(c.Request.Context(), query)
 	if err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, err.Error())
+		newErrorResponse(c, http.StatusInternalServerError, notFoundError)
 		return
 	}
 
@@ -186,7 +186,7 @@ func (h *Handler) getUserAdverts(c *gin.Context) {
 
 	adverts, err := h.service.Adverts.GetMyAdverts(c.Request.Context(), userId)
 	if err != nil {
-		newErrorResponse(c, http.StatusNotFound, "user not found")
+		newErrorResponse(c, http.StatusNotFound, notFoundError)
 		return
 	}
 
@@ -194,15 +194,9 @@ func (h *Handler) getUserAdverts(c *gin.Context) {
 }
 
 func (h *Handler) getTopAdverts(c *gin.Context) {
-	userId, err := getUserId(c)
+	adverts, err := h.service.Adverts.GetTopAdverts(c.Request.Context())
 	if err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, "user not found")
-		return
-	}
-
-	adverts, err := h.service.Adverts.GetMyAdverts(c.Request.Context(), userId)
-	if err != nil {
-		newErrorResponse(c, http.StatusNotFound, "user not found")
+		newErrorResponse(c, http.StatusNotFound, notFoundError)
 		return
 	}
 
@@ -215,7 +209,7 @@ func (h *Handler) getSimilarAdverts(c *gin.Context) {
 
 	adverts, err := h.service.Adverts.GetSimilarAdverts(c.Request.Context(), title, price)
 	if err != nil {
-		newErrorResponse(c, http.StatusNotFound, "adverts not found")
+		newErrorResponse(c, http.StatusNotFound, notFoundError)
 		return
 	}
 

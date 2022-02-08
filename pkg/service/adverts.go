@@ -23,29 +23,17 @@ func NewAdvertService(repo *repository.Repository) *AdvertService {
 	return &AdvertService{repo: repo.Adverts}
 }
 
-func (s *AdvertService) GetMyAdverts(ctx context.Context, userId string) ([]models.Advert, error) {
-	return s.repo.GetMyAdverts(ctx, userId)
-}
-
-func (s *AdvertService) GetSimilarAdverts(ctx context.Context, title string, price int) ([]models.Advert, error) {
-	return s.repo.GetSimilarAdverts(ctx, title, price)
-}
-
-func (s *AdvertService) GetUserAdverts(ctx context.Context, userId string, status string) ([]models.Advert, error) {
-	return s.repo.GetUserAdverts(ctx, userId, status)
-}
-
 func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.AdvertInput, imageUrl []string, userId string) (string, error) {
 
 	userObjId, _ := primitive.ObjectIDFromHex(userId)
 
 	advert.UserID = userObjId
-	advert.CreatedAt = time.Now()
 	advert.HasAdvertisement = false
 	advert.TitleSearch = strings.Fields(strings.ToLower(advert.Title))
 	advert.Feedbacks = make([]models.Feedback, 0)
 	advert.Images = make([]models.Image, 0)
 	advert.Status = defaultStatusValue
+	advert.CreatedAt = time.Now()
 
 	advertId, err := s.repo.CreateAdvert(ctx, advert)
 	if err != nil {
@@ -66,6 +54,22 @@ func (s *AdvertService) GetAllAdverts(ctx context.Context, filter bson.M) ([]mod
 
 func (s *AdvertService) GetAdvertById(ctx context.Context, id string) (models.Advert, error) {
 	return s.repo.GetAdvertById(ctx, id)
+}
+
+func (s *AdvertService) GetTopAdverts(ctx context.Context) ([]models.Advert, error) {
+	panic("implement me")
+}
+
+func (s *AdvertService) GetMyAdverts(ctx context.Context, userId string) ([]models.Advert, error) {
+	return s.repo.GetMyAdverts(ctx, userId)
+}
+
+func (s *AdvertService) GetSimilarAdverts(ctx context.Context, title string, price int) ([]models.Advert, error) {
+	return s.repo.GetSimilarAdverts(ctx, title, price)
+}
+
+func (s *AdvertService) GetUserAdverts(ctx context.Context, userId string, status string) ([]models.Advert, error) {
+	return s.repo.GetUserAdverts(ctx, userId, status)
 }
 
 func (s *AdvertService) UpdateAdvert(ctx context.Context, id string, advert models.AdvertInput) error {

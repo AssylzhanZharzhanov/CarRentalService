@@ -14,7 +14,6 @@ import (
 type AdvertMongo struct {
 	db *mongo.Database
 }
-
 func (r *AdvertMongo) CreateAdvert(ctx context.Context, advert models.AdvertInput) (string, error) {
 	res, err := r.db.Collection(advertsCollection).InsertOne(ctx, advert)
 
@@ -60,6 +59,25 @@ func (r *AdvertMongo) GetUserAdverts(ctx context.Context, userId string, status 
 
 	return adverts, nil
 }
+
+func (r *AdvertMongo) GetTopAdverts(ctx context.Context) ([]models.Advert, error) {
+	adverts := make([]models.Advert, 0)
+
+	filter := bson.M{
+
+	}
+
+	cur, err := r.db.Collection(advertsCollection).Find(ctx, filter)
+	if err != nil {
+		return adverts, err
+	}
+
+	if err = cur.All(ctx, &adverts); err != nil {
+		return adverts, err
+	}
+
+	return adverts, nil}
+
 
 func (r *AdvertMongo) GetSimilarAdverts(ctx context.Context, title string, price int) ([]models.Advert, error) {
 	adverts := make([]models.Advert, 0)
