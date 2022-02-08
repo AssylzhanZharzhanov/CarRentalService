@@ -21,8 +21,6 @@ func (h *Handler) InitRoutes() *gin.Engine {
 
 	router.MaxMultipartMemory = 100 << 20
 
-	//router.Use(CORSMiddleware())
-
 	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	auth := router.Group("/auth")
@@ -51,20 +49,20 @@ func (h *Handler) InitRoutes() *gin.Engine {
 
 		adverts := api.Group("/adverts")
 		{
-			adverts.POST("/", h.createAdvert)
+			adverts.POST("/", h.GetUserIdentity, h.createAdvert)
 			adverts.GET("/", h.getAllAdverts)
 			adverts.GET("/:id", h.getAdvertById)
 			adverts.GET("/top", h.getTopAdverts)
 			adverts.GET("/similar", h.getSimilarAdverts)
-			adverts.PUT("/:id", h.updateAdvert)
-			adverts.DELETE("/:id", h.deleteAdvert)
 			adverts.GET("/my", h.getUserAdverts)
+			adverts.PUT("/:id", h.GetUserIdentity, h.updateAdvert)
+			adverts.DELETE("/:id", h.GetUserIdentity, h.deleteAdvert)
 
-			usersAdverts := adverts.Group("", h.GetUserIdentity)
+			usersAdverts := adverts.Group("/users", h.GetUserIdentity)
 			{
-				usersAdverts.GET("/users/active", h.getUserActiveAdverts)
-				usersAdverts.GET("/users/archive", h.getUserArchiveAdverts)
-				usersAdverts.GET("/users/moderation", h.getUserModerationAdverts)
+				usersAdverts.GET("/active", h.getUserActiveAdverts)
+				usersAdverts.GET("/archive", h.getUserArchiveAdverts)
+				usersAdverts.GET("/moderation", h.getUserModerationAdverts)
 			}
 		}
 
@@ -126,8 +124,8 @@ func (h *Handler) InitRoutes() *gin.Engine {
 
 			statuses := filters.Group("/statuses")
 			{
-				statuses.GET("", h.getStatuses)
 				statuses.POST("", h.addStatus)
+				statuses.GET("", h.getStatuses)
 				statuses.PUT("", h.updateStatus)
 			}
 		}

@@ -10,6 +10,8 @@ type Advert struct {
 	ID               primitive.ObjectID `json:"id" bson:"_id,omitempty"`
 	UserID           primitive.ObjectID `json:"user_id" bson:"user_id"`
 	Status           string             `json:"status" bson:"status"`
+	Mark			 string             `json:"mark" bson:"mark" form:"mark"`
+	Model			 string             `json:"model" bson:"model" form:"model"`
 	Reason           string       		`json:"reason,omitempty" bson:"reason,omitempty"`
 	City             string             `json:"city" bson:"city"`
 	Category         string             `json:"category" bson:"category"`
@@ -29,6 +31,8 @@ type Advert struct {
 
 type AdvertInput struct {
 	Title            string             `json:"title,omitempty" bson:"title,omitempty" form:"title"`
+	Mark			 string             `json:"mark" bson:"mark" form:"mark"`
+	Model			 string             `json:"model" bson:"model" form:"model"`
 	Status           string             `json:"status,omitempty" bson:"status,omitempty"`
 	UserID           primitive.ObjectID `json:"user_id,omitempty" bson:"user_id,omitempty"`
 	City             string             `json:"city,omitempty" bson:"city,omitempty" form:"city" `

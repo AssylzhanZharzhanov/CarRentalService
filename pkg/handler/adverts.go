@@ -63,7 +63,7 @@ func (h *Handler) createAdvert(c *gin.Context) {
 
 	userId, err := getUserId(c)
 	if err != nil {
-		newErrorResponse(c, http.StatusInternalServerError, notFoundError)
+		newErrorResponse(c, http.StatusInternalServerError, err.Error())
 		return
 	}
 
