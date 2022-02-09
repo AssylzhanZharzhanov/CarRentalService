@@ -7,17 +7,20 @@ definitions:
     type: object
   models.Advert:
     properties:
-      advertisement:
-        $ref: '#/definitions/models.Advertisement'
+      body_style:
+        type: string
       category:
         type: string
       city:
+        type: string
+      class:
         type: string
       createdAt:
         type: string
       description:
         type: string
       feedbacks:
+        description: Advertisement    []Advertisement    `json:"advertisement" bson:"advertisement"`
         items:
           $ref: '#/definitions/models.Feedback'
         type: array
@@ -27,8 +30,12 @@ definitions:
         type: string
       images:
         items:
-          type: string
+          $ref: '#/definitions/models.Image'
         type: array
+      mark:
+        type: string
+      model:
+        type: string
       phone:
         type: string
       price:
@@ -45,26 +52,50 @@ definitions:
         type: array
       total_rating:
         type: number
+      transmission:
+        type: string
+      user_id:
+        type: string
+      views:
+        type: integer
+      year:
+        type: string
     type: object
   models.AdvertInput:
     properties:
+      body_style:
+        type: string
       category:
         type: string
       city:
+        type: string
+      class:
         type: string
       createdAt:
         type: string
       description:
         type: string
+      feedbacks:
+        items:
+          $ref: '#/definitions/models.Feedback'
+        type: array
       has_advertisement:
         type: boolean
-      image:
+      images:
+        items:
+          $ref: '#/definitions/models.Image'
+        type: array
+      mark:
+        type: string
+      model:
         type: string
       phone:
         type: string
       price:
         type: integer
-      rentType:
+      rent_type:
+        type: string
+      status:
         type: string
       title:
         type: string
@@ -72,26 +103,13 @@ definitions:
         items:
           type: string
         type: array
-    required:
-    - category
-    - city
-    - description
-    - phone
-    - price
-    - rentType
-    - title
-    type: object
-  models.Advertisement:
-    properties:
-      _id:
+      transmission:
         type: string
-      expiration_date:
+      user_id:
         type: string
-      inspiration_date:
-        type: string
-      status:
-        type: string
-      type:
+      views:
+        type: integer
+      year:
         type: string
     type: object
   models.Feedback:
@@ -107,6 +125,13 @@ definitions:
       user_id:
         type: string
     type: object
+  models.Image:
+    properties:
+      id:
+        type: string
+      url:
+        type: string
+    type: object
 host: localhost
 info:
   contact: {}
@@ -115,11 +140,47 @@ info:
   title: Swagger Region.app Объявления API
   version: "1.0"
 paths:
+  /api/advertisement:
+    get:
+      consumes:
+      - application/json
+      description: Get advertisements
+      operationId: get-advertisements
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              type: object
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get advertisements
+      tags:
+      - adverts
   /api/adverts:
     get:
       consumes:
       - application/json
-      description: get all adverts
+      description: Get all adverts
       operationId: get-all-adverts
       parameters:
       - description: City
@@ -182,7 +243,7 @@ paths:
       - adverts
     post:
       consumes:
-      - multipart/form-data
+      - application/json
       description: create advert
       operationId: create-advert
       parameters:
@@ -215,7 +276,350 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/handler.errorResponse'
+      security:
+      - ApiKeyAuth: []
       summary: Create Advert
+      tags:
+      - adverts
+  /api/adverts/:
+    get:
+      consumes:
+      - application/json
+      description: Get similar adverts
+      operationId: get-similar-adverts
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Advert'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get similar adverts
+      tags:
+      - adverts
+  /api/adverts/{id}:
+    get:
+      consumes:
+      - application/json
+      description: Get advert by id
+      operationId: get-advert-by-id
+      parameters:
+      - description: Payment ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Advert'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      summary: Get advert by id
+      tags:
+      - adverts
+    put:
+      consumes:
+      - application/json
+      description: Update advert by id
+      operationId: Update-advert-by-id
+      parameters:
+      - description: Payment ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: advert body
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/models.AdvertInput'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Update advert by id
+      tags:
+      - adverts
+  /api/adverts/my:
+    get:
+      consumes:
+      - application/json
+      description: Get user adverts
+      operationId: get-user-adverts
+      parameters:
+      - description: Payment ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Advert'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get user adverts
+      tags:
+      - adverts
+  /api/adverts/top/:
+    get:
+      consumes:
+      - application/json
+      description: Get top adverts
+      operationId: get-top-adverts
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Advert'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get top adverts
+      tags:
+      - adverts
+  /api/adverts/users/active:
+    get:
+      consumes:
+      - application/json
+      description: Get user's active adverts
+      operationId: get-active-adverts
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: json
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get user's active adverts
+      tags:
+      - adverts
+  /api/adverts/users/archive:
+    get:
+      consumes:
+      - application/json
+      description: Get in archive adverts
+      operationId: get-archive-adverts
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Advert'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get user's in archive adverts
+      tags:
+      - adverts
+  /api/adverts/users/moderation:
+    get:
+      consumes:
+      - application/json
+      description: Get on moderation adverts
+      operationId: get-on-moderation-adverts
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Advert'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get user's on moderation adverts
+      tags:
+      - adverts
+  /api/bookmarks:
+    get:
+      consumes:
+      - application/json
+      description: Get bookmarks
+      operationId: get-bookmarks
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              type: object
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+        default:
+          description: ""
+          schema:
+            $ref: '#/definitions/handler.errorResponse'
+      security:
+      - ApiKeyAuth: []
+      summary: Get bookmarks
       tags:
       - adverts
 swagger: "2.0"

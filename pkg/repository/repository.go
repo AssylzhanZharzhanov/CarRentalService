@@ -115,7 +115,7 @@ func NewRepository(db *mongo.Database) *Repository {
 		Adverts:        NewAdvertMongo(db),
 		Images:         NewImageMongo(db),
 		Search:         NewSearchMongo(db),
-		Feedback:       NewFeedbackMongo(db, advertsCollection),
+		Feedback:       NewFeedbackMongo(db),
 		Filters:        NewFilterRepository(db),
 		Bookmarks:      NewBookmarkMongo(db),
 		Admin: 			NewAdminMongo(db),

@@ -68,10 +68,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 
 		advertisements := api.Group("/advertisements", h.GetUserIdentity)
 		{
-			advertisements.POST("/", h.addAdvertisement)
 			advertisements.GET("/", h.getAdvertisements)
-			advertisements.GET("/:id", h.getAdvertisementByID)
-			advertisements.PUT("/:id", h.updateAdvertisement)
 			advertisements.DELETE("/:id", h.deleteAdvertisement)
 			advertisements.POST("/connect", h.connectAdvertisement)
 		}

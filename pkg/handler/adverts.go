@@ -21,10 +21,11 @@ type Filter struct {
 }
 
 // @Summary Create Advert
+// @Security ApiKeyAuth
 // @Tags adverts
 // @Description create advert
 // @ID create-advert
-// @Accept mpfd
+// @Accept json
 // @Produce json
 // @Param input body models.AdvertInput true "advert body"
 // @Success 200 {integer} integer
@@ -165,6 +166,7 @@ func (h *Handler) getAdvertById(c *gin.Context) {
 }
 
 // @Summary Get user adverts
+// @Security ApiKeyAuth
 // @Tags adverts
 // @Description Get user adverts
 // @ID get-user-adverts
@@ -175,7 +177,7 @@ func (h *Handler) getAdvertById(c *gin.Context) {
 // @Failure 400,404 {object} errorResponse
 // @Failure 500 {object} errorResponse
 // @Failure default {object} errorResponse
-// @Router /api/adverts/{id} [get]
+// @Router /api/adverts/my [get]
 func (h *Handler) getUserAdverts(c *gin.Context) {
 	userId, err := getUserId(c)
 	if err != nil {
@@ -192,6 +194,18 @@ func (h *Handler) getUserAdverts(c *gin.Context) {
 	c.JSON(http.StatusOK, adverts)
 }
 
+// @Summary Get top adverts
+// @Security ApiKeyAuth
+// @Tags adverts
+// @Description Get top adverts
+// @ID get-top-adverts
+// @Accept json
+// @Produce json
+// @Success 200 {array} models.Advert
+// @Failure 400,404 {object} errorResponse
+// @Failure 500 {object} errorResponse
+// @Failure default {object} errorResponse
+// @Router /api/adverts/top/ [get]
 func (h *Handler) getTopAdverts(c *gin.Context) {
 	adverts, err := h.service.Adverts.GetTopAdverts(c.Request.Context())
 	if err != nil {
@@ -202,6 +216,18 @@ func (h *Handler) getTopAdverts(c *gin.Context) {
 	c.JSON(http.StatusOK, adverts)
 }
 
+// @Summary Get similar adverts
+// @Security ApiKeyAuth
+// @Tags adverts
+// @Description Get similar adverts
+// @ID get-similar-adverts
+// @Accept json
+// @Produce json
+// @Success 200 {array} models.Advert
+// @Failure 400,404 {object} errorResponse
+// @Failure 500 {object} errorResponse
+// @Failure default {object} errorResponse
+// @Router /api/adverts/ [get]
 func (h *Handler) getSimilarAdverts(c *gin.Context) {
 	title := c.Query("title")
 	price, _ := strconv.Atoi(c.Query("price"))
@@ -215,13 +241,15 @@ func (h *Handler) getSimilarAdverts(c *gin.Context) {
 	c.JSON(http.StatusOK, adverts)
 }
 
-// @Summary Get advert by id
+// @Summary Update advert by id
+// @Security ApiKeyAuth
 // @Tags adverts
-// @Description Get advert by id
-// @ID get-advert-by-id
+// @Description Update advert by id
+// @ID Update-advert-by-id
 // @Accept json
 // @Produce json
 // @Param id path int true "Payment ID"
+// @Param input body models.AdvertInput true "advert body"
 // @Success 200 {json} models.Advert
 // @Failure 400,404 {object} errorResponse
 // @Failure 500 {object} errorResponse
@@ -235,8 +263,6 @@ func (h *Handler) updateAdvert(c *gin.Context) {
 		newErrorResponse(c, http.StatusInternalServerError, inputError)
 		return
 	}
-
-	log.Println(newAdvert)
 
 	err := h.service.UpdateAdvert(c.Request.Context(), id, newAdvert)
 	if err != nil {
@@ -264,6 +290,18 @@ func (h *Handler) deleteAdvert(c *gin.Context) {
 	})
 }
 
+// @Summary Get user's active adverts
+// @Security ApiKeyAuth
+// @Tags adverts
+// @Description Get user's active adverts
+// @ID get-active-adverts
+// @Accept json
+// @Produce json
+// @Success 200 {json} models.Advert
+// @Failure 400,404 {object} errorResponse
+// @Failure 500 {object} errorResponse
+// @Failure default {object} errorResponse
+// @Router /api/adverts/users/active [get]
 func (h *Handler) getUserActiveAdverts(c *gin.Context) {
 	userId, err := getUserId(c)
 	if err != nil {
@@ -282,6 +320,18 @@ func (h *Handler) getUserActiveAdverts(c *gin.Context) {
 	c.JSON(http.StatusOK, adverts)
 }
 
+// @Summary Get user's in archive adverts
+// @Security ApiKeyAuth
+// @Tags adverts
+// @Description Get in archive adverts
+// @ID get-archive-adverts
+// @Accept json
+// @Produce json
+// @Success 200 {array} models.Advert
+// @Failure 400,404 {object} errorResponse
+// @Failure 500 {object} errorResponse
+// @Failure default {object} errorResponse
+// @Router /api/adverts/users/archive [get]
 func (h *Handler) getUserArchiveAdverts(c *gin.Context) {
 	userId, err := getUserId(c)
 	if err != nil {
@@ -290,7 +340,6 @@ func (h *Handler) getUserArchiveAdverts(c *gin.Context) {
 	}
 
 	status := "Архив"
-	log.Println(status)
 	adverts, err := h.service.Adverts.GetUserAdverts(c.Request.Context(), userId, status)
 	if err != nil {
 		newErrorResponse(c, http.StatusNotFound, "user not found")
@@ -300,6 +349,18 @@ func (h *Handler) getUserArchiveAdverts(c *gin.Context) {
 	c.JSON(http.StatusOK, adverts)
 }
 
+// @Summary Get user's on moderation adverts
+// @Security ApiKeyAuth
+// @Tags adverts
+// @Description Get on moderation adverts
+// @ID get-on-moderation-adverts
+// @Accept json
+// @Produce json
+// @Success 200 {array} models.Advert
+// @Failure 400,404 {object} errorResponse
+// @Failure 500 {object} errorResponse
+// @Failure default {object} errorResponse
+// @Router /api/adverts/users/moderation [get]
 func (h *Handler) getUserModerationAdverts(c *gin.Context) {
 	userId, err := getUserId(c)
 	if err != nil {

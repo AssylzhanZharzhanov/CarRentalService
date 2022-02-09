@@ -24,6 +24,18 @@ func (h *Handler) addBookmark(c *gin.Context) {
 	})
 }
 
+// @Summary Get bookmarks
+// @Security ApiKeyAuth
+// @Tags adverts
+// @Description Get bookmarks
+// @ID get-bookmarks
+// @Accept json
+// @Produce json
+// @Success 200 {array} object
+// @Failure 400,404 {object} errorResponse
+// @Failure 500 {object} errorResponse
+// @Failure default {object} errorResponse
+// @Router /api/bookmarks [get]
 func (h *Handler) getBookmarks(c *gin.Context) {
 
 	userId, err := getUserId(c)
