@@ -29,6 +29,7 @@ type Advert struct {
 	//Advertisement    []Advertisement    `json:"advertisement" bson:"advertisement"`
 	Feedbacks        []Feedback         `json:"feedbacks" bson:"feedbacks"`
 	TotalRating      float64            `json:"total_rating" bson:"total_rating"`
+	Views			 int				`json:"views" bson:"views"`
 	CreatedAt        time.Time          `json:"createdAt" bson:"createdAt "`
 }
 
@@ -52,5 +53,6 @@ type AdvertInput struct {
 	Feedbacks        []Feedback         `json:"feedbacks,omitempty" bson:"feedbacks,omitempty"`
 	HasAdvertisement bool               `json:"has_advertisement,omitempty" bson:"has_advertisement,omitempty"`
 	TitleSearch      []string           `json:"title_search,omitempty" bson:"title_search,omitempty"`
+	Views			 int				`json:"views" bson:"views"`
 	CreatedAt        time.Time          `json:"createdAt,omitempty" bson:"createdAt,omitempty"`
 }

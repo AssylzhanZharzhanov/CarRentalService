@@ -21,7 +21,13 @@
         "advertisements": [
           {
             "type": "top",
-            "statusId": "active",
+            "isActive": true,
+            "issuedDate": "",
+            "expirationDate": ""
+          },
+          {
+            "type": "hot_sales",
+            "isActive": false,
             "issuedDate": "",
             "expirationDate": ""
           }
@@ -41,7 +47,13 @@
         "advertisements": [
           {
             "type": "top",
-            "statusId": "active",
+            "isActive": false,
+            "issuedDate": "",
+            "expirationDate": ""
+          },
+          {
+            "type": "hot_sales",
+            "isActive": true,
             "issuedDate": "",
             "expirationDate": ""
           }

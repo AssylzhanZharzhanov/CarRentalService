@@ -114,9 +114,11 @@ func (r *AdvertMongo) GetAllAdverts(ctx context.Context, filter bson.M) ([]model
 func (r *AdvertMongo) GetAdvertById(ctx context.Context, id string) (models.Advert, error) {
 	objId, _ := primitive.ObjectIDFromHex(id)
 
-	advert := models.Advert{}
-	err := r.db.Collection(advertsCollection).FindOne(ctx, bson.M{"_id": objId}).Decode(&advert)
+	_, err := r.db.Collection(advertsCollection).UpdateOne(ctx, bson.D{{"_id", objId}},
+		bson.D{{"$inc", bson.D{{"views", 1}}}})
 
+	advert := models.Advert{}
+	err = r.db.Collection(advertsCollection).FindOne(ctx, bson.M{"_id": objId}).Decode(&advert)
 	if err != nil {
 		return advert, err
 	}

@@ -33,6 +33,7 @@ func (s *AdvertService) CreateAdvert(ctx context.Context, advert models.AdvertIn
 	advert.Feedbacks = make([]models.Feedback, 0)
 	advert.Images = make([]models.Image, 0)
 	advert.Status = defaultStatusValue
+	advert.Views = 0
 	advert.CreatedAt = time.Now()
 
 	advertId, err := s.repo.CreateAdvert(ctx, advert)
