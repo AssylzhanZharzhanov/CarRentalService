@@ -11,6 +11,7 @@ import (
 const (
 	advertsCollection = "adverts"
 	imageCollection = "images"
+	advertisementsCollection = "advertisements"
 )
 
 type Admin interface {
@@ -55,8 +56,12 @@ type Search interface {
 	GetAdverts(ctx context.Context, name string) ([]models.Advert, error)
 }
 
-type Users interface {
-
+type Advertisements interface {
+	CreateAdvertisement(ctx context.Context, advertisement models.AdvertisementInput) error
+	GetAdvertisements(ctx context.Context) ([]models.Advertisement, error)
+	GetAdvertisementByID(ctx context.Context) (models.Advertisement, error)
+	UpdateAdvertisement(ctx context.Context, id string, advertisement models.AdvertisementInput) error
+	DeleteAdvertisement(ctx context.Context, id string) error
 }
 
 type Images interface {
@@ -87,6 +92,10 @@ type Filters interface {
 	DeleteStatus(ctx context.Context, name string) error
 }
 
+type Users interface {
+
+}
+
 type Repository struct {
 	Authentication
 	Adverts
@@ -97,6 +106,7 @@ type Repository struct {
 	Filters
 	Bookmarks
 	Admin
+	Advertisements
 }
 
 func NewRepository(db *mongo.Database) *Repository {
@@ -109,5 +119,6 @@ func NewRepository(db *mongo.Database) *Repository {
 		Filters:        NewFilterRepository(db),
 		Bookmarks:      NewBookmarkMongo(db),
 		Admin: 			NewAdminMongo(db),
+		Advertisements: NewAdvertisementMongo(db),
 	}
 }

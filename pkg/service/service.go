@@ -93,13 +93,13 @@ type Filters interface {
 type Service struct {
 	Authentication
 	Adverts
-	Advertisements
 	Images
 	Search
 	Feedback
 	Filters
 	Bookmarks
 	Admin
+	Advertisements
 }
 
 func NewService(repos *repository.Repository) *Service {
@@ -107,11 +107,11 @@ func NewService(repos *repository.Repository) *Service {
 		Authentication: NewAuthService(repos),
 		Adverts:        NewAdvertService(repos),
 		Advertisements: NewAdvertisementService(repos),
-		Images:         NewImageService(repos),
-		Search:         NewSearchService(repos),
+		Admin:          NewAdminService(repos),
+		Bookmarks:      NewBookmarkService(repos),
 		Feedback: 		NewFeedbackService(repos),
 		Filters:        NewFilterService(repos),
-		Bookmarks:      NewBookmarkService(repos),
-		Admin:          NewAdminService(repos),
+		Images:         NewImageService(repos),
+		Search:         NewSearchService(repos),
 	}
 }

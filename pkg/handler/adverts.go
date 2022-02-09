@@ -111,7 +111,6 @@ func (h *Handler) getAllAdverts(c *gin.Context) {
 		query["status"] = status
 	}
 
-	//array
 	if rentType := c.Query("rent_type"); rentType != "" {
 		query["rent_type"] = rentType
 	}

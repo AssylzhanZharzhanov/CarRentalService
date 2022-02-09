@@ -26,7 +26,13 @@ func (h *Handler) addAdvertisement(c *gin.Context) {
 }
 
 func (h *Handler) getAdvertisements(c *gin.Context) {
+	adverts, err := h.service.GetAdvertisements(c.Request.Context())
+	if err != nil {
+		newErrorResponse(c, http.StatusInternalServerError, notFoundError)
+		return
+	}
 
+	c.JSON(http.StatusOK, adverts)
 }
 
 func (h *Handler) getAdvertisementByID(c *gin.Context) {
