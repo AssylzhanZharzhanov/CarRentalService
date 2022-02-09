@@ -16,7 +16,7 @@ import (
 
 // @title Swagger Region.app Объявления API
 // @version 1.0
-// @description REST API for Region.app Объявления.
+// @description REST API for Region.Ads.
 // @termsOfService http://swagger.io/terms/
 
 // @host localhost
