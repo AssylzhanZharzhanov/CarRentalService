@@ -1,8 +1,11 @@
 package main
 
 import (
+	"github.com/sirupsen/logrus"
 	"log"
 	"os"
+	"os/signal"
+	"syscall"
 
 	"gitlab.com/zharzhanov/region"
 	"gitlab.com/zharzhanov/region/database/mongo"
@@ -33,7 +36,15 @@ func main() {
 	handler := handler.NewHandler(services)
 
 	srv := new(region.Server)
-	if err := srv.Run("8000", handler.InitRoutes()); err != nil {
-		log.Fatalf("error occured during starting web service: %s", err.Error())
-	}
+
+	go func() {
+		if err := srv.Run("8000", handler.InitRoutes()); err != nil {
+			log.Fatalf("error occured during starting web service: %s", err.Error())
+		}
+	}()
+	logrus.Print("Server started at 8000")
+
+	quit := make(chan os.Signal, 1)
+	signal.Notify(quit, syscall.SIGTERM, syscall.SIGINT)
+	<-quit
 }
