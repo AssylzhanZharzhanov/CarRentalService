@@ -1,8 +1,12 @@
 # Quick setup
-To start a project you should:
 
-1. Install golang
-2. Build project
-3. Start containers
+Для запуска приложения:
+```
+    make build && make run
+```
 
-## 
+Если приложение запускается впервые, необходимо применить миграции к базе данных:
+```
+    make migrate-up
+```
+##
